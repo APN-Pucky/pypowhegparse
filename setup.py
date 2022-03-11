@@ -7,6 +7,8 @@ requirements = [
     "smpl",
     "requests",
     "numpy",
+    "pandas",
+    "uncertainties",
     "tqdm",
     "scipy",
     "validators",
