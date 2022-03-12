@@ -9,9 +9,9 @@ from scipy.stats import chi2
 
 def load_top_plot(plot:TopPlot):
 	pairs = [
-		("plot",plot),
 		("pvalue",pvalue_top(plot)),
 		("chi2",chisquare_top(plot)),
+		("plot",plot),
 	]
 	return pd.DataFrame.from_records(pairs,columns=['title',plot.title.text],index="title").transpose()
 
