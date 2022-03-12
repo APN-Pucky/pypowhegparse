@@ -1,4 +1,0 @@
-packaging
-six>=1.13.0
-toml>=0.10.2
-setuptools
