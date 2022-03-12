@@ -15,7 +15,8 @@ def load_stat_file(file):
 			pair = re.compile('(.*?)\s+([0-9\.Ee\+-]+)\s+\+-\s+([0-9\.Ee\+-]+)')
 			g = pair.search(line)
 			if g is not None:
-				pairs.append((g.group(1),ufloat(float(g.group(2)),float(g.group(3)))))
+				pairs.append((g.group(1).strip(),float(g.group(2))))
+				pairs.append((g.group(1).strip() + "+-stat",float(g.group(3))))
 			else:
 				pair = re.compile('(.*?)\s+([0-9\.Ee\+-]+)')
 				g = pair.search(line)
@@ -34,8 +35,8 @@ def load_stat_folder(folder):
 				fname = fname[0:-1]
 			fname = fname + "-stat"
 			number = int(g.group(2))
-		if fname not in pairs.keys():
-			pairs[fname] = load_stat_file(file)
-		else:
-			pairs[fname]=pairs[fname].append(load_stat_file(file))
+			if fname not in pairs.keys():
+				pairs[fname] = load_stat_file(file)
+			else:
+				pairs[fname]=pd.concat([pairs[fname],load_stat_file(file)])
 	return pd.concat(pairs.values(),keys =pairs.keys())

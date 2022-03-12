@@ -26,10 +26,10 @@ def load_top_file(file):
 				fname = fname[0:-1]
 			fname = fname + "-" + g.group(3)
 			number = int(g.group(2))
-		if number not in pairs.keys():
-			pairs[number] = load_top_plot(top)
-		else:
-			pairs[number]=pairs[number].append(load_top_plot(top))
+			if number not in pairs.keys():
+				pairs[number] = load_top_plot(top)
+			else:
+				pairs[number]=pd.concat([pairs[number],load_top_plot(top)])
 	return pd.concat(pairs.values(),keys =pairs.keys())
 
 def load_top_folder(folder): # names
@@ -42,11 +42,12 @@ def load_top_folder(folder): # names
 			if fname[-1] == "-":
 				fname = fname[0:-1]
 			fname = fname + "-" + g.group(3)
-			number = int(g.group(2))
-		if fname not in pairs.keys():
-			pairs[fname] = load_top_file(file)
-		else:
-			pairs[fname]=pairs[fname].append(load_top_file(file))
+			if g.group(2) is not None:
+				number = int(g.group(2))
+				if fname not in pairs.keys():
+					pairs[fname] = load_top_file(file)
+				else:
+					pairs[fname]=pd.concat([pairs[fname],load_top_file(file)])
 	return pd.concat(pairs.values(),keys =pairs.keys())
 
 	

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import argparse
 import pytopdrawer
+import pypowhegparse as ppp
 import numpy as np
 from smpl import plot
 
@@ -9,9 +10,21 @@ def __main__():
 	parser = argparse.ArgumentParser()
 	parser.add_argument("folder", type=str,help="url/file/string")
 	args = parser.parse_args()
-	tops = pytopdrawer.read(args.folder)
-	for t in tops:
-		plot.data(t.xdata(),np.gradient(t.ydata()) ,fmt="-",grid=False)
-		t.show()
+
+
+	print("Checklimits warning stats:")
+	print("-"*50)
+	ppp.print_stats(args.folder)
+	print("-"*50)
+	print()
+	print("WWWARN:")
+	print("-"*50)
+	for a in ppp.inspect_warn_grep(args.folder,3):
+		print()
+		for s in a:
+			print(s)
+		print()
+	print("-"*50)
+
 
 __main__()

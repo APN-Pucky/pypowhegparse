@@ -36,7 +36,14 @@ def count_warn(folder,level=1,grep=True):
 		return len(search_for_warn_loop(folder,level))-1
 
 def print_stats(folder,grep=True):
-	print("#WARN    = ", count_warn("." ,1))
-	print("#WWARN   = ", count_warn("." ,2))
-	print("#WWWARN  = ", count_warn("." ,3))
-	print("#WWWWARN = ", count_warn("." ,4))
+	print("#WARN    = ", count_warn(folder ,1))
+	print("#WWARN   = ", count_warn(folder,2))
+	print("#WWWARN  = ", count_warn(folder ,3))
+	print("#WWWWARN = ", count_warn(folder ,4))
+
+def print_warn_grep(folder,level=3):
+	for a in inspect_warn_grep(folder,3):
+		print()
+		for s in a:
+			print(s)
+		print()
