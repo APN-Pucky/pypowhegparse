@@ -12,6 +12,7 @@ requirements = [
     "tqdm",
     "scipy",
     "validators",
+    "pytopdrawer",
 ]
 
 
