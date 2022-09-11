@@ -3,6 +3,17 @@ import subprocess
 def inspect_warn_loop(folder,level=1):
 	raise Exception ("Unimplemented")
 
+def error_colour_grep(folder):
+	p = subprocess.run("grep -H colour check fails " +folder + "/*checklimits*", shell=True, capture_output=True)
+	lines = p.stdout.split(b'\n')
+	return lines
+
+def error_spin_grep(folder):
+	p = subprocess.run("grep -H spin correlated amplitude wrong " +folder + "/*checklimits*", shell=True, capture_output=True)
+	lines = p.stdout.split(b'\n')
+	return lines
+	
+
 def inspect_warn_grep(folder,level=1):
 	after = 10
 	before = 10
