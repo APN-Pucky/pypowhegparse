@@ -7,7 +7,7 @@ import sys
 from smpl import plot
 
 
-def __main__():
+def main():
 	parser = argparse.ArgumentParser()
 	parser.add_argument('-f','--folder', type=str,help="url/file/string",default=".")
 	parser.add_argument('-w','--warn', type=int,help="level of warnings to fail",default=3)
@@ -48,4 +48,4 @@ def __main__():
 		print("-"*50)
 	sys.exit(exit_code)
 
-__main__()
+main()
