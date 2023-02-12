@@ -16,7 +16,7 @@ numpy = "*"
 pytopdrawer = "*"
 
 [tool.poetry.scripts]
-hepi-fast = "pypowhegparse.pypowhegparse:main"
+pypowhegparse = "pypowhegparse.pypowhegparse:main"
 
 [tool.poetry.group.dev]
 optional = true
