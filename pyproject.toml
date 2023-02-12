@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pytopdrawer"
+name = "pypowhegparse"
 version = "0.0.1"
 description = "Analyse POWHEG output files for potential errors."
 authors = ["Alexander Puck Neuwirth <alexander@neuwirth-informatik.de>"]
