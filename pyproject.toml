@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pypowhegparse"
-version = "0.0.3.8"
+version = "0.0.0"
 description = "Analyse POWHEG output files for potential errors."
 authors = ["Alexander Puck Neuwirth <alexander@neuwirth-informatik.de>"]
 readme = "README.md"
@@ -32,7 +32,7 @@ requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
 build-backend = "poetry_dynamic_versioning.backend"
 
 [tool.poetry-dynamic-versioning]
-enable = false
+enable = true
 vcs = "git"
 style = "pep440"
 dirty = true
