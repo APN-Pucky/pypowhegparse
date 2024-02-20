@@ -2399,21 +2399,17 @@ files = [
 
 [[package]]
 name = "pytopdrawer"
-version = "0.0.0"
-description = "draw top files in matplotlib/smpl"
+version = "0.0.3"
+description = "Plot top files with python and matplotlib (mainly from POWHEG)"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7,<4.0"
 files = [
-    {file = "pytopdrawer-0.0.0-py3-none-any.whl", hash = "sha256:e47e2d7cdb6e62241ef6f2df346446755a96be89549c8fecb640ab51af31a731"},
-    {file = "pytopdrawer-0.0.0.tar.gz", hash = "sha256:b7b85006844964b313a047d8928d472b600c4ff5abec6b7bcfdd921b431762c4"},
+    {file = "pytopdrawer-0.0.3-py3-none-any.whl", hash = "sha256:425d613145f5bdb7223053723ceefd25aea951fc56fdbb6a74bbb52b66a80078"},
 ]
 
 [package.dependencies]
-numpy = "*"
-requests = "*"
 smpl = "*"
-tqdm = "*"
-validators = "*"
+uncertainties = "*"
 
 [[package]]
 name = "pytz"
@@ -3163,22 +3159,6 @@ files = [
 brotli = ["brotli (>=1.0.9)", "brotlicffi (>=0.8.0)", "brotlipy (>=0.6.0)"]
 secure = ["certifi", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "ipaddress", "pyOpenSSL (>=0.14)", "urllib3-secure-extra"]
 socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
-
-[[package]]
-name = "validators"
-version = "0.20.0"
-description = "Python Data Validation for Humans™."
-optional = false
-python-versions = ">=3.4"
-files = [
-    {file = "validators-0.20.0.tar.gz", hash = "sha256:24148ce4e64100a2d5e267233e23e7afeb55316b47d30faae7eb6e7292bc226a"},
-]
-
-[package.dependencies]
-decorator = ">=3.4.0"
-
-[package.extras]
-test = ["flake8 (>=2.4.0)", "isort (>=4.2.2)", "pytest (>=2.2.3)"]
 
 [[package]]
 name = "virtualenv"
