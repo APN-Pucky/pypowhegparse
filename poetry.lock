@@ -2873,14 +2873,14 @@ files = [
 
 [[package]]
 name = "pytopdrawer"
-version = "0.0.7"
+version = "0.0.9"
 description = "Plot top files with python and matplotlib (mainly from POWHEG)"
 optional = false
-python-versions = ">=3.8,<4.0"
+python-versions = "<4.0,>=3.8"
 groups = ["main"]
 files = [
-    {file = "pytopdrawer-0.0.7-py3-none-any.whl", hash = "sha256:994bb38c168d8a61e619ef90a8cc00955af23aa607183d0eb385d571bba38990"},
-    {file = "pytopdrawer-0.0.7.tar.gz", hash = "sha256:8ba5a73f6fc6651a83a47ede70993d256b3bc5cd8064145c530c017bbfa9d893"},
+    {file = "pytopdrawer-0.0.9-py3-none-any.whl", hash = "sha256:347fc5b1a678e339f315c816df520fdda2696f008689309467697679c3feddb1"},
+    {file = "pytopdrawer-0.0.9.tar.gz", hash = "sha256:bbbfef483439042ea3ad93a320d2995d366a13cf52f17f23b6d8e86d83a3cc78"},
 ]
 
 [package.dependencies]
