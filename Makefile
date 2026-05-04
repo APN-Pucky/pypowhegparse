@@ -8,7 +8,7 @@ doc: html
 
 install:
 	poetry install --with dev
-	python3 -m pip install --user .
+	python3 -m pip install --user . --break-system-packages
 
 build:
 	poetry build
