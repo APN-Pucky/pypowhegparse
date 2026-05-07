@@ -1,32 +1,36 @@
 import glob
+import subprocess
 from pathlib import Path
 
-from smpl.io.grep import grep as smplgrep
+
+def grepc(parttern, file):
+    result = subprocess.run(
+        ["grep", "-a", "-c", parttern, file],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+    )
+    if result.returncode == 0:
+        return int(result.stdout.strip())
+    else:
+        return 0
 
 
 def grep(parttern, file):
-    # check if grep is installed and use it if so, otherwise fall back to a pure Python implementation
-    try:
-        import subprocess
-
-        result = subprocess.run(
-            ["grep", "-a", parttern, file],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            encoding="utf-8",
-            errors="replace",
-        )
-        if result.returncode == 0:
-            return result.stdout.splitlines()
-        else:
-            return ""
-    except FileNotFoundError:
-        return (
-            smplgrep(parttern, file, encoding="utf-8", errors="replace")
-            .read()
-            .splitlines()
-        )
+    result = subprocess.run(
+        ["grep", "-a", parttern, file],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+    )
+    if result.returncode == 0:
+        return result.stdout.splitlines()
+    else:
+        return ""
 
 
 def _checklimits_files(folder, file_filter=None):
@@ -47,7 +51,14 @@ def inspect_warn_loop(folder, level=1):
     raise Exception("Unimplemented")
 
 
-def error_colour_grep(folder, file_filter=None):
+def error_colour_grepc(folder, file_filter=None) -> int:
+    count = 0
+    for file in _checklimits_files(folder, file_filter=file_filter):
+        count += grepc("colour check fails", file)
+    return count
+
+
+def error_colour_grep(folder, file_filter=None) -> list[str]:
     matches = []
     for file in _checklimits_files(folder, file_filter=file_filter):
         lines = grep("colour check fails", file)
@@ -55,7 +66,14 @@ def error_colour_grep(folder, file_filter=None):
     return _encode_lines(matches)
 
 
-def error_spin_grep(folder, file_filter=None):
+def error_spin_grepc(folder, file_filter=None) -> int:
+    count = 0
+    for file in _checklimits_files(folder, file_filter=file_filter):
+        count += grepc("spin correlated amplitude wrong", file)
+    return count
+
+
+def error_spin_grep(folder, file_filter=None) -> list[str]:
     matches = []
     for file in _checklimits_files(folder, file_filter=file_filter):
         lines = grep("spin correlated amplitude wrong", file)
@@ -64,7 +82,7 @@ def error_spin_grep(folder, file_filter=None):
 
 
 def inspect_warn_grep(folder, level=1, after=10, before=10, file_filter=None):
-    pattern = "W" * level + "ARN"
+    pattern = "\\*\\-" + "W" * level + "ARN" + "\\-\\*"
     blocks = []
 
     for file in _checklimits_files(folder, file_filter=file_filter):
@@ -96,12 +114,20 @@ def search_for_warn_loop(folder, level=1):
     raise Exception("Unimplemented")
 
 
-def search_for_warn_grep(folder, level=1, file_filter=None):
+def search_for_warn_grep(folder, level=1, file_filter=None) -> list[str]:
     pattern = "W" * level + "ARN"
     matches = []
     for file in _checklimits_files(folder, file_filter=file_filter):
         matches.extend(grep(pattern, file))
     return _encode_lines(matches)
+
+
+def search_for_warn_grepc(folder, level=1, file_filter=None) -> int:
+    pattern = "\\*\\-" + "W" * level + "ARN" + "\\-\\*"
+    count = 0
+    for file in _checklimits_files(folder, file_filter=file_filter):
+        count += grepc(pattern, file)
+    return count
 
 
 def search_for_warn(folder, level=1, grep=True, file_filter=None):
@@ -113,17 +139,7 @@ def search_for_warn(folder, level=1, grep=True, file_filter=None):
 
 def count_warn(folder, level=1, grep=True, file_filter=None):
     if grep:
-        return len(
-            [
-                line
-                for line in search_for_warn_grep(
-                    folder,
-                    level,
-                    file_filter=file_filter,
-                )
-                if line
-            ]
-        )
+        return search_for_warn_grepc(folder, level, file_filter=file_filter)
     else:
         return len(search_for_warn_loop(folder, level)) - 1
 

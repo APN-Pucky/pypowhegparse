@@ -13,8 +13,8 @@ import pandas as pd
 
 from .checklimits import (
     count_warn,
-    error_colour_grep,
-    error_spin_grep,
+    error_colour_grepc,
+    error_spin_grepc,
 )
 from .counters import load_counter_folder
 from .stat import load_stat_folder
@@ -667,20 +667,18 @@ def _checklimits_summary(
         ("WWWWARN", count_warn(str(folder), 4, file_filter=file_filter)),
         ("WWWWWARN", count_warn(str(folder), 5, file_filter=file_filter)),
     ]
-    colour_lines = _bytes_to_lines(
-        error_colour_grep(str(folder), file_filter=file_filter)
-    )
-    spin_lines = _bytes_to_lines(error_spin_grep(str(folder), file_filter=file_filter))
+    colour_lines = error_colour_grepc(str(folder), file_filter=file_filter)
+    spin_lines = error_spin_grepc(str(folder), file_filter=file_filter)
     summary = pd.DataFrame.from_records(
         [
             *warn_rows,
-            ("colour check failures", len(colour_lines)),
-            ("spin-correlation failures", len(spin_lines)),
+            ("colour check failures", colour_lines),
+            ("spin-correlation failures", spin_lines),
         ],
         columns=["check", "count"],
     ).set_index("check")
 
-    return summary, colour_lines, spin_lines
+    return summary
 
 
 def _checklimits_status_counts(
@@ -766,14 +764,12 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
     _debug_print_timing_summary(args, timings, "Parser Input")
 
     warn_summary = None
-    colour_lines: list[str] = []
-    spin_lines: list[str] = []
     summary_warning_count = 0
     summary_failure_count = 0
 
     if not args.no_checklimits:
         checklimits_start = time.perf_counter()
-        warn_summary, colour_lines, spin_lines = _checklimits_summary(
+        warn_summary = _checklimits_summary(
             folder,
             args.warn_level,
             file_filter=file_filter,
