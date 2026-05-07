@@ -494,9 +494,11 @@ def _build_file_filter(
     return lambda file_path: _extract_run_number(file_path) == args.run_number
 
 
-def _safe_load_dataframe(loader, folder: Path, file_filter=None) -> pd.DataFrame | None:
+def _safe_load_dataframe(
+    loader, folder: Path, file_filter=None, **kwargs
+) -> pd.DataFrame | None:
     try:
-        return loader(str(folder), file_filter=file_filter)
+        return loader(str(folder), file_filter=file_filter, **kwargs)
     except ValueError as exc:
         if "No objects to concatenate" in str(exc):
             return None
@@ -738,7 +740,9 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
     top_df = (
         None
         if args.no_top
-        else _safe_load_dataframe(load_top_folder, folder, file_filter=file_filter)
+        else _safe_load_dataframe(
+            load_top_folder, folder, file_filter=file_filter, first_only=True
+        )
     )
     timings.append(("load_top_folder", time.perf_counter() - top_start))
 

@@ -12,10 +12,44 @@ TOP_RUN_RE = re.compile(r"^(pwg[a-zA-Z0-9-]*?)-(\d{4})-([a-zA-Z0-9-]+?grid)\.top
 TOP_SERIAL_RE = re.compile(r"^(pwg[a-zA-Z0-9-]*?)-([a-zA-Z0-9-]+?grid)\.top$")
 
 
-def _top_files(folder, file_filter=None):
+def _top_files(folder, file_filter=None, first_only=False):
     files = sorted(glob.glob(folder + "/pwg*.top"))
     if file_filter is not None:
         files = [file for file in files if file_filter(file)]
+
+    # Keep one file per logical top-file family, preferring no run number,
+    # then 0001, 0002, ...
+    if first_only and files:
+        selected = {}
+        for file in files:
+            basename = os.path.basename(file)
+
+            run_match = TOP_RUN_RE.search(basename)
+            if run_match is not None:
+                fname = run_match.group(1)
+                if fname.endswith("-"):
+                    fname = fname[:-1]
+                key = f"{fname}-{run_match.group(3)}"
+                priority = int(run_match.group(2))
+            else:
+                serial_match = TOP_SERIAL_RE.search(basename)
+                if serial_match is not None:
+                    fname = serial_match.group(1)
+                    if fname.endswith("-"):
+                        fname = fname[:-1]
+                    key = f"{fname}-{serial_match.group(2)}"
+                    priority = 0
+                else:
+                    # Unknown names are kept as-is and not merged.
+                    key = basename
+                    priority = 0
+
+            current = selected.get(key)
+            if current is None or (priority, file) < (current[0], current[1]):
+                selected[key] = (priority, file)
+
+        files = sorted(file for _, file in selected.values())
+
     return files
 
 
@@ -60,9 +94,9 @@ def load_top_file(file):
     return pd.concat(pairs.values(), keys=pairs.keys())
 
 
-def load_top_folder(folder, file_filter=None):  # names
+def load_top_folder(folder, file_filter=None, first_only=False):  # names
     pairs = {}
-    for file in _top_files(folder, file_filter=file_filter):
+    for file in _top_files(folder, file_filter=file_filter, first_only=first_only):
         try:
             fname, _ = _top_file_info(file)
         except ValueError:
