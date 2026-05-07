@@ -1,0 +1,44 @@
+Beginning sequence of equivalent amplitudes
+   1      0.1000D+01       -5    0   11  -11   -5
+   5      0.1000D+01       -3    0   11  -11   -3
+   9      0.1000D+01       -1    0   11  -11   -1
+Beginning sequence of equivalent amplitudes
+   2      0.1000D+01       -5    5   11  -11    0
+   6      0.1000D+01       -3    3   11  -11    0
+  10      0.1000D+01       -1    1   11  -11    0
+Beginning sequence of equivalent amplitudes
+   3      0.1000D+01       -4    0   11  -11   -4
+   7      0.1000D+01       -2    0   11  -11   -2
+Beginning sequence of equivalent amplitudes
+   4      0.1000D+01       -4    4   11  -11    0
+   8      0.1000D+01       -2    2   11  -11    0
+Beginning sequence of equivalent amplitudes
+  11      0.1000D+01        0   -5   11  -11   -5
+  13      0.1000D+01        0   -3   11  -11   -3
+  15      0.1000D+01        0   -1   11  -11   -1
+Beginning sequence of equivalent amplitudes
+  12      0.1000D+01        0   -4   11  -11   -4
+  14      0.1000D+01        0   -2   11  -11   -2
+Beginning sequence of equivalent amplitudes
+  16      0.1000D+01        0    1   11  -11    1
+  18      0.1000D+01        0    3   11  -11    3
+  20      0.1000D+01        0    5   11  -11    5
+Beginning sequence of equivalent amplitudes
+  17      0.1000D+01        0    2   11  -11    2
+  19      0.1000D+01        0    4   11  -11    4
+Beginning sequence of equivalent amplitudes
+  21      0.1000D+01        1   -1   11  -11    0
+  25      0.1000D+01        3   -3   11  -11    0
+  29      0.1000D+01        5   -5   11  -11    0
+Beginning sequence of equivalent amplitudes
+  22      0.1000D+01        1    0   11  -11    1
+  26      0.1000D+01        3    0   11  -11    3
+  30      0.1000D+01        5    0   11  -11    5
+Beginning sequence of equivalent amplitudes
+  23      0.1000D+01        2   -2   11  -11    0
+  27      0.1000D+01        4   -4   11  -11    0
+Beginning sequence of equivalent amplitudes
+  24      0.1000D+01        2    0   11  -11    2
+  28      0.1000D+01        4    0   11  -11    4
+ 
+Found   12 equivalent groups

@@ -1,0 +1,15 @@
+
+ Value of counters at end of run:
+ setrandom time (sec) =    0.0000000000000000     
+ upper bound failure in inclusive cross section =    78537.000000000000     
+ vetoed calls in inclusive cross section =    841910.00000000000     
+ upper bound failures in generation of radiation =    0.0000000000000000     
+ vetoed radiation =    0.0000000000000000     
+ remnant cross section used: =    38894367644.013084     
+ remnant cross section estimate: =    33168857269.808521     
+ remnant cross section error estimate: =    4675034563.1939325     
+ remnant cross section estimate num. points: =    941910.00000000000     
+ remnant time (sec) =    1676.2299999995755     
+ remnant event =    100000.00000000000     
+ NaN exception =    75.000000000000000     
+
