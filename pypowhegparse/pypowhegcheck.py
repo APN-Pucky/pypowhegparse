@@ -53,12 +53,13 @@ def _strip_ansi(text: str) -> str:
     return ANSI_RE.sub("", text)
 
 
-def _status_and_content(line: str) -> tuple[str, str] | None:
+def _status_and_content(line: str) -> tuple[str, str, str] | None:
     match = STATUS_LINE_RE.match(_strip_ansi(line))
     if match is None:
         return None
     label, content = match.groups()
-    return ("fail" if "FAIL" in label else "warn", content)
+    rendered_label, rendered_content = line.split("  ", 1)
+    return ("fail" if "FAIL" in label else "warn", rendered_label, rendered_content)
 
 
 def _should_include_status(status: str, args: argparse.Namespace) -> bool:
@@ -68,7 +69,7 @@ def _should_include_status(status: str, args: argparse.Namespace) -> bool:
 def _extract_section_matches(
     output: str,
     args: argparse.Namespace,
-) -> dict[str, list[tuple[str, str]]]:
+) -> dict[str, list[tuple[str, str, str]]]:
     matches = {key: [] for key in SECTION_LABELS.values()}
     current_section = None
     current_group = None
@@ -89,20 +90,24 @@ def _extract_section_matches(
         if parsed is None or current_section is None:
             continue
 
-        status, content = parsed
+        status, rendered_label, rendered_content = parsed
         if not _should_include_status(status, args):
             continue
 
         if current_section in {"counters", "stats"} and current_group is not None:
-            content = f"{current_group} {content}"
+            rendered_content = f"{current_group} {rendered_content}"
 
-        matches[current_section].append((status, content))
+        matches[current_section].append((status, rendered_label, rendered_content))
 
     return matches
 
 
-def _format_match_line(run_number: str, status: str, content: str) -> str:
-    return f"{run_number} {status.upper()}: {content}"
+def _format_match_line(
+    run_number: str,
+    rendered_label: str,
+    rendered_content: str,
+) -> str:
+    return f"{run_number} {rendered_label}  {rendered_content}"
 
 
 def _build_overview_args(
@@ -174,23 +179,23 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
         matches = _extract_section_matches(output, args)
 
         for section_key in ("checklimits", "counters", "stats"):
-            for status, content in matches[section_key]:
+            for status, rendered_label, rendered_content in matches[section_key]:
                 if status == "warn":
                     saw_warning = True
                 if status == "fail":
                     saw_failure = True
                 section_lines[section_key].append(
-                    _format_match_line(run_number, status, content)
+                    _format_match_line(run_number, rendered_label, rendered_content)
                 )
 
         if not top_recorded and matches["top"]:
-            for status, content in matches["top"]:
+            for status, rendered_label, rendered_content in matches["top"]:
                 if status == "warn":
                     saw_warning = True
                 if status == "fail":
                     saw_failure = True
                 section_lines["top"].append(
-                    _format_match_line(run_number, status, content)
+                    _format_match_line(run_number, rendered_label, rendered_content)
                 )
             top_recorded = True
 

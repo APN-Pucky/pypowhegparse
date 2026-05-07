@@ -109,6 +109,26 @@ def test_cli_warns_on_nan_exception_in_counter_summary(capsys):
     assert "50+-35.3553" in captured.out
 
 
+def test_cli_no_color_flag_disables_ansi_but_keeps_symbols(capsys):
+    exit_code = cli.main(["tests/directphoton", "--no-top-plots", "--no-color"])
+    captured = capsys.readouterr()
+
+    assert exit_code == 1
+    assert "\x1b[" not in captured.out
+    assert "✗ FAIL" in captured.out
+
+
+def test_cli_no_color_env_var_disables_ansi(monkeypatch, capsys):
+    monkeypatch.setenv("NO_COLOR", "1")
+
+    exit_code = cli.main(["tests/directphoton", "--no-top-plots"])
+    captured = capsys.readouterr()
+
+    assert exit_code == 1
+    assert "\x1b[" not in captured.out
+    assert "✗ FAIL" in captured.out
+
+
 def test_summary_formatter_marks_failures_and_warnings():
     df = cli.pd.DataFrame(
         {

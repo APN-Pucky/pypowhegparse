@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import signal
 import argparse
+import os
 import re
 from pathlib import Path
 from typing import Callable, Iterable, Sequence
@@ -20,6 +21,7 @@ from .stat import load_stat_folder
 from .top import load_top_folder
 
 
+ANSI_RE = re.compile(r"\x1b\[[0-9;]*m")
 SECTION_WIDTH = 88
 FAIL_LABEL = "\033[31m✗ FAIL\033[0m"
 WARN_LABEL = "\033[33m⚠ WARN\033[0m"
@@ -27,8 +29,8 @@ FAIL_LABEL_WIDTH = len("✗ FAIL")
 STATUS_LABEL_WIDTH = max(len("✗ FAIL"), len("⚠ WARN"))
 DEFAULT_NEGATIVE_WEIGHT_FRACTION_WARN = 0.1
 DEFAULT_NEGATIVE_WEIGHT_FRACTION_FAIL = 0.5
-DEFAULT_STAT_RELATIVE_WARN = 0.25
-DEFAULT_STAT_RELATIVE_FAIL = 0.5
+DEFAULT_STAT_RELATIVE_WARN = 0.5
+DEFAULT_STAT_RELATIVE_FAIL = 1.0
 DEFAULT_FAILING_CHECKS = {
     "WWWWWARN",
     "colour check failures",
@@ -74,6 +76,11 @@ def build_parser() -> argparse.ArgumentParser:
         "--run-number",
         type=_parse_run_number,
         help="Only include files for this run number, for example 0001 or 9999.",
+    )
+    parser.add_argument(
+        "--no-color",
+        action="store_true",
+        help="Disable ANSI color output. Also honored when NO_COLOR is set.",
     )
     parser.add_argument(
         "--no-counters",
@@ -275,7 +282,7 @@ def _checklimits_summary_to_string(
         f"{' ' * STATUS_LABEL_WIDTH}  {'check':<{check_width}}  {'count':>{count_width}}"
     ]
     for check, count in zip(checks, counts):
-        prefix = _status_prefix(_checklimits_status(str(check), int(count), args))
+        prefix = _status_prefix(_checklimits_status(str(check), int(count), args), args)
         lines.append(f"{prefix}  {check:<{check_width}}  {count:>{count_width}}")
     return "\n".join(lines)
 
@@ -286,16 +293,33 @@ def _format_number(value: float) -> str:
     return f"{float(value):.6g}"
 
 
-def _status_prefix(status: str) -> str:
+def _no_color_requested(args: argparse.Namespace | None = None) -> bool:
+    if args is not None and getattr(args, "no_color", False):
+        return True
+    no_color = os.environ.get("NO_COLOR")
+    return no_color is not None and no_color != ""
+
+
+def _maybe_strip_ansi(text: str, args: argparse.Namespace | None = None) -> str:
+    if _no_color_requested(args):
+        return ANSI_RE.sub("", text)
+    return text
+
+
+def _status_prefix(status: str, args: argparse.Namespace | None = None) -> str:
     if status == "fail":
-        return FAIL_LABEL
+        return _maybe_strip_ansi(FAIL_LABEL, args)
     if status == "warn":
-        return WARN_LABEL
+        return _maybe_strip_ansi(WARN_LABEL, args)
     return " " * STATUS_LABEL_WIDTH
 
 
-def _prefixed_block_lines(text: str, status: str) -> list[str]:
-    prefix = f"{_status_prefix(status)}  "
+def _prefixed_block_lines(
+    text: str,
+    status: str,
+    args: argparse.Namespace | None = None,
+) -> list[str]:
+    prefix = f"{_status_prefix(status, args)}  "
     return [f"{prefix}{line}" for line in text.splitlines()]
 
 
@@ -428,7 +452,7 @@ def _mean_std_summary(
             if status == "fail":
                 failure_count += 1
             lines.append(
-                f"{_status_prefix(status)}  {_metric_label(column):<{label_width}}  "
+                f"{_status_prefix(status, args)}  {_metric_label(column):<{label_width}}  "
                 f"{_format_summary_value(mean, std)}"
             )
         lines.append("")
@@ -794,13 +818,14 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
                         summary_failure_count += 1
                     print()
                     print(
-                        f"{_status_prefix(top_status)}  "
+                        f"{_status_prefix(top_status, args)}  "
                         f"[{row.top_file} run {row.run} | {row.plot_title} | "
                         f"pvalue={row.pvalue:.6g} chi2={row.chi2:.6g}]"
                     )
                     for line in _prefixed_block_lines(
                         row.plot.terminal_plot_str(),
                         top_status,
+                        args,
                     ):
                         print(line)
     elif not args.no_top:
