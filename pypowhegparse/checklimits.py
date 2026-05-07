@@ -42,9 +42,12 @@ def inspect_warn_grep(folder, level=1):
     blocks = []
 
     for file in _checklimits_files(folder):
+        matched_lines = grep(pattern, file).read().splitlines()
+        if not matched_lines:
+            continue
+
         path = Path(file)
         lines = path.read_text().splitlines()
-        matched_lines = grep(pattern, file).read().splitlines()
         search_start = 0
 
         for matched_line in matched_lines:
