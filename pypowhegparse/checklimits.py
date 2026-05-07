@@ -1,7 +1,7 @@
 import glob
 from pathlib import Path
 
-from smpl_io.grep import grep
+from smpl.io.grep import grep
 
 
 def _checklimits_files(folder):
