@@ -16,6 +16,7 @@ numpy = "*"
 pytopdrawer = ">=0.0.11"
 
 [tool.poetry.scripts]
+pypowhegparse = "pypowhegparse.pypowhegoverview:main"
 pypowhegoverview = "pypowhegparse.pypowhegoverview:main"
 pypowhegcheck = "pypowhegparse.pypowhegcheck:main"
 
