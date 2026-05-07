@@ -5,7 +5,6 @@ import pandas as pd
 import re
 import pytopdrawer as ptd
 from pytopdrawer import TopPlot
-from scipy.stats import chisquare
 from scipy.stats import chi2
 
 
@@ -98,7 +97,6 @@ def chisquare_tops(folder, p_min=0.33):
     for file in glob.glob(folder + "/*.top"):
         tops = ptd.read(file)
         for top in tops:
-            chi2 = chisquare_top(top)
             p = pvalue_top(top)
             if p < p_min:
                 print("p=", p)
@@ -107,13 +105,9 @@ def chisquare_tops(folder, p_min=0.33):
 
 def btlgrid_tops(folder, p_min=0.95):
     for file in glob.glob(folder + "/*btlgrid.top"):
-        title = re.compile(r"(pwg-[a-zA-Z0-9-]+)-(\d*)-?btlgrid.top")
-
         tops = ptd.read(file)
         for top in tops:
-            mask = top.xdata() > 0
-            chi2 = chisquare(top.ydata()[mask], top.xdata()[mask])
-            p = pvalue_top(top.ydata()[mask], top.xdata()[mask])
+            p = pvalue_top(top)
             if p < p_min:
                 print("p=", p)
                 top.show()
