@@ -179,9 +179,11 @@ def test_summary_formatter_marks_large_relative_stat_values():
 
     summary, warning_count, failure_count = cli._mean_std_summary(df)
 
-    assert warning_count == 1
-    assert failure_count == 1
+    assert warning_count == 2
+    assert failure_count == 2
+    assert "\x1b[33m⚠ WARN\x1b[0m  signal:" in summary
     assert "\x1b[33m⚠ WARN\x1b[0m  signal+-stat:" in summary
+    assert "\x1b[31m✗ FAIL\x1b[0m  background:" in summary
     assert "\x1b[31m✗ FAIL\x1b[0m  background+-stat:" in summary
 
 

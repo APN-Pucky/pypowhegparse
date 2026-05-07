@@ -379,6 +379,52 @@ def _relative_stat_status(
     return "ok"
 
 
+def _status_severity(status: str) -> int:
+    if status == "fail":
+        return 2
+    if status == "warn":
+        return 1
+    return 0
+
+
+def _promote_status(current: str, candidate: str | None) -> str:
+    if candidate is None:
+        return current
+    if _status_severity(candidate) > _status_severity(current):
+        return candidate
+    return current
+
+
+def _paired_relative_stat_status(
+    column: str,
+    means: pd.Series,
+    args: argparse.Namespace | None = None,
+) -> str | None:
+    normalized = column.strip()
+    if "+-stat" in normalized:
+        mean = means.get(column)
+        if mean is None or pd.isna(mean):
+            return None
+        return _relative_stat_status(column, mean, means, args)
+
+    stat_column = f"{column}+-stat"
+    stat_mean = means.get(stat_column)
+    if stat_mean is None or pd.isna(stat_mean):
+        stripped_lookup = {str(key).strip(): value for key, value in means.items()}
+        stat_mean = stripped_lookup.get(stat_column.strip())
+        if stat_mean is None or pd.isna(stat_mean):
+            return None
+        stat_column = next(
+            (
+                str(key)
+                for key in means.keys()
+                if str(key).strip() == f"{column.strip()}+-stat"
+            ),
+            stat_column,
+        )
+    return _relative_stat_status(stat_column, stat_mean, means, args)
+
+
 def _format_summary_value(mean: float, std: float) -> str:
     mean_text = _format_number(mean)
     if pd.isna(std):
@@ -393,6 +439,7 @@ def _metric_status(
     args: argparse.Namespace | None = None,
 ) -> str:
     normalized = column.strip()
+    status = "ok"
     negative_weight_fraction_warn = getattr(
         args,
         "negative_weight_fraction_warn",
@@ -404,26 +451,24 @@ def _metric_status(
         DEFAULT_NEGATIVE_WEIGHT_FRACTION_FAIL,
     )
 
-    relative_stat_status = _relative_stat_status(column, mean, means, args)
-    if relative_stat_status is not None and relative_stat_status != "ok":
-        return relative_stat_status
+    status = _promote_status(status, _paired_relative_stat_status(column, means, args))
 
     if "negative weight fraction" in normalized:
         if mean > negative_weight_fraction_fail:
-            return "fail"
+            status = _promote_status(status, "fail")
         if mean > negative_weight_fraction_warn:
-            return "warn"
+            status = _promote_status(status, "warn")
 
     if normalized == "NaN exception" and mean > 0:
-        return "warn"
+        status = _promote_status(status, "warn")
 
     if "cross section error estimate:" in normalized:
         estimate_column = column.replace(" error estimate:", " estimate:")
         estimate = means.get(estimate_column)
         if estimate is not None and pd.notna(estimate) and mean > estimate:
-            return "fail"
+            status = _promote_status(status, "fail")
 
-    return "ok"
+    return status
 
 
 def _mean_std_summary(
