@@ -429,7 +429,7 @@ def _format_summary_value(mean: float, std: float) -> str:
     mean_text = _format_number(mean)
     if pd.isna(std):
         return mean_text
-    return f"{mean_text}+-{_format_number(std)}"
+    return f"{mean_text} +- {_format_number(std)}"
 
 
 def _metric_status(

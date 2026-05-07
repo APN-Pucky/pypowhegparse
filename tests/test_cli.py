@@ -114,7 +114,7 @@ def test_cli_warns_on_nan_exception_in_counter_summary(capsys):
 
     assert exit_code == 0
     assert "\x1b[33m⚠ WARN\x1b[0m  NaN exception:" in captured.out
-    assert "50+-35.3553" in captured.out
+    assert "50 +- 35.3553" in captured.out
 
 
 def test_cli_no_color_flag_disables_ansi_but_keeps_symbols(capsys):
@@ -156,11 +156,11 @@ def test_summary_formatter_marks_failures_and_warnings():
     assert warning_count == 1
     assert failure_count == 2
     assert "\x1b[31m✗ FAIL\x1b[0m  negative weight fraction:" in summary
-    assert "0.65+-0.0707107" in summary
+    assert "0.65 +- 0.0707107" in summary
     assert "\x1b[31m✗ FAIL\x1b[0m  btilde cross section error estimate:" in summary
-    assert "12+-0" in summary
+    assert "12 +- 0" in summary
     assert "\x1b[33m⚠ WARN\x1b[0m  NaN exception:" in summary
-    assert "0.5+-0.707107" in summary
+    assert "0.5 +- 0.707107" in summary
 
 
 def test_summary_formatter_marks_large_relative_stat_values():
@@ -242,7 +242,7 @@ def test_negative_weight_fraction_thresholds_are_adjustable():
     assert "\x1b[31m✗ FAIL\x1b[0m" not in summary
 
 
-def test_summary_formatter_aligns_value_column():
+def test_summary_formatter_uses_spaced_plus_minus():
     df = cli.pd.DataFrame(
         {
             "short": [1.0, 3.0],
@@ -260,11 +260,8 @@ def test_summary_formatter_aligns_value_column():
     assert warning_count == 0
     assert failure_count == 0
     assert len(metric_lines) == 2
-    value_columns = [
-        line.index("2+-") if "2+-" in line else line.index("3+-")
-        for line in metric_lines
-    ]
-    assert value_columns[0] == value_columns[1]
+    assert "2 +- 1.41421" in metric_lines[0]
+    assert "3 +- 1.41421" in metric_lines[1]
 
 
 def test_top_plot_status_thresholds_are_adjustable():
@@ -311,7 +308,7 @@ def test_cli_strict_returns_nonzero_on_warning_only(capsys):
 
     assert exit_code == 1
     assert "\x1b[33m⚠ WARN\x1b[0m  NaN exception:" in captured.out
-    assert "50+-35.3553" in captured.out
+    assert "50 +- 35.3553" in captured.out
 
 
 def test_cli_handles_missing_powheg_outputs(tmp_path, capsys):
