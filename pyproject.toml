@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pypowhegparse"
-version = "0.0.6"
+version = "0.0.7"
 description = "Analyse POWHEG output files for potential errors."
 authors = ["Alexander Puck Neuwirth <alexander@neuwirth-informatik.de>"]
 readme = "README.md"
@@ -13,7 +13,7 @@ uncertainties = "*"
 pandas = "*"
 scipy = "*"
 numpy = "*"
-pytopdrawer = "*"
+pytopdrawer = ">=0.0.11"
 
 [tool.poetry.scripts]
 pypowhegparse = "pypowhegparse.pypowhegparse:main"
