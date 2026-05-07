@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.9] - 2026-05-07
+
+### Changed
+
+- improved speed by using grep -c instead of python code
+
 ## [0.0.8] - 2026-05-07
 
 ### Added
