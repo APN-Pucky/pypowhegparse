@@ -833,7 +833,7 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
                         f"pvalue={row.pvalue:.6g} chi2={row.chi2:.6g}]"
                     )
                     for line in _prefixed_block_lines(
-                        row.plot.terminal_plot_str(),
+                        _maybe_strip_ansi(row.plot.terminal_plot_str(), args),
                         top_status,
                         args,
                     ):
