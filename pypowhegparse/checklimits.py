@@ -35,9 +35,7 @@ def error_spin_grep(folder):
     return _encode_lines(matches)
 
 
-def inspect_warn_grep(folder, level=1):
-    after = 10
-    before = 10
+def inspect_warn_grep(folder, level=1, after=10, before=10):
     pattern = "W" * level + "ARN"
     blocks = []
 
