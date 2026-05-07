@@ -126,6 +126,33 @@ def test_summary_formatter_marks_failures_and_warnings():
     assert "0.5+-0.707107" in summary
 
 
+def test_negative_weight_fraction_thresholds_are_adjustable():
+    df = cli.pd.DataFrame(
+        {
+            "negative weight fraction:": [0.2, 0.2],
+        },
+        index=cli.pd.MultiIndex.from_tuples(
+            [("group", 1), ("group", 2)],
+            names=["proc", "run"],
+        ),
+    )
+    args = cli.build_parser().parse_args(
+        [
+            "--negative-weight-fraction-warn",
+            "0.3",
+            "--negative-weight-fraction-fail",
+            "0.6",
+        ]
+    )
+
+    summary, warning_count, failure_count = cli._mean_std_summary(df, args)
+
+    assert warning_count == 0
+    assert failure_count == 0
+    assert "\x1b[33m⚠ WARN\x1b[0m" not in summary
+    assert "\x1b[31m✗ FAIL\x1b[0m" not in summary
+
+
 def test_summary_formatter_aligns_value_column():
     df = cli.pd.DataFrame(
         {

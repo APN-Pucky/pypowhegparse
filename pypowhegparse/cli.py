@@ -22,6 +22,8 @@ FAIL_LABEL = "\033[31m✗ FAIL\033[0m"
 WARN_LABEL = "\033[33m⚠ WARN\033[0m"
 FAIL_LABEL_WIDTH = len("✗ FAIL")
 STATUS_LABEL_WIDTH = max(len("✗ FAIL"), len("⚠ WARN"))
+DEFAULT_NEGATIVE_WEIGHT_FRACTION_WARN = 0.1
+DEFAULT_NEGATIVE_WEIGHT_FRACTION_FAIL = 0.5
 DEFAULT_FAILING_CHECKS = {
     "WWWWWARN",
     "colour check failures",
@@ -121,6 +123,18 @@ def build_parser() -> argparse.ArgumentParser:
         type=float,
         default=10.83,
         help="Mark a top-plot title as failure when chi2 is at or above this threshold.",
+    )
+    parser.add_argument(
+        "--negative-weight-fraction-warn",
+        type=float,
+        default=DEFAULT_NEGATIVE_WEIGHT_FRACTION_WARN,
+        help="Mark a negative weight fraction summary entry as warning above this threshold.",
+    )
+    parser.add_argument(
+        "--negative-weight-fraction-fail",
+        type=float,
+        default=DEFAULT_NEGATIVE_WEIGHT_FRACTION_FAIL,
+        help="Mark a negative weight fraction summary entry as failure above this threshold.",
     )
     parser.add_argument(
         "--warn-level",
@@ -252,13 +266,28 @@ def _metric_label(column: str) -> str:
     return label
 
 
-def _metric_status(column: str, mean: float, means: pd.Series) -> str:
+def _metric_status(
+    column: str,
+    mean: float,
+    means: pd.Series,
+    args: argparse.Namespace | None = None,
+) -> str:
     normalized = column.strip()
+    negative_weight_fraction_warn = getattr(
+        args,
+        "negative_weight_fraction_warn",
+        DEFAULT_NEGATIVE_WEIGHT_FRACTION_WARN,
+    )
+    negative_weight_fraction_fail = getattr(
+        args,
+        "negative_weight_fraction_fail",
+        DEFAULT_NEGATIVE_WEIGHT_FRACTION_FAIL,
+    )
 
     if "negative weight fraction" in normalized:
-        if mean > 0.5:
+        if mean > negative_weight_fraction_fail:
             return "fail"
-        if mean > 0.1:
+        if mean > negative_weight_fraction_warn:
             return "warn"
 
     if normalized == "NaN exception" and mean > 0:
@@ -273,7 +302,10 @@ def _metric_status(column: str, mean: float, means: pd.Series) -> str:
     return "ok"
 
 
-def _mean_std_summary(df: pd.DataFrame) -> tuple[str, int, int]:
+def _mean_std_summary(
+    df: pd.DataFrame,
+    args: argparse.Namespace | None = None,
+) -> tuple[str, int, int]:
     label_width = 0
     for group_name in df.index.get_level_values(0).unique():
         group_df = df.xs(group_name)
@@ -297,7 +329,7 @@ def _mean_std_summary(df: pd.DataFrame) -> tuple[str, int, int]:
             if pd.isna(mean):
                 continue
             std = stds.get(column)
-            status = _metric_status(column, mean, means)
+            status = _metric_status(column, mean, means, args)
             if status == "warn":
                 warning_count += 1
             if status == "fail":
@@ -578,7 +610,8 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
     if counter_df is not None:
         _section("Counter Summary")
         counter_summary, counter_warnings, counter_failures = _mean_std_summary(
-            counter_df
+            counter_df,
+            args,
         )
         summary_warning_count += counter_warnings
         summary_failure_count += counter_failures
@@ -589,7 +622,7 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
 
     if stat_df is not None:
         _section("Stat Summary")
-        stat_summary, stat_warnings, stat_failures = _mean_std_summary(stat_df)
+        stat_summary, stat_warnings, stat_failures = _mean_std_summary(stat_df, args)
         summary_warning_count += stat_warnings
         summary_failure_count += stat_failures
         print(stat_summary)
