@@ -218,6 +218,8 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
 
 
 def main(argv: Sequence[str] | None = None) -> int:
+    if hasattr(signal, "SIGPIPE"):
+        signal.signal(signal.SIGPIPE, signal.SIG_DFL)
     parser = build_parser()
     args = parser.parse_args(argv)
 
@@ -228,6 +230,4 @@ def main(argv: Sequence[str] | None = None) -> int:
 
 
 if __name__ == "__main__":
-    if hasattr(signal, "SIGPIPE"):
-        signal.signal(signal.SIGPIPE, signal.SIG_DFL)
     raise SystemExit(main())
