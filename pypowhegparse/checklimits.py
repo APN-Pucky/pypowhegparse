@@ -9,7 +9,7 @@ def _checklimits_files(folder):
 
 
 def _encode_lines(lines, trailing_empty=True):
-    encoded = [line.encode() for line in lines]
+    encoded = [line.encode("utf-8") for line in lines]
     if trailing_empty:
         encoded.append(b"")
     return encoded
