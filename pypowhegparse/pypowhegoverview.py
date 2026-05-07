@@ -1,9 +1,11 @@
+#!/usr/bin/python3
 from __future__ import annotations
 
 import signal
 import argparse
+import re
 from pathlib import Path
-from typing import Iterable, Sequence
+from typing import Callable, Iterable, Sequence
 
 import pandas as pd
 
@@ -25,12 +27,27 @@ FAIL_LABEL_WIDTH = len("✗ FAIL")
 STATUS_LABEL_WIDTH = max(len("✗ FAIL"), len("⚠ WARN"))
 DEFAULT_NEGATIVE_WEIGHT_FRACTION_WARN = 0.1
 DEFAULT_NEGATIVE_WEIGHT_FRACTION_FAIL = 0.5
+DEFAULT_STAT_RELATIVE_WARN = 0.25
+DEFAULT_STAT_RELATIVE_FAIL = 0.5
 DEFAULT_FAILING_CHECKS = {
     "WWWWWARN",
     "colour check failures",
     "spin-correlation failures",
 }
 DEFAULT_WARNING_CHECKS = {"WWWWARN"}
+RUN_NUMBER_RE = re.compile(r"-(\d{4})(?:[.-]|$)")
+
+
+def _parse_run_number(value: str) -> str:
+    stripped = value.strip()
+    if not stripped.isdigit():
+        raise argparse.ArgumentTypeError(
+            "run number must be numeric, for example 0001 or 9999"
+        )
+    number = int(stripped)
+    if number < 0 or number > 9999:
+        raise argparse.ArgumentTypeError("run number must be between 0000 and 9999")
+    return f"{number:04d}"
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -52,6 +69,11 @@ def build_parser() -> argparse.ArgumentParser:
         dest="folders",
         default=[],
         help="Additional POWHEG run directory to inspect.",
+    )
+    parser.add_argument(
+        "--run-number",
+        type=_parse_run_number,
+        help="Only include files for this run number, for example 0001 or 9999.",
     )
     parser.add_argument(
         "--no-counters",
@@ -136,6 +158,18 @@ def build_parser() -> argparse.ArgumentParser:
         type=float,
         default=DEFAULT_NEGATIVE_WEIGHT_FRACTION_FAIL,
         help="Mark a negative weight fraction summary entry as failure above this threshold.",
+    )
+    parser.add_argument(
+        "--stat-relative-warn",
+        type=float,
+        default=DEFAULT_STAT_RELATIVE_WARN,
+        help="Mark a +-stat summary entry as warning above this fraction of its central value.",
+    )
+    parser.add_argument(
+        "--stat-relative-fail",
+        type=float,
+        default=DEFAULT_STAT_RELATIVE_FAIL,
+        help="Mark a +-stat summary entry as failure above this fraction of its central value.",
     )
     parser.add_argument(
         "--warn-level",
@@ -260,11 +294,65 @@ def _status_prefix(status: str) -> str:
     return " " * STATUS_LABEL_WIDTH
 
 
+def _prefixed_block_lines(text: str, status: str) -> list[str]:
+    prefix = f"{_status_prefix(status)}  "
+    return [f"{prefix}{line}" for line in text.splitlines()]
+
+
 def _metric_label(column: str) -> str:
     label = column.strip()
     if not label.endswith(":"):
         label = f"{label}:"
     return label
+
+
+def _relative_stat_status(
+    column: str,
+    mean: float,
+    means: pd.Series,
+    args: argparse.Namespace | None = None,
+) -> str | None:
+    normalized = column.strip()
+    if "+-stat" not in normalized:
+        return None
+
+    relative_warn = getattr(
+        args,
+        "stat_relative_warn",
+        DEFAULT_STAT_RELATIVE_WARN,
+    )
+    relative_fail = getattr(
+        args,
+        "stat_relative_fail",
+        DEFAULT_STAT_RELATIVE_FAIL,
+    )
+
+    central_column = column.replace("+-stat", "", 1)
+    central_value = means.get(central_column)
+    if central_value is None or pd.isna(central_value):
+        stripped_lookup = {str(key).strip(): value for key, value in means.items()}
+        central_value = stripped_lookup.get(central_column.strip())
+    if central_value is None or pd.isna(central_value):
+        return None
+
+    scale = abs(float(central_value))
+    if scale == 0:
+        relative = float("inf") if mean > 0 else 0.0
+    else:
+        relative = abs(float(mean)) / scale
+
+    if relative > relative_fail:
+        return "fail"
+    if relative > relative_warn:
+        return "warn"
+    return "ok"
+
+
+def _format_summary_value(mean: float, std: float) -> str:
+    mean_text = _format_number(mean)
+    if pd.isna(std):
+        return mean_text
+    return f"{mean_text}+-{_format_number(std)}"
 
 
 def _metric_status(
@@ -284,6 +372,10 @@ def _metric_status(
         "negative_weight_fraction_fail",
         DEFAULT_NEGATIVE_WEIGHT_FRACTION_FAIL,
     )
+
+    relative_stat_status = _relative_stat_status(column, mean, means, args)
+    if relative_stat_status is not None and relative_stat_status != "ok":
+        return relative_stat_status
 
     if "negative weight fraction" in normalized:
         if mean > negative_weight_fraction_fail:
@@ -337,7 +429,7 @@ def _mean_std_summary(
                 failure_count += 1
             lines.append(
                 f"{_status_prefix(status)}  {_metric_label(column):<{label_width}}  "
-                f"{_format_number(mean)}+-{_format_number(std)}"
+                f"{_format_summary_value(mean, std)}"
             )
         lines.append("")
     return "\n".join(lines).rstrip(), warning_count, failure_count
@@ -347,9 +439,24 @@ def _bytes_to_lines(lines: Iterable[bytes]) -> list[str]:
     return [line.decode("utf-8", errors="replace") for line in lines if line]
 
 
-def _safe_load_dataframe(loader, folder: Path) -> pd.DataFrame | None:
+def _extract_run_number(file_path: str | Path) -> str | None:
+    match = RUN_NUMBER_RE.search(Path(file_path).name)
+    if match is None:
+        return None
+    return match.group(1)
+
+
+def _build_file_filter(
+    args: argparse.Namespace,
+) -> Callable[[str], bool] | None:
+    if args.run_number is None:
+        return None
+    return lambda file_path: _extract_run_number(file_path) == args.run_number
+
+
+def _safe_load_dataframe(loader, folder: Path, file_filter=None) -> pd.DataFrame | None:
     try:
-        return loader(str(folder))
+        return loader(str(folder), file_filter=file_filter)
     except ValueError as exc:
         if "No objects to concatenate" in str(exc):
             return None
@@ -372,11 +479,23 @@ def _resolve_folders(args: argparse.Namespace) -> list[Path]:
     return folders
 
 
+def _matching_folder_files(
+    folder: Path,
+    pattern: str,
+    file_filter=None,
+) -> list[Path]:
+    files = sorted(folder.glob(pattern))
+    if file_filter is not None:
+        files = [file_path for file_path in files if file_filter(str(file_path))]
+    return files
+
+
 def _parser_input_summary(
     folder: Path,
     counter_df: pd.DataFrame | None,
     stat_df: pd.DataFrame | None,
     top_df: pd.DataFrame | None,
+    file_filter=None,
 ) -> pd.DataFrame:
     parsed_top_files = 0
     parsed_top_plots = 0
@@ -389,7 +508,7 @@ def _parser_input_summary(
     rows = [
         (
             "counter files",
-            len(list(folder.glob("pwgcounters*.dat"))),
+            len(_matching_folder_files(folder, "pwgcounters*.dat", file_filter)),
             len(counter_df) if counter_df is not None else 0,
             len(counter_df.index.get_level_values(0).unique())
             if counter_df is not None
@@ -397,7 +516,7 @@ def _parser_input_summary(
         ),
         (
             "stat files",
-            len(list(folder.glob("pwg*stat.dat"))),
+            len(_matching_folder_files(folder, "pwg*stat.dat", file_filter)),
             len(stat_df) if stat_df is not None else 0,
             len(stat_df.index.get_level_values(0).unique())
             if stat_df is not None
@@ -405,11 +524,16 @@ def _parser_input_summary(
         ),
         (
             "grid top files",
-            len(list(folder.glob("pwg*grid.top"))),
+            len(_matching_folder_files(folder, "pwg*grid.top", file_filter)),
             parsed_top_files,
             parsed_top_groups,
         ),
-        ("checklimits files", len(list(folder.glob("*checklimits*"))), 0, 0),
+        (
+            "checklimits files",
+            len(_matching_folder_files(folder, "*checklimits*", file_filter)),
+            0,
+            0,
+        ),
     ]
     summary = pd.DataFrame.from_records(
         rows,
@@ -494,16 +618,19 @@ def _top_plot_status(row, args: argparse.Namespace) -> str:
 def _checklimits_summary(
     folder: Path,
     warn_level: int,
+    file_filter=None,
 ) -> tuple[pd.DataFrame, list[str], list[str], list[list[str]]]:
     warn_rows = [
-        ("WARN", count_warn(str(folder), 1)),
-        ("WWARN", count_warn(str(folder), 2)),
-        ("WWWARN", count_warn(str(folder), 3)),
-        ("WWWWARN", count_warn(str(folder), 4)),
-        ("WWWWWARN", count_warn(str(folder), 5)),
+        ("WARN", count_warn(str(folder), 1, file_filter=file_filter)),
+        ("WWARN", count_warn(str(folder), 2, file_filter=file_filter)),
+        ("WWWARN", count_warn(str(folder), 3, file_filter=file_filter)),
+        ("WWWWARN", count_warn(str(folder), 4, file_filter=file_filter)),
+        ("WWWWWARN", count_warn(str(folder), 5, file_filter=file_filter)),
     ]
-    colour_lines = _bytes_to_lines(error_colour_grep(str(folder)))
-    spin_lines = _bytes_to_lines(error_spin_grep(str(folder)))
+    colour_lines = _bytes_to_lines(
+        error_colour_grep(str(folder), file_filter=file_filter)
+    )
+    spin_lines = _bytes_to_lines(error_spin_grep(str(folder), file_filter=file_filter))
     summary = pd.DataFrame.from_records(
         [
             *warn_rows,
@@ -514,7 +641,7 @@ def _checklimits_summary(
     ).set_index("check")
 
     warn_contexts = []
-    for block in inspect_warn_grep(str(folder), warn_level):
+    for block in inspect_warn_grep(str(folder), warn_level, file_filter=file_filter):
         lines = _bytes_to_lines(block)
         if lines:
             warn_contexts.append(lines)
@@ -569,16 +696,36 @@ def _strict_exit_code(
 
 
 def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
+    file_filter = _build_file_filter(args)
     counter_df = (
-        None if args.no_counters else _safe_load_dataframe(load_counter_folder, folder)
+        None
+        if args.no_counters
+        else _safe_load_dataframe(load_counter_folder, folder, file_filter=file_filter)
     )
-    stat_df = None if args.no_stat else _safe_load_dataframe(load_stat_folder, folder)
-    top_df = None if args.no_top else _safe_load_dataframe(load_top_folder, folder)
+    stat_df = (
+        None
+        if args.no_stat
+        else _safe_load_dataframe(load_stat_folder, folder, file_filter=file_filter)
+    )
+    top_df = (
+        None
+        if args.no_top
+        else _safe_load_dataframe(load_top_folder, folder, file_filter=file_filter)
+    )
 
-    _title(f"POWHEG Overview: {folder}")
+    title = f"POWHEG Overview: {folder}"
+    if args.run_number is not None:
+        title = f"{title} [run {args.run_number}]"
+    _title(title)
     print(
         _table_to_string(
-            _parser_input_summary(folder, counter_df, stat_df, top_df),
+            _parser_input_summary(
+                folder,
+                counter_df,
+                stat_df,
+                top_df,
+                file_filter=file_filter,
+            ),
             args.width,
             args.max_rows,
         )
@@ -595,6 +742,7 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
         warn_summary, colour_lines, spin_lines, warn_contexts = _checklimits_summary(
             folder,
             args.warn_level,
+            file_filter=file_filter,
         )
         _section("Checklimits Summary")
         print(_checklimits_summary_to_string(warn_summary, args))
@@ -650,7 +798,11 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
                         f"[{row.top_file} run {row.run} | {row.plot_title} | "
                         f"pvalue={row.pvalue:.6g} chi2={row.chi2:.6g}]"
                     )
-                    print(row.plot.terminal_plot_str())
+                    for line in _prefixed_block_lines(
+                        row.plot.terminal_plot_str(),
+                        top_status,
+                    ):
+                        print(line)
     elif not args.no_top:
         _section("Relevant Top Plots")
         print("No *grid.top files were parsed.")
