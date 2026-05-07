@@ -139,15 +139,18 @@ def _capture_overview_output(
 
 def _discover_run_numbers(folder: Path, args: argparse.Namespace) -> list[str]:
     file_filter = overview._build_file_filter(args)
+    top_file_filter = overview._build_top_file_filter(args)
     run_numbers = set()
 
-    for pattern in (
-        "pwgcounters*.dat",
-        "pwg*stat.dat",
-        "pwg*grid.top",
-        "*checklimits*",
+    for pattern, pattern_filter in (
+        ("pwgcounters*.dat", file_filter),
+        ("pwg*stat.dat", file_filter),
+        ("pwg*grid.top", top_file_filter),
+        ("*checklimits*", file_filter),
     ):
-        for file_path in overview._matching_folder_files(folder, pattern, file_filter):
+        for file_path in overview._matching_folder_files(
+            folder, pattern, pattern_filter
+        ):
             run_number = overview._extract_run_number(file_path)
             if run_number is not None:
                 run_numbers.add(run_number)

@@ -1,4 +1,7 @@
 __pycache__
+*.out
+*.prof
+*.svg
 .pypirc
 dist/
 build/

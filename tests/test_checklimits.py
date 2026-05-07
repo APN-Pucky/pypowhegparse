@@ -17,7 +17,7 @@ def test_search_for_warn_returns_warn_lines(process_dir):
 
     assert nonempty_lines
     assert all(isinstance(line, bytes) for line in nonempty_lines)
-    assert all(b"WARN" in line for line in nonempty_lines)
+    assert all(b"*-WARN-*" in line for line in nonempty_lines)
 
 
 @pytest.mark.parametrize("process_dir", PROCESS_DIRS, ids=PROCESS_IDS)

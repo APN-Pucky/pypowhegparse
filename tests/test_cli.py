@@ -36,6 +36,7 @@ def test_cli_renders_selected_terminal_top_plots(capsys):
     assert "top_file  run" not in captured.out
     assert "dim=" in captured.out
     assert "┌" in captured.out
+    assert "pwg-xg" not in captured.out
     assert any(
         ("\x1b[31m✗ FAIL\x1b[0m  [" in line or "\x1b[33m⚠ WARN\x1b[0m  [" in line)
         and " run 1 | dim=" in line
@@ -97,12 +98,13 @@ def test_cli_strict_mode_reports_non_zero_for_detected_failures(capsys):
     assert "\x1b[31m✗ FAIL\x1b[0m  spin-correlation failures" in captured.out
 
 
-def test_cli_warns_on_wwwwarn_and_returns_nonzero_without_strict(capsys):
+def test_cli_reports_exact_higher_level_warnings_without_strict(capsys):
     exit_code = cli.main(["tests/directphoton", "--no-top-plots"])
     captured = capsys.readouterr()
 
     assert exit_code == 1
-    assert "\x1b[33m⚠ WARN\x1b[0m  WWWWARN" in captured.out
+    assert "\x1b[33m⚠ WARN\x1b[0m  WWWWARN" not in captured.out
+    assert "WWWWARN                        0" in captured.out
     assert "\x1b[31m✗ FAIL\x1b[0m  WWWWWARN" in captured.out
 
 
@@ -340,6 +342,17 @@ def test_cli_parses_serial_powheg_outputs(capsys):
     assert "No pwg*stat.dat files were parsed." not in captured.out
     assert "[pwgcounters]" in captured.out
     assert "[pwg-stat]" in captured.out
+
+
+def test_top_file_filter_skips_intermediate_xg_grids():
+    args = cli.build_parser().parse_args([])
+    top_file_filter = cli._build_top_file_filter(args)
+
+    assert top_file_filter is not None
+    assert top_file_filter("tests/Z2jet/pwg-0001-btlgrid.top")
+    assert top_file_filter("tests/regression-test/pwg-btlgrid.top")
+    assert not top_file_filter("tests/Z2jet/pwg-xg1-0001-btlgrid.top")
+    assert not top_file_filter("tests/Z2jet/pwg-xg2-0002-rmngrid.top")
 
 
 def test_run_number_filter_is_applied_across_folder_parsers():

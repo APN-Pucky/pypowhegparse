@@ -34,6 +34,7 @@ def test_check_prints_top_plots_only_for_first_matching_run(capsys):
 
     assert exit_code == 1
     assert "Relevant Top Plots" in captured.out
+    assert "pwg-xg" not in captured.out
     assert any(
         (
             "0001 \x1b[31m✗ FAIL\x1b[0m  [" in line

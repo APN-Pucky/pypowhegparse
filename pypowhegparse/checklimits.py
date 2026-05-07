@@ -47,6 +47,14 @@ def _encode_lines(lines, trailing_empty=True):
     return encoded
 
 
+def _warn_marker(level: int) -> str:
+    return f"*-{'W' * level}ARN-*"
+
+
+def _warn_grep_pattern(level: int) -> str:
+    return rf"\*\-{'W' * level}ARN\-\*"
+
+
 def inspect_warn_loop(folder, level=1):
     raise Exception("Unimplemented")
 
@@ -82,7 +90,8 @@ def error_spin_grep(folder, file_filter=None) -> list[str]:
 
 
 def inspect_warn_grep(folder, level=1, after=10, before=10, file_filter=None):
-    pattern = "\\*\\-" + "W" * level + "ARN" + "\\-\\*"
+    pattern = _warn_grep_pattern(level)
+    marker = _warn_marker(level)
     blocks = []
 
     for file in _checklimits_files(folder, file_filter=file_filter):
@@ -96,7 +105,7 @@ def inspect_warn_grep(folder, level=1, after=10, before=10, file_filter=None):
 
         for matched_line in matched_lines:
             for match_index in range(search_start, len(lines)):
-                if pattern in lines[match_index] and lines[match_index] == matched_line:
+                if marker in lines[match_index] and lines[match_index] == matched_line:
                     break
             else:
                 continue
@@ -115,7 +124,7 @@ def search_for_warn_loop(folder, level=1):
 
 
 def search_for_warn_grep(folder, level=1, file_filter=None) -> list[str]:
-    pattern = "W" * level + "ARN"
+    pattern = _warn_grep_pattern(level)
     matches = []
     for file in _checklimits_files(folder, file_filter=file_filter):
         matches.extend(grep(pattern, file))
@@ -123,7 +132,7 @@ def search_for_warn_grep(folder, level=1, file_filter=None) -> list[str]:
 
 
 def search_for_warn_grepc(folder, level=1, file_filter=None) -> int:
-    pattern = "\\*\\-" + "W" * level + "ARN" + "\\-\\*"
+    pattern = _warn_grep_pattern(level)
     count = 0
     for file in _checklimits_files(folder, file_filter=file_filter):
         count += grepc(pattern, file)

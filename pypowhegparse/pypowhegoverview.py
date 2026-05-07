@@ -38,6 +38,7 @@ DEFAULT_FAILING_CHECKS = {
 }
 DEFAULT_WARNING_CHECKS = {"WWWWARN"}
 RUN_NUMBER_RE = re.compile(r"-(\d{4})(?:[.-]|$)")
+INTERMEDIATE_TOP_RE = re.compile(r"^pwg-xg\d+(?:-\d{4})?-[a-zA-Z0-9-]+grid\.top$")
 
 
 def _parse_run_number(value: str) -> str:
@@ -494,6 +495,30 @@ def _build_file_filter(
     return lambda file_path: _extract_run_number(file_path) == args.run_number
 
 
+def _combine_file_filters(
+    *filters: Callable[[str], bool] | None,
+) -> Callable[[str], bool] | None:
+    active_filters = [file_filter for file_filter in filters if file_filter is not None]
+    if not active_filters:
+        return None
+    return lambda file_path: all(
+        file_filter(file_path) for file_filter in active_filters
+    )
+
+
+def _is_intermediate_top_file(file_path: str | Path) -> bool:
+    return INTERMEDIATE_TOP_RE.match(Path(file_path).name) is not None
+
+
+def _build_top_file_filter(
+    args: argparse.Namespace,
+) -> Callable[[str], bool] | None:
+    return _combine_file_filters(
+        _build_file_filter(args),
+        lambda file_path: not _is_intermediate_top_file(file_path),
+    )
+
+
 def _safe_load_dataframe(
     loader, folder: Path, file_filter=None, **kwargs
 ) -> pd.DataFrame | None:
@@ -538,6 +563,7 @@ def _parser_input_summary(
     stat_df: pd.DataFrame | None,
     top_df: pd.DataFrame | None,
     file_filter=None,
+    top_file_filter=None,
 ) -> pd.DataFrame:
     parsed_top_files = 0
     parsed_top_plots = 0
@@ -566,7 +592,13 @@ def _parser_input_summary(
         ),
         (
             "grid top files",
-            len(_matching_folder_files(folder, "pwg*grid.top", file_filter)),
+            len(
+                _matching_folder_files(
+                    folder,
+                    "pwg*grid.top",
+                    top_file_filter if top_file_filter is not None else file_filter,
+                )
+            ),
             parsed_top_files,
             parsed_top_groups,
         ),
@@ -719,6 +751,7 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
     report_start = time.perf_counter()
     timings: list[tuple[str, float]] = []
     file_filter = _build_file_filter(args)
+    top_file_filter = _build_top_file_filter(args)
 
     counter_start = time.perf_counter()
     counter_df = (
@@ -741,7 +774,7 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
         None
         if args.no_top
         else _safe_load_dataframe(
-            load_top_folder, folder, file_filter=file_filter, first_only=True
+            load_top_folder, folder, file_filter=top_file_filter, first_only=True
         )
     )
     timings.append(("load_top_folder", time.perf_counter() - top_start))
@@ -759,6 +792,7 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
                 stat_df,
                 top_df,
                 file_filter=file_filter,
+                top_file_filter=top_file_filter,
             ),
             args.width,
             args.max_rows,
