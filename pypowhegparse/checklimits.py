@@ -45,7 +45,7 @@ def inspect_warn_grep(folder, level=1, after=10, before=10):
             continue
 
         path = Path(file)
-        lines = path.read_text().splitlines()
+        lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
         search_start = 0
 
         for matched_line in matched_lines:
