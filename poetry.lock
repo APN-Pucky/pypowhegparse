@@ -3179,6 +3179,23 @@ files = [
 ]
 
 [[package]]
+name = "plotext"
+version = "5.3.2"
+description = "plotext plots directly on terminal"
+optional = false
+python-versions = ">=3.5"
+groups = ["main"]
+files = [
+    {file = "plotext-5.3.2-py3-none-any.whl", hash = "sha256:394362349c1ddbf319548cfac17ca65e6d5dfc03200c40dfdc0503b3e95a2283"},
+    {file = "plotext-5.3.2.tar.gz", hash = "sha256:52d1e932e67c177bf357a3f0fe6ce14d1a96f7f7d5679d7b455b929df517068e"},
+]
+
+[package.extras]
+completion = ["shtab"]
+image = ["pillow (>=8.4)"]
+video = ["ffpyplayer (>=4.3.5)", "opencv-python (>=4.5.5)", "pafy (>=0.5.5)", "pillow (>=8.4)", "youtube-dl (==2020.12.2)"]
+
+[[package]]
 name = "poetry"
 version = "2.4.0"
 description = "Python dependency management and packaging made easy."
@@ -3450,17 +3467,18 @@ dev = ["black", "build", "freezegun", "mdx_truly_sane_lists", "mike", "mkdocs", 
 
 [[package]]
 name = "pytopdrawer"
-version = "0.0.9"
+version = "0.0.11"
 description = "Plot top files with python and matplotlib (mainly from POWHEG)"
 optional = false
-python-versions = "<4.0,>=3.8"
+python-versions = "<4.0,>=3.10"
 groups = ["main"]
 files = [
-    {file = "pytopdrawer-0.0.9-py3-none-any.whl", hash = "sha256:347fc5b1a678e339f315c816df520fdda2696f008689309467697679c3feddb1"},
-    {file = "pytopdrawer-0.0.9.tar.gz", hash = "sha256:bbbfef483439042ea3ad93a320d2995d366a13cf52f17f23b6d8e86d83a3cc78"},
+    {file = "pytopdrawer-0.0.11-py3-none-any.whl", hash = "sha256:0e1bbb55e7dd407e2734331071cec421dfd1a3d76eed92f3efee2f461a80814c"},
+    {file = "pytopdrawer-0.0.11.tar.gz", hash = "sha256:3cb92afad3d182b49ed8e28a1df6b3036eb91054c567450b5fe79c0bfe49aad7"},
 ]
 
 [package.dependencies]
+plotext = "*"
 smpl = "*"
 uncertainties = "*"
 
@@ -4890,4 +4908,4 @@ cffi = ["cffi (>=1.17,<2.0) ; platform_python_implementation != \"PyPy\" and pyt
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "69ce2ac463bb1523641d6359a0308ec9bca87d05d97936b1823ce0f79cc6e78b"
+content-hash = "bd0c1d3cfddee77bf172b1095d327a941ff4b249e72e02d60fd522101d747c45"

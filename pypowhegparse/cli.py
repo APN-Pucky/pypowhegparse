@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import signal
 import argparse
 from pathlib import Path
 from typing import Iterable, Sequence
@@ -675,4 +676,5 @@ def main(argv: Sequence[str] | None = None) -> int:
 
 
 if __name__ == "__main__":
+    signal.signal(signal.SIGPIPE, signal.SIG_DFL)
     raise SystemExit(main())
