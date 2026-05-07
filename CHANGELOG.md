@@ -7,7 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.7] - 2026-05-07
+
+### Changed
+
+- replace subprocess grep with smpl grep
+
 ## [0.0.6] - 2026-05-07
+
+### Changed
 
 - Upgrade CLI to show topplots in commandline
 
