@@ -1,0 +1,3570 @@
+ d   d~   ==>  gam (g  ) g       | mult=  1
+ d   d~   ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+(d   d~ ) ==>  g    g    gam     | mult=  1
+ d   d~   ==>  g    g       | uborn, mult=  1
+   3  4   0  3   0  4   0  5
+(d   d~ ) ==>  gam  g    g       | mult=  2
+ d   d~   ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+ u   u~   ==>  gam (g  ) g       | mult=  1
+ u   u~   ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+(u   u~ ) ==>  g    g    gam     | mult=  1
+ u   u~   ==>  g    g       | uborn, mult=  1
+   3  4   0  3   0  4   0  5
+(u   u~ ) ==>  gam  g    g       | mult=  2
+ u   u~   ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+ s   s~   ==>  gam (g  ) g       | mult=  1
+ s   s~   ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+(s   s~ ) ==>  g    g    gam     | mult=  1
+ s   s~   ==>  g    g       | uborn, mult=  1
+   3  4   0  3   0  4   0  5
+(s   s~ ) ==>  gam  g    g       | mult=  2
+ s   s~   ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+ c   c~   ==>  gam (g  ) g       | mult=  1
+ c   c~   ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+(c   c~ ) ==>  g    g    gam     | mult=  1
+ c   c~   ==>  g    g       | uborn, mult=  1
+   3  4   0  3   0  4   0  5
+(c   c~ ) ==>  gam  g    g       | mult=  2
+ c   c~   ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+ b   b~   ==>  gam (g  ) g       | mult=  1
+ b   b~   ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+(b   b~ ) ==>  g    g    gam     | mult=  1
+ b   b~   ==>  g    g       | uborn, mult=  1
+   3  4   0  3   0  4   0  5
+(b   b~ ) ==>  gam  g    g       | mult=  2
+ b   b~   ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+ d~  d    ==>  gam (g  ) g       | mult=  1
+ d~  d    ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+(d~  d  ) ==>  g    g    gam     | mult=  1
+ d~  d    ==>  g    g       | uborn, mult=  1
+   3  4   0  3   0  4   0  5
+(d~  d  ) ==>  gam  g    g       | mult=  2
+ d~  d    ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+ u~  u    ==>  gam (g  ) g       | mult=  1
+ u~  u    ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+(u~  u  ) ==>  g    g    gam     | mult=  1
+ u~  u    ==>  g    g       | uborn, mult=  1
+   3  4   0  3   0  4   0  5
+(u~  u  ) ==>  gam  g    g       | mult=  2
+ u~  u    ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+ s~  s    ==>  gam (g  ) g       | mult=  1
+ s~  s    ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+(s~  s  ) ==>  g    g    gam     | mult=  1
+ s~  s    ==>  g    g       | uborn, mult=  1
+   3  4   0  3   0  4   0  5
+(s~  s  ) ==>  gam  g    g       | mult=  2
+ s~  s    ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+ c~  c    ==>  gam (g  ) g       | mult=  1
+ c~  c    ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+(c~  c  ) ==>  g    g    gam     | mult=  1
+ c~  c    ==>  g    g       | uborn, mult=  1
+   3  4   0  3   0  4   0  5
+(c~  c  ) ==>  gam  g    g       | mult=  2
+ c~  c    ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+ b~  b    ==>  gam (g  ) g       | mult=  1
+ b~  b    ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+(b~  b  ) ==>  g    g    gam     | mult=  1
+ b~  b    ==>  g    g       | uborn, mult=  1
+   3  4   0  3   0  4   0  5
+(b~  b  ) ==>  gam  g    g       | mult=  2
+ b~  b    ==>  gam  g       | uborn, mult=  1
+   4  5   0  3   0  4   0  5
+ d   d~   ==> (gam) d~   d       | mult=  1
+ d   d~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ d   d~   ==> (d  ) d~   gam     | mult=  1
+ d   d~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   2  4   0  5
+ d   d~   ==>  d   (gam) d~      | mult=  1
+ d   d~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   0  4   2  5
+ d   d~   ==>  d   (d~ ) gam     | mult=  1
+ d   d~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   2  4   0  5
+ d   d~   ==>  gam (d  ) d~      | mult=  1
+ d   d~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+ d   d~   ==>  gam (d~ ) d       | mult=  1
+ d   d~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+(d   d~ ) ==>  d    d~   gam     | mult=  1
+ d   d~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   2  4   0  5
+(d  )d~   ==>  gam  d~   d       | mult=  1
+ g   d~   ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ d  (d~ ) ==>  gam  d    d~      | mult=  1
+ d   g    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+ u   u~   ==> (gam) d~   d       | mult=  1
+ u   u~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u   u~   ==> (d  ) d~   gam     | mult=  1
+ u   u~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u   u~   ==>  d   (gam) d~      | mult=  1
+ u   u~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ u   u~   ==>  d   (d~ ) gam     | mult=  1
+ u   u~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u   u~   ==>  gam (d  ) d~      | mult=  1
+ u   u~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u   u~   ==>  gam (d~ ) d       | mult=  1
+ u   u~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(u   u~ ) ==>  d    d~   gam     | mult=  1
+ u   u~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s   s~   ==> (gam) d~   d       | mult=  1
+ s   s~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s   s~   ==> (d  ) d~   gam     | mult=  1
+ s   s~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s   s~   ==>  d   (gam) d~      | mult=  1
+ s   s~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ s   s~   ==>  d   (d~ ) gam     | mult=  1
+ s   s~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s   s~   ==>  gam (d  ) d~      | mult=  1
+ s   s~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s   s~   ==>  gam (d~ ) d       | mult=  1
+ s   s~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(s   s~ ) ==>  d    d~   gam     | mult=  1
+ s   s~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c   c~   ==> (gam) d~   d       | mult=  1
+ c   c~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c   c~   ==> (d  ) d~   gam     | mult=  1
+ c   c~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c   c~   ==>  d   (gam) d~      | mult=  1
+ c   c~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ c   c~   ==>  d   (d~ ) gam     | mult=  1
+ c   c~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c   c~   ==>  gam (d  ) d~      | mult=  1
+ c   c~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c   c~   ==>  gam (d~ ) d       | mult=  1
+ c   c~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(c   c~ ) ==>  d    d~   gam     | mult=  1
+ c   c~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b   b~   ==> (gam) d~   d       | mult=  1
+ b   b~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b   b~   ==> (d  ) d~   gam     | mult=  1
+ b   b~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b   b~   ==>  d   (gam) d~      | mult=  1
+ b   b~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ b   b~   ==>  d   (d~ ) gam     | mult=  1
+ b   b~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b   b~   ==>  gam (d  ) d~      | mult=  1
+ b   b~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b   b~   ==>  gam (d~ ) d       | mult=  1
+ b   b~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(b   b~ ) ==>  d    d~   gam     | mult=  1
+ b   b~   ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d   d~   ==> (gam) u~   u       | mult=  1
+ d   d~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d   d~   ==> (u  ) u~   gam     | mult=  1
+ d   d~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d   d~   ==>  u   (gam) u~      | mult=  1
+ d   d~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ d   d~   ==>  u   (u~ ) gam     | mult=  1
+ d   d~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d   d~   ==>  gam (u  ) u~      | mult=  1
+ d   d~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d   d~   ==>  gam (u~ ) u       | mult=  1
+ d   d~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(d   d~ ) ==>  u    u~   gam     | mult=  1
+ d   d~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u   u~   ==> (gam) u~   u       | mult=  1
+ u   u~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ u   u~   ==> (u  ) u~   gam     | mult=  1
+ u   u~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   2  4   0  5
+ u   u~   ==>  u   (gam) u~      | mult=  1
+ u   u~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   0  4   2  5
+ u   u~   ==>  u   (u~ ) gam     | mult=  1
+ u   u~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   2  4   0  5
+ u   u~   ==>  gam (u  ) u~      | mult=  1
+ u   u~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+ u   u~   ==>  gam (u~ ) u       | mult=  1
+ u   u~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+(u   u~ ) ==>  u    u~   gam     | mult=  1
+ u   u~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   2  4   0  5
+(u  )u~   ==>  gam  u~   u       | mult=  1
+ g   u~   ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ u  (u~ ) ==>  gam  u    u~      | mult=  1
+ u   g    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+ s   s~   ==> (gam) u~   u       | mult=  1
+ s   s~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s   s~   ==> (u  ) u~   gam     | mult=  1
+ s   s~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s   s~   ==>  u   (gam) u~      | mult=  1
+ s   s~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ s   s~   ==>  u   (u~ ) gam     | mult=  1
+ s   s~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s   s~   ==>  gam (u  ) u~      | mult=  1
+ s   s~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s   s~   ==>  gam (u~ ) u       | mult=  1
+ s   s~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(s   s~ ) ==>  u    u~   gam     | mult=  1
+ s   s~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c   c~   ==> (gam) u~   u       | mult=  1
+ c   c~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c   c~   ==> (u  ) u~   gam     | mult=  1
+ c   c~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c   c~   ==>  u   (gam) u~      | mult=  1
+ c   c~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ c   c~   ==>  u   (u~ ) gam     | mult=  1
+ c   c~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c   c~   ==>  gam (u  ) u~      | mult=  1
+ c   c~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c   c~   ==>  gam (u~ ) u       | mult=  1
+ c   c~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(c   c~ ) ==>  u    u~   gam     | mult=  1
+ c   c~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b   b~   ==> (gam) u~   u       | mult=  1
+ b   b~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b   b~   ==> (u  ) u~   gam     | mult=  1
+ b   b~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b   b~   ==>  u   (gam) u~      | mult=  1
+ b   b~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ b   b~   ==>  u   (u~ ) gam     | mult=  1
+ b   b~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b   b~   ==>  gam (u  ) u~      | mult=  1
+ b   b~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b   b~   ==>  gam (u~ ) u       | mult=  1
+ b   b~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(b   b~ ) ==>  u    u~   gam     | mult=  1
+ b   b~   ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d   d~   ==> (gam) s~   s       | mult=  1
+ d   d~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d   d~   ==> (s  ) s~   gam     | mult=  1
+ d   d~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d   d~   ==>  s   (gam) s~      | mult=  1
+ d   d~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ d   d~   ==>  s   (s~ ) gam     | mult=  1
+ d   d~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d   d~   ==>  gam (s  ) s~      | mult=  1
+ d   d~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d   d~   ==>  gam (s~ ) s       | mult=  1
+ d   d~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(d   d~ ) ==>  s    s~   gam     | mult=  1
+ d   d~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u   u~   ==> (gam) s~   s       | mult=  1
+ u   u~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u   u~   ==> (s  ) s~   gam     | mult=  1
+ u   u~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u   u~   ==>  s   (gam) s~      | mult=  1
+ u   u~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ u   u~   ==>  s   (s~ ) gam     | mult=  1
+ u   u~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u   u~   ==>  gam (s  ) s~      | mult=  1
+ u   u~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u   u~   ==>  gam (s~ ) s       | mult=  1
+ u   u~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(u   u~ ) ==>  s    s~   gam     | mult=  1
+ u   u~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s   s~   ==> (gam) s~   s       | mult=  1
+ s   s~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ s   s~   ==> (s  ) s~   gam     | mult=  1
+ s   s~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   2  4   0  5
+ s   s~   ==>  s   (gam) s~      | mult=  1
+ s   s~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   0  4   2  5
+ s   s~   ==>  s   (s~ ) gam     | mult=  1
+ s   s~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   2  4   0  5
+ s   s~   ==>  gam (s  ) s~      | mult=  1
+ s   s~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+ s   s~   ==>  gam (s~ ) s       | mult=  1
+ s   s~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+(s   s~ ) ==>  s    s~   gam     | mult=  1
+ s   s~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   2  4   0  5
+(s  )s~   ==>  gam  s~   s       | mult=  1
+ g   s~   ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ s  (s~ ) ==>  gam  s    s~      | mult=  1
+ s   g    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+ c   c~   ==> (gam) s~   s       | mult=  1
+ c   c~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c   c~   ==> (s  ) s~   gam     | mult=  1
+ c   c~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c   c~   ==>  s   (gam) s~      | mult=  1
+ c   c~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ c   c~   ==>  s   (s~ ) gam     | mult=  1
+ c   c~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c   c~   ==>  gam (s  ) s~      | mult=  1
+ c   c~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c   c~   ==>  gam (s~ ) s       | mult=  1
+ c   c~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(c   c~ ) ==>  s    s~   gam     | mult=  1
+ c   c~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b   b~   ==> (gam) s~   s       | mult=  1
+ b   b~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b   b~   ==> (s  ) s~   gam     | mult=  1
+ b   b~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b   b~   ==>  s   (gam) s~      | mult=  1
+ b   b~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ b   b~   ==>  s   (s~ ) gam     | mult=  1
+ b   b~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b   b~   ==>  gam (s  ) s~      | mult=  1
+ b   b~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b   b~   ==>  gam (s~ ) s       | mult=  1
+ b   b~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(b   b~ ) ==>  s    s~   gam     | mult=  1
+ b   b~   ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d   d~   ==> (gam) c~   c       | mult=  1
+ d   d~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d   d~   ==> (c  ) c~   gam     | mult=  1
+ d   d~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d   d~   ==>  c   (gam) c~      | mult=  1
+ d   d~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ d   d~   ==>  c   (c~ ) gam     | mult=  1
+ d   d~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d   d~   ==>  gam (c  ) c~      | mult=  1
+ d   d~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d   d~   ==>  gam (c~ ) c       | mult=  1
+ d   d~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(d   d~ ) ==>  c    c~   gam     | mult=  1
+ d   d~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u   u~   ==> (gam) c~   c       | mult=  1
+ u   u~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u   u~   ==> (c  ) c~   gam     | mult=  1
+ u   u~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u   u~   ==>  c   (gam) c~      | mult=  1
+ u   u~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ u   u~   ==>  c   (c~ ) gam     | mult=  1
+ u   u~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u   u~   ==>  gam (c  ) c~      | mult=  1
+ u   u~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u   u~   ==>  gam (c~ ) c       | mult=  1
+ u   u~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(u   u~ ) ==>  c    c~   gam     | mult=  1
+ u   u~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s   s~   ==> (gam) c~   c       | mult=  1
+ s   s~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s   s~   ==> (c  ) c~   gam     | mult=  1
+ s   s~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s   s~   ==>  c   (gam) c~      | mult=  1
+ s   s~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ s   s~   ==>  c   (c~ ) gam     | mult=  1
+ s   s~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s   s~   ==>  gam (c  ) c~      | mult=  1
+ s   s~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s   s~   ==>  gam (c~ ) c       | mult=  1
+ s   s~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(s   s~ ) ==>  c    c~   gam     | mult=  1
+ s   s~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c   c~   ==> (gam) c~   c       | mult=  1
+ c   c~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ c   c~   ==> (c  ) c~   gam     | mult=  1
+ c   c~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   2  4   0  5
+ c   c~   ==>  c   (gam) c~      | mult=  1
+ c   c~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   0  4   2  5
+ c   c~   ==>  c   (c~ ) gam     | mult=  1
+ c   c~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   2  4   0  5
+ c   c~   ==>  gam (c  ) c~      | mult=  1
+ c   c~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+ c   c~   ==>  gam (c~ ) c       | mult=  1
+ c   c~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+(c   c~ ) ==>  c    c~   gam     | mult=  1
+ c   c~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   2  4   0  5
+(c  )c~   ==>  gam  c~   c       | mult=  1
+ g   c~   ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ c  (c~ ) ==>  gam  c    c~      | mult=  1
+ c   g    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+ b   b~   ==> (gam) c~   c       | mult=  1
+ b   b~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b   b~   ==> (c  ) c~   gam     | mult=  1
+ b   b~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b   b~   ==>  c   (gam) c~      | mult=  1
+ b   b~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ b   b~   ==>  c   (c~ ) gam     | mult=  1
+ b   b~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b   b~   ==>  gam (c  ) c~      | mult=  1
+ b   b~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b   b~   ==>  gam (c~ ) c       | mult=  1
+ b   b~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(b   b~ ) ==>  c    c~   gam     | mult=  1
+ b   b~   ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d   d~   ==> (gam) b~   b       | mult=  1
+ d   d~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d   d~   ==> (b  ) b~   gam     | mult=  1
+ d   d~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d   d~   ==>  b   (gam) b~      | mult=  1
+ d   d~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ d   d~   ==>  b   (b~ ) gam     | mult=  1
+ d   d~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d   d~   ==>  gam (b  ) b~      | mult=  1
+ d   d~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d   d~   ==>  gam (b~ ) b       | mult=  1
+ d   d~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(d   d~ ) ==>  b    b~   gam     | mult=  1
+ d   d~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u   u~   ==> (gam) b~   b       | mult=  1
+ u   u~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u   u~   ==> (b  ) b~   gam     | mult=  1
+ u   u~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u   u~   ==>  b   (gam) b~      | mult=  1
+ u   u~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ u   u~   ==>  b   (b~ ) gam     | mult=  1
+ u   u~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u   u~   ==>  gam (b  ) b~      | mult=  1
+ u   u~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u   u~   ==>  gam (b~ ) b       | mult=  1
+ u   u~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(u   u~ ) ==>  b    b~   gam     | mult=  1
+ u   u~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s   s~   ==> (gam) b~   b       | mult=  1
+ s   s~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s   s~   ==> (b  ) b~   gam     | mult=  1
+ s   s~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s   s~   ==>  b   (gam) b~      | mult=  1
+ s   s~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ s   s~   ==>  b   (b~ ) gam     | mult=  1
+ s   s~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s   s~   ==>  gam (b  ) b~      | mult=  1
+ s   s~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s   s~   ==>  gam (b~ ) b       | mult=  1
+ s   s~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(s   s~ ) ==>  b    b~   gam     | mult=  1
+ s   s~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c   c~   ==> (gam) b~   b       | mult=  1
+ c   c~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c   c~   ==> (b  ) b~   gam     | mult=  1
+ c   c~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c   c~   ==>  b   (gam) b~      | mult=  1
+ c   c~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ c   c~   ==>  b   (b~ ) gam     | mult=  1
+ c   c~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c   c~   ==>  gam (b  ) b~      | mult=  1
+ c   c~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c   c~   ==>  gam (b~ ) b       | mult=  1
+ c   c~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(c   c~ ) ==>  b    b~   gam     | mult=  1
+ c   c~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b   b~   ==> (gam) b~   b       | mult=  1
+ b   b~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ b   b~   ==> (b  ) b~   gam     | mult=  1
+ b   b~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   2  4   0  5
+ b   b~   ==>  b   (gam) b~      | mult=  1
+ b   b~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   0  4   2  5
+ b   b~   ==>  b   (b~ ) gam     | mult=  1
+ b   b~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   2  4   0  5
+ b   b~   ==>  gam (b  ) b~      | mult=  1
+ b   b~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+ b   b~   ==>  gam (b~ ) b       | mult=  1
+ b   b~   ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+(b   b~ ) ==>  b    b~   gam     | mult=  1
+ b   b~   ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   1  3   2  4   0  5
+(b  )b~   ==>  gam  b~   b       | mult=  1
+ g   b~   ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ b  (b~ ) ==>  gam  b    b~      | mult=  1
+ b   g    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+ d~  d    ==> (gam) d~   d       | mult=  1
+ d~  d    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+ d~  d    ==> (d  ) d~   gam     | mult=  1
+ d~  d    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   1  4   0  5
+ d~  d    ==>  d   (gam) d~      | mult=  1
+ d~  d    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   0  4   1  5
+ d~  d    ==>  d   (d~ ) gam     | mult=  1
+ d~  d    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   1  4   0  5
+ d~  d    ==>  gam (d  ) d~      | mult=  1
+ d~  d    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ d~  d    ==>  gam (d~ ) d       | mult=  1
+ d~  d    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+(d~  d  ) ==>  d    d~   gam     | mult=  1
+ d~  d    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   1  4   0  5
+ d~ (d  ) ==>  gam  d~   d       | mult=  1
+ d~  g    ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+(d~ )d    ==>  gam  d    d~      | mult=  1
+ g   d    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ u~  u    ==> (gam) d~   d       | mult=  1
+ u~  u    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u~  u    ==> (d  ) d~   gam     | mult=  1
+ u~  u    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u~  u    ==>  d   (gam) d~      | mult=  1
+ u~  u    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ u~  u    ==>  d   (d~ ) gam     | mult=  1
+ u~  u    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u~  u    ==>  gam (d  ) d~      | mult=  1
+ u~  u    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u~  u    ==>  gam (d~ ) d       | mult=  1
+ u~  u    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(u~  u  ) ==>  d    d~   gam     | mult=  1
+ u~  u    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s~  s    ==> (gam) d~   d       | mult=  1
+ s~  s    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s~  s    ==> (d  ) d~   gam     | mult=  1
+ s~  s    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s~  s    ==>  d   (gam) d~      | mult=  1
+ s~  s    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ s~  s    ==>  d   (d~ ) gam     | mult=  1
+ s~  s    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s~  s    ==>  gam (d  ) d~      | mult=  1
+ s~  s    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s~  s    ==>  gam (d~ ) d       | mult=  1
+ s~  s    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(s~  s  ) ==>  d    d~   gam     | mult=  1
+ s~  s    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c~  c    ==> (gam) d~   d       | mult=  1
+ c~  c    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c~  c    ==> (d  ) d~   gam     | mult=  1
+ c~  c    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c~  c    ==>  d   (gam) d~      | mult=  1
+ c~  c    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ c~  c    ==>  d   (d~ ) gam     | mult=  1
+ c~  c    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c~  c    ==>  gam (d  ) d~      | mult=  1
+ c~  c    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c~  c    ==>  gam (d~ ) d       | mult=  1
+ c~  c    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(c~  c  ) ==>  d    d~   gam     | mult=  1
+ c~  c    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b~  b    ==> (gam) d~   d       | mult=  1
+ b~  b    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b~  b    ==> (d  ) d~   gam     | mult=  1
+ b~  b    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b~  b    ==>  d   (gam) d~      | mult=  1
+ b~  b    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ b~  b    ==>  d   (d~ ) gam     | mult=  1
+ b~  b    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b~  b    ==>  gam (d  ) d~      | mult=  1
+ b~  b    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b~  b    ==>  gam (d~ ) d       | mult=  1
+ b~  b    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(b~  b  ) ==>  d    d~   gam     | mult=  1
+ b~  b    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d~  d    ==> (gam) u~   u       | mult=  1
+ d~  d    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d~  d    ==> (u  ) u~   gam     | mult=  1
+ d~  d    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d~  d    ==>  u   (gam) u~      | mult=  1
+ d~  d    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ d~  d    ==>  u   (u~ ) gam     | mult=  1
+ d~  d    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d~  d    ==>  gam (u  ) u~      | mult=  1
+ d~  d    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d~  d    ==>  gam (u~ ) u       | mult=  1
+ d~  d    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(d~  d  ) ==>  u    u~   gam     | mult=  1
+ d~  d    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u~  u    ==> (gam) u~   u       | mult=  1
+ u~  u    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+ u~  u    ==> (u  ) u~   gam     | mult=  1
+ u~  u    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   1  4   0  5
+ u~  u    ==>  u   (gam) u~      | mult=  1
+ u~  u    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   0  4   1  5
+ u~  u    ==>  u   (u~ ) gam     | mult=  1
+ u~  u    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   1  4   0  5
+ u~  u    ==>  gam (u  ) u~      | mult=  1
+ u~  u    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ u~  u    ==>  gam (u~ ) u       | mult=  1
+ u~  u    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+(u~  u  ) ==>  u    u~   gam     | mult=  1
+ u~  u    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   1  4   0  5
+ u~ (u  ) ==>  gam  u~   u       | mult=  1
+ u~  g    ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+(u~ )u    ==>  gam  u    u~      | mult=  1
+ g   u    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ s~  s    ==> (gam) u~   u       | mult=  1
+ s~  s    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s~  s    ==> (u  ) u~   gam     | mult=  1
+ s~  s    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s~  s    ==>  u   (gam) u~      | mult=  1
+ s~  s    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ s~  s    ==>  u   (u~ ) gam     | mult=  1
+ s~  s    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s~  s    ==>  gam (u  ) u~      | mult=  1
+ s~  s    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s~  s    ==>  gam (u~ ) u       | mult=  1
+ s~  s    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(s~  s  ) ==>  u    u~   gam     | mult=  1
+ s~  s    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c~  c    ==> (gam) u~   u       | mult=  1
+ c~  c    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c~  c    ==> (u  ) u~   gam     | mult=  1
+ c~  c    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c~  c    ==>  u   (gam) u~      | mult=  1
+ c~  c    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ c~  c    ==>  u   (u~ ) gam     | mult=  1
+ c~  c    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c~  c    ==>  gam (u  ) u~      | mult=  1
+ c~  c    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c~  c    ==>  gam (u~ ) u       | mult=  1
+ c~  c    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(c~  c  ) ==>  u    u~   gam     | mult=  1
+ c~  c    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b~  b    ==> (gam) u~   u       | mult=  1
+ b~  b    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b~  b    ==> (u  ) u~   gam     | mult=  1
+ b~  b    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b~  b    ==>  u   (gam) u~      | mult=  1
+ b~  b    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ b~  b    ==>  u   (u~ ) gam     | mult=  1
+ b~  b    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b~  b    ==>  gam (u  ) u~      | mult=  1
+ b~  b    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b~  b    ==>  gam (u~ ) u       | mult=  1
+ b~  b    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(b~  b  ) ==>  u    u~   gam     | mult=  1
+ b~  b    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d~  d    ==> (gam) s~   s       | mult=  1
+ d~  d    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d~  d    ==> (s  ) s~   gam     | mult=  1
+ d~  d    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d~  d    ==>  s   (gam) s~      | mult=  1
+ d~  d    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ d~  d    ==>  s   (s~ ) gam     | mult=  1
+ d~  d    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d~  d    ==>  gam (s  ) s~      | mult=  1
+ d~  d    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d~  d    ==>  gam (s~ ) s       | mult=  1
+ d~  d    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(d~  d  ) ==>  s    s~   gam     | mult=  1
+ d~  d    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u~  u    ==> (gam) s~   s       | mult=  1
+ u~  u    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u~  u    ==> (s  ) s~   gam     | mult=  1
+ u~  u    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u~  u    ==>  s   (gam) s~      | mult=  1
+ u~  u    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ u~  u    ==>  s   (s~ ) gam     | mult=  1
+ u~  u    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u~  u    ==>  gam (s  ) s~      | mult=  1
+ u~  u    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u~  u    ==>  gam (s~ ) s       | mult=  1
+ u~  u    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(u~  u  ) ==>  s    s~   gam     | mult=  1
+ u~  u    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s~  s    ==> (gam) s~   s       | mult=  1
+ s~  s    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+ s~  s    ==> (s  ) s~   gam     | mult=  1
+ s~  s    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   1  4   0  5
+ s~  s    ==>  s   (gam) s~      | mult=  1
+ s~  s    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   0  4   1  5
+ s~  s    ==>  s   (s~ ) gam     | mult=  1
+ s~  s    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   1  4   0  5
+ s~  s    ==>  gam (s  ) s~      | mult=  1
+ s~  s    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ s~  s    ==>  gam (s~ ) s       | mult=  1
+ s~  s    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+(s~  s  ) ==>  s    s~   gam     | mult=  1
+ s~  s    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   1  4   0  5
+ s~ (s  ) ==>  gam  s~   s       | mult=  1
+ s~  g    ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+(s~ )s    ==>  gam  s    s~      | mult=  1
+ g   s    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ c~  c    ==> (gam) s~   s       | mult=  1
+ c~  c    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c~  c    ==> (s  ) s~   gam     | mult=  1
+ c~  c    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c~  c    ==>  s   (gam) s~      | mult=  1
+ c~  c    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ c~  c    ==>  s   (s~ ) gam     | mult=  1
+ c~  c    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c~  c    ==>  gam (s  ) s~      | mult=  1
+ c~  c    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c~  c    ==>  gam (s~ ) s       | mult=  1
+ c~  c    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(c~  c  ) ==>  s    s~   gam     | mult=  1
+ c~  c    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b~  b    ==> (gam) s~   s       | mult=  1
+ b~  b    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b~  b    ==> (s  ) s~   gam     | mult=  1
+ b~  b    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b~  b    ==>  s   (gam) s~      | mult=  1
+ b~  b    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ b~  b    ==>  s   (s~ ) gam     | mult=  1
+ b~  b    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b~  b    ==>  gam (s  ) s~      | mult=  1
+ b~  b    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b~  b    ==>  gam (s~ ) s       | mult=  1
+ b~  b    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(b~  b  ) ==>  s    s~   gam     | mult=  1
+ b~  b    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d~  d    ==> (gam) c~   c       | mult=  1
+ d~  d    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d~  d    ==> (c  ) c~   gam     | mult=  1
+ d~  d    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d~  d    ==>  c   (gam) c~      | mult=  1
+ d~  d    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ d~  d    ==>  c   (c~ ) gam     | mult=  1
+ d~  d    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d~  d    ==>  gam (c  ) c~      | mult=  1
+ d~  d    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d~  d    ==>  gam (c~ ) c       | mult=  1
+ d~  d    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(d~  d  ) ==>  c    c~   gam     | mult=  1
+ d~  d    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u~  u    ==> (gam) c~   c       | mult=  1
+ u~  u    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u~  u    ==> (c  ) c~   gam     | mult=  1
+ u~  u    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u~  u    ==>  c   (gam) c~      | mult=  1
+ u~  u    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ u~  u    ==>  c   (c~ ) gam     | mult=  1
+ u~  u    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u~  u    ==>  gam (c  ) c~      | mult=  1
+ u~  u    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u~  u    ==>  gam (c~ ) c       | mult=  1
+ u~  u    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(u~  u  ) ==>  c    c~   gam     | mult=  1
+ u~  u    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s~  s    ==> (gam) c~   c       | mult=  1
+ s~  s    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s~  s    ==> (c  ) c~   gam     | mult=  1
+ s~  s    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s~  s    ==>  c   (gam) c~      | mult=  1
+ s~  s    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ s~  s    ==>  c   (c~ ) gam     | mult=  1
+ s~  s    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s~  s    ==>  gam (c  ) c~      | mult=  1
+ s~  s    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s~  s    ==>  gam (c~ ) c       | mult=  1
+ s~  s    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(s~  s  ) ==>  c    c~   gam     | mult=  1
+ s~  s    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c~  c    ==> (gam) c~   c       | mult=  1
+ c~  c    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+ c~  c    ==> (c  ) c~   gam     | mult=  1
+ c~  c    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   1  4   0  5
+ c~  c    ==>  c   (gam) c~      | mult=  1
+ c~  c    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   0  4   1  5
+ c~  c    ==>  c   (c~ ) gam     | mult=  1
+ c~  c    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   1  4   0  5
+ c~  c    ==>  gam (c  ) c~      | mult=  1
+ c~  c    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ c~  c    ==>  gam (c~ ) c       | mult=  1
+ c~  c    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+(c~  c  ) ==>  c    c~   gam     | mult=  1
+ c~  c    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   1  4   0  5
+ c~ (c  ) ==>  gam  c~   c       | mult=  1
+ c~  g    ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+(c~ )c    ==>  gam  c    c~      | mult=  1
+ g   c    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ b~  b    ==> (gam) c~   c       | mult=  1
+ b~  b    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b~  b    ==> (c  ) c~   gam     | mult=  1
+ b~  b    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b~  b    ==>  c   (gam) c~      | mult=  1
+ b~  b    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ b~  b    ==>  c   (c~ ) gam     | mult=  1
+ b~  b    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b~  b    ==>  gam (c  ) c~      | mult=  1
+ b~  b    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ b~  b    ==>  gam (c~ ) c       | mult=  1
+ b~  b    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(b~  b  ) ==>  c    c~   gam     | mult=  1
+ b~  b    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d~  d    ==> (gam) b~   b       | mult=  1
+ d~  d    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d~  d    ==> (b  ) b~   gam     | mult=  1
+ d~  d    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d~  d    ==>  b   (gam) b~      | mult=  1
+ d~  d    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ d~  d    ==>  b   (b~ ) gam     | mult=  1
+ d~  d    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ d~  d    ==>  gam (b  ) b~      | mult=  1
+ d~  d    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ d~  d    ==>  gam (b~ ) b       | mult=  1
+ d~  d    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(d~  d  ) ==>  b    b~   gam     | mult=  1
+ d~  d    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u~  u    ==> (gam) b~   b       | mult=  1
+ u~  u    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u~  u    ==> (b  ) b~   gam     | mult=  1
+ u~  u    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u~  u    ==>  b   (gam) b~      | mult=  1
+ u~  u    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ u~  u    ==>  b   (b~ ) gam     | mult=  1
+ u~  u    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ u~  u    ==>  gam (b  ) b~      | mult=  1
+ u~  u    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ u~  u    ==>  gam (b~ ) b       | mult=  1
+ u~  u    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(u~  u  ) ==>  b    b~   gam     | mult=  1
+ u~  u    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s~  s    ==> (gam) b~   b       | mult=  1
+ s~  s    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s~  s    ==> (b  ) b~   gam     | mult=  1
+ s~  s    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s~  s    ==>  b   (gam) b~      | mult=  1
+ s~  s    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ s~  s    ==>  b   (b~ ) gam     | mult=  1
+ s~  s    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ s~  s    ==>  gam (b  ) b~      | mult=  1
+ s~  s    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ s~  s    ==>  gam (b~ ) b       | mult=  1
+ s~  s    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(s~  s  ) ==>  b    b~   gam     | mult=  1
+ s~  s    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c~  c    ==> (gam) b~   b       | mult=  1
+ c~  c    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c~  c    ==> (b  ) b~   gam     | mult=  1
+ c~  c    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c~  c    ==>  b   (gam) b~      | mult=  1
+ c~  c    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  4
+ c~  c    ==>  b   (b~ ) gam     | mult=  1
+ c~  c    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ c~  c    ==>  gam (b  ) b~      | mult=  1
+ c~  c    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+ c~  c    ==>  gam (b~ ) b       | mult=  1
+ c~  c    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3
+(c~  c  ) ==>  b    b~   gam     | mult=  1
+ c~  c    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  5
+ b~  b    ==> (gam) b~   b       | mult=  1
+ b~  b    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+ b~  b    ==> (b  ) b~   gam     | mult=  1
+ b~  b    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   1  4   0  5
+ b~  b    ==>  b   (gam) b~      | mult=  1
+ b~  b    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   0  4   1  5
+ b~  b    ==>  b   (b~ ) gam     | mult=  1
+ b~  b    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   1  4   0  5
+ b~  b    ==>  gam (b  ) b~      | mult=  1
+ b~  b    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ b~  b    ==>  gam (b~ ) b       | mult=  1
+ b~  b    ==>  gam  g       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+(b~  b  ) ==>  b    b~   gam     | mult=  1
+ b~  b    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   4  5   2  3   1  4   0  5
+ b~ (b  ) ==>  gam  b~   b       | mult=  1
+ b~  g    ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   4  5   0  3   1  4   2  5
+(b~ )b    ==>  gam  b    b~      | mult=  1
+ g   b    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   4  5   0  3   2  4   1  5
+ d   d    ==>  d   (gam) d       | mult=  2
+ d   d    ==>  d    d       | uborn, mult=  2
+   3  4   4  5   1  3   2  3   0  4   1  5   2  5
+ d   d    ==>  d   (d  ) gam     | mult=  2
+ d   d    ==>  d    d       | uborn, mult=  2
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(d   d  ) ==>  d    d    gam     | mult=  1
+ d   d    ==>  d    d       | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(d  )d    ==>  gam  d    d       | mult=  2
+ g   d    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ d  (d  ) ==>  gam  d    d       | mult=  2
+ d   g    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ u   d    ==> (gam) d    u       | mult=  1
+ u   d    ==>  u    d       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u   d    ==> (u  ) d    gam     | mult=  1
+ u   d    ==>  u    d       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ u   d    ==>  u   (gam) d       | mult=  1
+ u   d    ==>  u    d       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ u   d    ==>  u   (d  ) gam     | mult=  1
+ u   d    ==>  u    d       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u   d  ) ==>  u    d    gam     | mult=  1
+ u   d    ==>  u    d       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u  )d    ==>  gam  d    u       | mult=  1
+ g   d    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u  (d  ) ==>  gam  u    d       | mult=  1
+ u   g    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s   d    ==> (gam) d    s       | mult=  1
+ s   d    ==>  s    d       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s   d    ==> (s  ) d    gam     | mult=  1
+ s   d    ==>  s    d       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ s   d    ==>  s   (gam) d       | mult=  1
+ s   d    ==>  s    d       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ s   d    ==>  s   (d  ) gam     | mult=  1
+ s   d    ==>  s    d       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s   d  ) ==>  s    d    gam     | mult=  1
+ s   d    ==>  s    d       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s  )d    ==>  gam  d    s       | mult=  1
+ g   d    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s  (d  ) ==>  gam  s    d       | mult=  1
+ s   g    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c   d    ==> (gam) d    c       | mult=  1
+ c   d    ==>  c    d       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c   d    ==> (c  ) d    gam     | mult=  1
+ c   d    ==>  c    d       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ c   d    ==>  c   (gam) d       | mult=  1
+ c   d    ==>  c    d       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ c   d    ==>  c   (d  ) gam     | mult=  1
+ c   d    ==>  c    d       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c   d  ) ==>  c    d    gam     | mult=  1
+ c   d    ==>  c    d       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c  )d    ==>  gam  d    c       | mult=  1
+ g   d    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c  (d  ) ==>  gam  c    d       | mult=  1
+ c   g    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b   d    ==> (gam) d    b       | mult=  1
+ b   d    ==>  b    d       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b   d    ==> (b  ) d    gam     | mult=  1
+ b   d    ==>  b    d       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ b   d    ==>  b   (gam) d       | mult=  1
+ b   d    ==>  b    d       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ b   d    ==>  b   (d  ) gam     | mult=  1
+ b   d    ==>  b    d       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b   d  ) ==>  b    d    gam     | mult=  1
+ b   d    ==>  b    d       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b  )d    ==>  gam  d    b       | mult=  1
+ g   d    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b  (d  ) ==>  gam  b    d       | mult=  1
+ b   g    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d   u    ==> (gam) u    d       | mult=  1
+ d   u    ==>  d    u       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d   u    ==> (d  ) u    gam     | mult=  1
+ d   u    ==>  d    u       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ d   u    ==>  d   (gam) u       | mult=  1
+ d   u    ==>  d    u       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ d   u    ==>  d   (u  ) gam     | mult=  1
+ d   u    ==>  d    u       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d   u  ) ==>  d    u    gam     | mult=  1
+ d   u    ==>  d    u       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d  )u    ==>  gam  u    d       | mult=  1
+ g   u    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d  (u  ) ==>  gam  d    u       | mult=  1
+ d   g    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u   u    ==>  u   (gam) u       | mult=  2
+ u   u    ==>  u    u       | uborn, mult=  2
+   3  4   4  5   1  3   2  3   0  4   1  5   2  5
+ u   u    ==>  u   (u  ) gam     | mult=  2
+ u   u    ==>  u    u       | uborn, mult=  2
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(u   u  ) ==>  u    u    gam     | mult=  1
+ u   u    ==>  u    u       | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(u  )u    ==>  gam  u    u       | mult=  2
+ g   u    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ u  (u  ) ==>  gam  u    u       | mult=  2
+ u   g    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ s   u    ==> (gam) u    s       | mult=  1
+ s   u    ==>  s    u       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s   u    ==> (s  ) u    gam     | mult=  1
+ s   u    ==>  s    u       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ s   u    ==>  s   (gam) u       | mult=  1
+ s   u    ==>  s    u       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ s   u    ==>  s   (u  ) gam     | mult=  1
+ s   u    ==>  s    u       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s   u  ) ==>  s    u    gam     | mult=  1
+ s   u    ==>  s    u       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s  )u    ==>  gam  u    s       | mult=  1
+ g   u    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s  (u  ) ==>  gam  s    u       | mult=  1
+ s   g    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c   u    ==> (gam) u    c       | mult=  1
+ c   u    ==>  c    u       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c   u    ==> (c  ) u    gam     | mult=  1
+ c   u    ==>  c    u       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ c   u    ==>  c   (gam) u       | mult=  1
+ c   u    ==>  c    u       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ c   u    ==>  c   (u  ) gam     | mult=  1
+ c   u    ==>  c    u       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c   u  ) ==>  c    u    gam     | mult=  1
+ c   u    ==>  c    u       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c  )u    ==>  gam  u    c       | mult=  1
+ g   u    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c  (u  ) ==>  gam  c    u       | mult=  1
+ c   g    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b   u    ==> (gam) u    b       | mult=  1
+ b   u    ==>  b    u       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b   u    ==> (b  ) u    gam     | mult=  1
+ b   u    ==>  b    u       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ b   u    ==>  b   (gam) u       | mult=  1
+ b   u    ==>  b    u       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ b   u    ==>  b   (u  ) gam     | mult=  1
+ b   u    ==>  b    u       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b   u  ) ==>  b    u    gam     | mult=  1
+ b   u    ==>  b    u       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b  )u    ==>  gam  u    b       | mult=  1
+ g   u    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b  (u  ) ==>  gam  b    u       | mult=  1
+ b   g    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d   s    ==> (gam) s    d       | mult=  1
+ d   s    ==>  d    s       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d   s    ==> (d  ) s    gam     | mult=  1
+ d   s    ==>  d    s       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ d   s    ==>  d   (gam) s       | mult=  1
+ d   s    ==>  d    s       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ d   s    ==>  d   (s  ) gam     | mult=  1
+ d   s    ==>  d    s       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d   s  ) ==>  d    s    gam     | mult=  1
+ d   s    ==>  d    s       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d  )s    ==>  gam  s    d       | mult=  1
+ g   s    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d  (s  ) ==>  gam  d    s       | mult=  1
+ d   g    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u   s    ==> (gam) s    u       | mult=  1
+ u   s    ==>  u    s       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u   s    ==> (u  ) s    gam     | mult=  1
+ u   s    ==>  u    s       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ u   s    ==>  u   (gam) s       | mult=  1
+ u   s    ==>  u    s       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ u   s    ==>  u   (s  ) gam     | mult=  1
+ u   s    ==>  u    s       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u   s  ) ==>  u    s    gam     | mult=  1
+ u   s    ==>  u    s       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u  )s    ==>  gam  s    u       | mult=  1
+ g   s    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u  (s  ) ==>  gam  u    s       | mult=  1
+ u   g    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s   s    ==>  s   (gam) s       | mult=  2
+ s   s    ==>  s    s       | uborn, mult=  2
+   3  4   4  5   1  3   2  3   0  4   1  5   2  5
+ s   s    ==>  s   (s  ) gam     | mult=  2
+ s   s    ==>  s    s       | uborn, mult=  2
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(s   s  ) ==>  s    s    gam     | mult=  1
+ s   s    ==>  s    s       | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(s  )s    ==>  gam  s    s       | mult=  2
+ g   s    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ s  (s  ) ==>  gam  s    s       | mult=  2
+ s   g    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ c   s    ==> (gam) s    c       | mult=  1
+ c   s    ==>  c    s       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c   s    ==> (c  ) s    gam     | mult=  1
+ c   s    ==>  c    s       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ c   s    ==>  c   (gam) s       | mult=  1
+ c   s    ==>  c    s       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ c   s    ==>  c   (s  ) gam     | mult=  1
+ c   s    ==>  c    s       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c   s  ) ==>  c    s    gam     | mult=  1
+ c   s    ==>  c    s       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c  )s    ==>  gam  s    c       | mult=  1
+ g   s    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c  (s  ) ==>  gam  c    s       | mult=  1
+ c   g    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b   s    ==> (gam) s    b       | mult=  1
+ b   s    ==>  b    s       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b   s    ==> (b  ) s    gam     | mult=  1
+ b   s    ==>  b    s       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ b   s    ==>  b   (gam) s       | mult=  1
+ b   s    ==>  b    s       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ b   s    ==>  b   (s  ) gam     | mult=  1
+ b   s    ==>  b    s       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b   s  ) ==>  b    s    gam     | mult=  1
+ b   s    ==>  b    s       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b  )s    ==>  gam  s    b       | mult=  1
+ g   s    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b  (s  ) ==>  gam  b    s       | mult=  1
+ b   g    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d   c    ==> (gam) c    d       | mult=  1
+ d   c    ==>  d    c       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d   c    ==> (d  ) c    gam     | mult=  1
+ d   c    ==>  d    c       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ d   c    ==>  d   (gam) c       | mult=  1
+ d   c    ==>  d    c       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ d   c    ==>  d   (c  ) gam     | mult=  1
+ d   c    ==>  d    c       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d   c  ) ==>  d    c    gam     | mult=  1
+ d   c    ==>  d    c       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d  )c    ==>  gam  c    d       | mult=  1
+ g   c    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d  (c  ) ==>  gam  d    c       | mult=  1
+ d   g    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u   c    ==> (gam) c    u       | mult=  1
+ u   c    ==>  u    c       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u   c    ==> (u  ) c    gam     | mult=  1
+ u   c    ==>  u    c       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ u   c    ==>  u   (gam) c       | mult=  1
+ u   c    ==>  u    c       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ u   c    ==>  u   (c  ) gam     | mult=  1
+ u   c    ==>  u    c       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u   c  ) ==>  u    c    gam     | mult=  1
+ u   c    ==>  u    c       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u  )c    ==>  gam  c    u       | mult=  1
+ g   c    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u  (c  ) ==>  gam  u    c       | mult=  1
+ u   g    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s   c    ==> (gam) c    s       | mult=  1
+ s   c    ==>  s    c       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s   c    ==> (s  ) c    gam     | mult=  1
+ s   c    ==>  s    c       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ s   c    ==>  s   (gam) c       | mult=  1
+ s   c    ==>  s    c       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ s   c    ==>  s   (c  ) gam     | mult=  1
+ s   c    ==>  s    c       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s   c  ) ==>  s    c    gam     | mult=  1
+ s   c    ==>  s    c       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s  )c    ==>  gam  c    s       | mult=  1
+ g   c    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s  (c  ) ==>  gam  s    c       | mult=  1
+ s   g    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c   c    ==>  c   (gam) c       | mult=  2
+ c   c    ==>  c    c       | uborn, mult=  2
+   3  4   4  5   1  3   2  3   0  4   1  5   2  5
+ c   c    ==>  c   (c  ) gam     | mult=  2
+ c   c    ==>  c    c       | uborn, mult=  2
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(c   c  ) ==>  c    c    gam     | mult=  1
+ c   c    ==>  c    c       | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(c  )c    ==>  gam  c    c       | mult=  2
+ g   c    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ c  (c  ) ==>  gam  c    c       | mult=  2
+ c   g    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ b   c    ==> (gam) c    b       | mult=  1
+ b   c    ==>  b    c       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b   c    ==> (b  ) c    gam     | mult=  1
+ b   c    ==>  b    c       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ b   c    ==>  b   (gam) c       | mult=  1
+ b   c    ==>  b    c       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ b   c    ==>  b   (c  ) gam     | mult=  1
+ b   c    ==>  b    c       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b   c  ) ==>  b    c    gam     | mult=  1
+ b   c    ==>  b    c       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b  )c    ==>  gam  c    b       | mult=  1
+ g   c    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b  (c  ) ==>  gam  b    c       | mult=  1
+ b   g    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d   b    ==> (gam) b    d       | mult=  1
+ d   b    ==>  d    b       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d   b    ==> (d  ) b    gam     | mult=  1
+ d   b    ==>  d    b       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ d   b    ==>  d   (gam) b       | mult=  1
+ d   b    ==>  d    b       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ d   b    ==>  d   (b  ) gam     | mult=  1
+ d   b    ==>  d    b       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d   b  ) ==>  d    b    gam     | mult=  1
+ d   b    ==>  d    b       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d  )b    ==>  gam  b    d       | mult=  1
+ g   b    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d  (b  ) ==>  gam  d    b       | mult=  1
+ d   g    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u   b    ==> (gam) b    u       | mult=  1
+ u   b    ==>  u    b       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u   b    ==> (u  ) b    gam     | mult=  1
+ u   b    ==>  u    b       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ u   b    ==>  u   (gam) b       | mult=  1
+ u   b    ==>  u    b       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ u   b    ==>  u   (b  ) gam     | mult=  1
+ u   b    ==>  u    b       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u   b  ) ==>  u    b    gam     | mult=  1
+ u   b    ==>  u    b       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u  )b    ==>  gam  b    u       | mult=  1
+ g   b    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u  (b  ) ==>  gam  u    b       | mult=  1
+ u   g    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s   b    ==> (gam) b    s       | mult=  1
+ s   b    ==>  s    b       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s   b    ==> (s  ) b    gam     | mult=  1
+ s   b    ==>  s    b       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ s   b    ==>  s   (gam) b       | mult=  1
+ s   b    ==>  s    b       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ s   b    ==>  s   (b  ) gam     | mult=  1
+ s   b    ==>  s    b       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s   b  ) ==>  s    b    gam     | mult=  1
+ s   b    ==>  s    b       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s  )b    ==>  gam  b    s       | mult=  1
+ g   b    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s  (b  ) ==>  gam  s    b       | mult=  1
+ s   g    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c   b    ==> (gam) b    c       | mult=  1
+ c   b    ==>  c    b       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c   b    ==> (c  ) b    gam     | mult=  1
+ c   b    ==>  c    b       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ c   b    ==>  c   (gam) b       | mult=  1
+ c   b    ==>  c    b       | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ c   b    ==>  c   (b  ) gam     | mult=  1
+ c   b    ==>  c    b       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c   b  ) ==>  c    b    gam     | mult=  1
+ c   b    ==>  c    b       | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c  )b    ==>  gam  b    c       | mult=  1
+ g   b    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c  (b  ) ==>  gam  c    b       | mult=  1
+ c   g    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b   b    ==>  b   (gam) b       | mult=  2
+ b   b    ==>  b    b       | uborn, mult=  2
+   3  4   4  5   1  3   2  3   0  4   1  5   2  5
+ b   b    ==>  b   (b  ) gam     | mult=  2
+ b   b    ==>  b    b       | uborn, mult=  2
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(b   b  ) ==>  b    b    gam     | mult=  1
+ b   b    ==>  b    b       | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(b  )b    ==>  gam  b    b       | mult=  2
+ g   b    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ b  (b  ) ==>  gam  b    b       | mult=  2
+ b   g    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ d~  d~   ==>  d~  (gam) d~      | mult=  2
+ d~  d~   ==>  d~   d~      | uborn, mult=  2
+   3  4   4  5   1  3   2  3   0  4   1  5   2  5
+ d~  d~   ==>  d~  (d~ ) gam     | mult=  2
+ d~  d~   ==>  d~   d~      | uborn, mult=  2
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(d~  d~ ) ==>  d~   d~   gam     | mult=  1
+ d~  d~   ==>  d~   d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(d~ )d~   ==>  gam  d~   d~      | mult=  2
+ g   d~   ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ d~ (d~ ) ==>  gam  d~   d~      | mult=  2
+ d~  g    ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ u~  d~   ==> (gam) d~   u~      | mult=  1
+ u~  d~   ==>  u~   d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u~  d~   ==> (u~ ) d~   gam     | mult=  1
+ u~  d~   ==>  u~   d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ u~  d~   ==>  u~  (gam) d~      | mult=  1
+ u~  d~   ==>  u~   d~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ u~  d~   ==>  u~  (d~ ) gam     | mult=  1
+ u~  d~   ==>  u~   d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u~  d~ ) ==>  u~   d~   gam     | mult=  1
+ u~  d~   ==>  u~   d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u~ )d~   ==>  gam  d~   u~      | mult=  1
+ g   d~   ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u~ (d~ ) ==>  gam  u~   d~      | mult=  1
+ u~  g    ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s~  d~   ==> (gam) d~   s~      | mult=  1
+ s~  d~   ==>  s~   d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s~  d~   ==> (s~ ) d~   gam     | mult=  1
+ s~  d~   ==>  s~   d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ s~  d~   ==>  s~  (gam) d~      | mult=  1
+ s~  d~   ==>  s~   d~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ s~  d~   ==>  s~  (d~ ) gam     | mult=  1
+ s~  d~   ==>  s~   d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s~  d~ ) ==>  s~   d~   gam     | mult=  1
+ s~  d~   ==>  s~   d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s~ )d~   ==>  gam  d~   s~      | mult=  1
+ g   d~   ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s~ (d~ ) ==>  gam  s~   d~      | mult=  1
+ s~  g    ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c~  d~   ==> (gam) d~   c~      | mult=  1
+ c~  d~   ==>  c~   d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c~  d~   ==> (c~ ) d~   gam     | mult=  1
+ c~  d~   ==>  c~   d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ c~  d~   ==>  c~  (gam) d~      | mult=  1
+ c~  d~   ==>  c~   d~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ c~  d~   ==>  c~  (d~ ) gam     | mult=  1
+ c~  d~   ==>  c~   d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c~  d~ ) ==>  c~   d~   gam     | mult=  1
+ c~  d~   ==>  c~   d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c~ )d~   ==>  gam  d~   c~      | mult=  1
+ g   d~   ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c~ (d~ ) ==>  gam  c~   d~      | mult=  1
+ c~  g    ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b~  d~   ==> (gam) d~   b~      | mult=  1
+ b~  d~   ==>  b~   d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b~  d~   ==> (b~ ) d~   gam     | mult=  1
+ b~  d~   ==>  b~   d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ b~  d~   ==>  b~  (gam) d~      | mult=  1
+ b~  d~   ==>  b~   d~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ b~  d~   ==>  b~  (d~ ) gam     | mult=  1
+ b~  d~   ==>  b~   d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b~  d~ ) ==>  b~   d~   gam     | mult=  1
+ b~  d~   ==>  b~   d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b~ )d~   ==>  gam  d~   b~      | mult=  1
+ g   d~   ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b~ (d~ ) ==>  gam  b~   d~      | mult=  1
+ b~  g    ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d~  u~   ==> (gam) u~   d~      | mult=  1
+ d~  u~   ==>  d~   u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d~  u~   ==> (d~ ) u~   gam     | mult=  1
+ d~  u~   ==>  d~   u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ d~  u~   ==>  d~  (gam) u~      | mult=  1
+ d~  u~   ==>  d~   u~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ d~  u~   ==>  d~  (u~ ) gam     | mult=  1
+ d~  u~   ==>  d~   u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d~  u~ ) ==>  d~   u~   gam     | mult=  1
+ d~  u~   ==>  d~   u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d~ )u~   ==>  gam  u~   d~      | mult=  1
+ g   u~   ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d~ (u~ ) ==>  gam  d~   u~      | mult=  1
+ d~  g    ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u~  u~   ==>  u~  (gam) u~      | mult=  2
+ u~  u~   ==>  u~   u~      | uborn, mult=  2
+   3  4   4  5   1  3   2  3   0  4   1  5   2  5
+ u~  u~   ==>  u~  (u~ ) gam     | mult=  2
+ u~  u~   ==>  u~   u~      | uborn, mult=  2
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(u~  u~ ) ==>  u~   u~   gam     | mult=  1
+ u~  u~   ==>  u~   u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(u~ )u~   ==>  gam  u~   u~      | mult=  2
+ g   u~   ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ u~ (u~ ) ==>  gam  u~   u~      | mult=  2
+ u~  g    ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ s~  u~   ==> (gam) u~   s~      | mult=  1
+ s~  u~   ==>  s~   u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s~  u~   ==> (s~ ) u~   gam     | mult=  1
+ s~  u~   ==>  s~   u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ s~  u~   ==>  s~  (gam) u~      | mult=  1
+ s~  u~   ==>  s~   u~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ s~  u~   ==>  s~  (u~ ) gam     | mult=  1
+ s~  u~   ==>  s~   u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s~  u~ ) ==>  s~   u~   gam     | mult=  1
+ s~  u~   ==>  s~   u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s~ )u~   ==>  gam  u~   s~      | mult=  1
+ g   u~   ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s~ (u~ ) ==>  gam  s~   u~      | mult=  1
+ s~  g    ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c~  u~   ==> (gam) u~   c~      | mult=  1
+ c~  u~   ==>  c~   u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c~  u~   ==> (c~ ) u~   gam     | mult=  1
+ c~  u~   ==>  c~   u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ c~  u~   ==>  c~  (gam) u~      | mult=  1
+ c~  u~   ==>  c~   u~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ c~  u~   ==>  c~  (u~ ) gam     | mult=  1
+ c~  u~   ==>  c~   u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c~  u~ ) ==>  c~   u~   gam     | mult=  1
+ c~  u~   ==>  c~   u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c~ )u~   ==>  gam  u~   c~      | mult=  1
+ g   u~   ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c~ (u~ ) ==>  gam  c~   u~      | mult=  1
+ c~  g    ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b~  u~   ==> (gam) u~   b~      | mult=  1
+ b~  u~   ==>  b~   u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b~  u~   ==> (b~ ) u~   gam     | mult=  1
+ b~  u~   ==>  b~   u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ b~  u~   ==>  b~  (gam) u~      | mult=  1
+ b~  u~   ==>  b~   u~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ b~  u~   ==>  b~  (u~ ) gam     | mult=  1
+ b~  u~   ==>  b~   u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b~  u~ ) ==>  b~   u~   gam     | mult=  1
+ b~  u~   ==>  b~   u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b~ )u~   ==>  gam  u~   b~      | mult=  1
+ g   u~   ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b~ (u~ ) ==>  gam  b~   u~      | mult=  1
+ b~  g    ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d~  s~   ==> (gam) s~   d~      | mult=  1
+ d~  s~   ==>  d~   s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d~  s~   ==> (d~ ) s~   gam     | mult=  1
+ d~  s~   ==>  d~   s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ d~  s~   ==>  d~  (gam) s~      | mult=  1
+ d~  s~   ==>  d~   s~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ d~  s~   ==>  d~  (s~ ) gam     | mult=  1
+ d~  s~   ==>  d~   s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d~  s~ ) ==>  d~   s~   gam     | mult=  1
+ d~  s~   ==>  d~   s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d~ )s~   ==>  gam  s~   d~      | mult=  1
+ g   s~   ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d~ (s~ ) ==>  gam  d~   s~      | mult=  1
+ d~  g    ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u~  s~   ==> (gam) s~   u~      | mult=  1
+ u~  s~   ==>  u~   s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u~  s~   ==> (u~ ) s~   gam     | mult=  1
+ u~  s~   ==>  u~   s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ u~  s~   ==>  u~  (gam) s~      | mult=  1
+ u~  s~   ==>  u~   s~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ u~  s~   ==>  u~  (s~ ) gam     | mult=  1
+ u~  s~   ==>  u~   s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u~  s~ ) ==>  u~   s~   gam     | mult=  1
+ u~  s~   ==>  u~   s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u~ )s~   ==>  gam  s~   u~      | mult=  1
+ g   s~   ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u~ (s~ ) ==>  gam  u~   s~      | mult=  1
+ u~  g    ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s~  s~   ==>  s~  (gam) s~      | mult=  2
+ s~  s~   ==>  s~   s~      | uborn, mult=  2
+   3  4   4  5   1  3   2  3   0  4   1  5   2  5
+ s~  s~   ==>  s~  (s~ ) gam     | mult=  2
+ s~  s~   ==>  s~   s~      | uborn, mult=  2
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(s~  s~ ) ==>  s~   s~   gam     | mult=  1
+ s~  s~   ==>  s~   s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(s~ )s~   ==>  gam  s~   s~      | mult=  2
+ g   s~   ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ s~ (s~ ) ==>  gam  s~   s~      | mult=  2
+ s~  g    ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ c~  s~   ==> (gam) s~   c~      | mult=  1
+ c~  s~   ==>  c~   s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c~  s~   ==> (c~ ) s~   gam     | mult=  1
+ c~  s~   ==>  c~   s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ c~  s~   ==>  c~  (gam) s~      | mult=  1
+ c~  s~   ==>  c~   s~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ c~  s~   ==>  c~  (s~ ) gam     | mult=  1
+ c~  s~   ==>  c~   s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c~  s~ ) ==>  c~   s~   gam     | mult=  1
+ c~  s~   ==>  c~   s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c~ )s~   ==>  gam  s~   c~      | mult=  1
+ g   s~   ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c~ (s~ ) ==>  gam  c~   s~      | mult=  1
+ c~  g    ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b~  s~   ==> (gam) s~   b~      | mult=  1
+ b~  s~   ==>  b~   s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b~  s~   ==> (b~ ) s~   gam     | mult=  1
+ b~  s~   ==>  b~   s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ b~  s~   ==>  b~  (gam) s~      | mult=  1
+ b~  s~   ==>  b~   s~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ b~  s~   ==>  b~  (s~ ) gam     | mult=  1
+ b~  s~   ==>  b~   s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b~  s~ ) ==>  b~   s~   gam     | mult=  1
+ b~  s~   ==>  b~   s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b~ )s~   ==>  gam  s~   b~      | mult=  1
+ g   s~   ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b~ (s~ ) ==>  gam  b~   s~      | mult=  1
+ b~  g    ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d~  c~   ==> (gam) c~   d~      | mult=  1
+ d~  c~   ==>  d~   c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d~  c~   ==> (d~ ) c~   gam     | mult=  1
+ d~  c~   ==>  d~   c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ d~  c~   ==>  d~  (gam) c~      | mult=  1
+ d~  c~   ==>  d~   c~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ d~  c~   ==>  d~  (c~ ) gam     | mult=  1
+ d~  c~   ==>  d~   c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d~  c~ ) ==>  d~   c~   gam     | mult=  1
+ d~  c~   ==>  d~   c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d~ )c~   ==>  gam  c~   d~      | mult=  1
+ g   c~   ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d~ (c~ ) ==>  gam  d~   c~      | mult=  1
+ d~  g    ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u~  c~   ==> (gam) c~   u~      | mult=  1
+ u~  c~   ==>  u~   c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u~  c~   ==> (u~ ) c~   gam     | mult=  1
+ u~  c~   ==>  u~   c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ u~  c~   ==>  u~  (gam) c~      | mult=  1
+ u~  c~   ==>  u~   c~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ u~  c~   ==>  u~  (c~ ) gam     | mult=  1
+ u~  c~   ==>  u~   c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u~  c~ ) ==>  u~   c~   gam     | mult=  1
+ u~  c~   ==>  u~   c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u~ )c~   ==>  gam  c~   u~      | mult=  1
+ g   c~   ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u~ (c~ ) ==>  gam  u~   c~      | mult=  1
+ u~  g    ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s~  c~   ==> (gam) c~   s~      | mult=  1
+ s~  c~   ==>  s~   c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s~  c~   ==> (s~ ) c~   gam     | mult=  1
+ s~  c~   ==>  s~   c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ s~  c~   ==>  s~  (gam) c~      | mult=  1
+ s~  c~   ==>  s~   c~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ s~  c~   ==>  s~  (c~ ) gam     | mult=  1
+ s~  c~   ==>  s~   c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s~  c~ ) ==>  s~   c~   gam     | mult=  1
+ s~  c~   ==>  s~   c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s~ )c~   ==>  gam  c~   s~      | mult=  1
+ g   c~   ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s~ (c~ ) ==>  gam  s~   c~      | mult=  1
+ s~  g    ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c~  c~   ==>  c~  (gam) c~      | mult=  2
+ c~  c~   ==>  c~   c~      | uborn, mult=  2
+   3  4   4  5   1  3   2  3   0  4   1  5   2  5
+ c~  c~   ==>  c~  (c~ ) gam     | mult=  2
+ c~  c~   ==>  c~   c~      | uborn, mult=  2
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(c~  c~ ) ==>  c~   c~   gam     | mult=  1
+ c~  c~   ==>  c~   c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(c~ )c~   ==>  gam  c~   c~      | mult=  2
+ g   c~   ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ c~ (c~ ) ==>  gam  c~   c~      | mult=  2
+ c~  g    ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ b~  c~   ==> (gam) c~   b~      | mult=  1
+ b~  c~   ==>  b~   c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b~  c~   ==> (b~ ) c~   gam     | mult=  1
+ b~  c~   ==>  b~   c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ b~  c~   ==>  b~  (gam) c~      | mult=  1
+ b~  c~   ==>  b~   c~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ b~  c~   ==>  b~  (c~ ) gam     | mult=  1
+ b~  c~   ==>  b~   c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b~  c~ ) ==>  b~   c~   gam     | mult=  1
+ b~  c~   ==>  b~   c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b~ )c~   ==>  gam  c~   b~      | mult=  1
+ g   c~   ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b~ (c~ ) ==>  gam  b~   c~      | mult=  1
+ b~  g    ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d~  b~   ==> (gam) b~   d~      | mult=  1
+ d~  b~   ==>  d~   b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d~  b~   ==> (d~ ) b~   gam     | mult=  1
+ d~  b~   ==>  d~   b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ d~  b~   ==>  d~  (gam) b~      | mult=  1
+ d~  b~   ==>  d~   b~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ d~  b~   ==>  d~  (b~ ) gam     | mult=  1
+ d~  b~   ==>  d~   b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d~  b~ ) ==>  d~   b~   gam     | mult=  1
+ d~  b~   ==>  d~   b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d~ )b~   ==>  gam  b~   d~      | mult=  1
+ g   b~   ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d~ (b~ ) ==>  gam  d~   b~      | mult=  1
+ d~  g    ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u~  b~   ==> (gam) b~   u~      | mult=  1
+ u~  b~   ==>  u~   b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u~  b~   ==> (u~ ) b~   gam     | mult=  1
+ u~  b~   ==>  u~   b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ u~  b~   ==>  u~  (gam) b~      | mult=  1
+ u~  b~   ==>  u~   b~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ u~  b~   ==>  u~  (b~ ) gam     | mult=  1
+ u~  b~   ==>  u~   b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u~  b~ ) ==>  u~   b~   gam     | mult=  1
+ u~  b~   ==>  u~   b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u~ )b~   ==>  gam  b~   u~      | mult=  1
+ g   b~   ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u~ (b~ ) ==>  gam  u~   b~      | mult=  1
+ u~  g    ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s~  b~   ==> (gam) b~   s~      | mult=  1
+ s~  b~   ==>  s~   b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s~  b~   ==> (s~ ) b~   gam     | mult=  1
+ s~  b~   ==>  s~   b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ s~  b~   ==>  s~  (gam) b~      | mult=  1
+ s~  b~   ==>  s~   b~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ s~  b~   ==>  s~  (b~ ) gam     | mult=  1
+ s~  b~   ==>  s~   b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s~  b~ ) ==>  s~   b~   gam     | mult=  1
+ s~  b~   ==>  s~   b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s~ )b~   ==>  gam  b~   s~      | mult=  1
+ g   b~   ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s~ (b~ ) ==>  gam  s~   b~      | mult=  1
+ s~  g    ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c~  b~   ==> (gam) b~   c~      | mult=  1
+ c~  b~   ==>  c~   b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c~  b~   ==> (c~ ) b~   gam     | mult=  1
+ c~  b~   ==>  c~   b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ c~  b~   ==>  c~  (gam) b~      | mult=  1
+ c~  b~   ==>  c~   b~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ c~  b~   ==>  c~  (b~ ) gam     | mult=  1
+ c~  b~   ==>  c~   b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c~  b~ ) ==>  c~   b~   gam     | mult=  1
+ c~  b~   ==>  c~   b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c~ )b~   ==>  gam  b~   c~      | mult=  1
+ g   b~   ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c~ (b~ ) ==>  gam  c~   b~      | mult=  1
+ c~  g    ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b~  b~   ==>  b~  (gam) b~      | mult=  2
+ b~  b~   ==>  b~   b~      | uborn, mult=  2
+   3  4   4  5   1  3   2  3   0  4   1  5   2  5
+ b~  b~   ==>  b~  (b~ ) gam     | mult=  2
+ b~  b~   ==>  b~   b~      | uborn, mult=  2
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(b~  b~ ) ==>  b~   b~   gam     | mult=  1
+ b~  b~   ==>  b~   b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4   0  5
+(b~ )b~   ==>  gam  b~   b~      | mult=  2
+ g   b~   ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ b~ (b~ ) ==>  gam  b~   b~      | mult=  2
+ b~  g    ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  4   1  5   2  5
+ d   u~   ==> (gam) u~   d       | mult=  1
+ d   u~   ==>  d    u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d   u~   ==> (d  ) u~   gam     | mult=  1
+ d   u~   ==>  d    u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ d   u~   ==>  d   (gam) u~      | mult=  1
+ d   u~   ==>  d    u~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ d   u~   ==>  d   (u~ ) gam     | mult=  1
+ d   u~   ==>  d    u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d   u~ ) ==>  d    u~   gam     | mult=  1
+ d   u~   ==>  d    u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d  )u~   ==>  gam  u~   d       | mult=  1
+ g   u~   ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d  (u~ ) ==>  gam  d    u~      | mult=  1
+ d   g    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d   s~   ==> (gam) s~   d       | mult=  1
+ d   s~   ==>  d    s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d   s~   ==> (d  ) s~   gam     | mult=  1
+ d   s~   ==>  d    s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ d   s~   ==>  d   (gam) s~      | mult=  1
+ d   s~   ==>  d    s~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ d   s~   ==>  d   (s~ ) gam     | mult=  1
+ d   s~   ==>  d    s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d   s~ ) ==>  d    s~   gam     | mult=  1
+ d   s~   ==>  d    s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d  )s~   ==>  gam  s~   d       | mult=  1
+ g   s~   ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d  (s~ ) ==>  gam  d    s~      | mult=  1
+ d   g    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d   c~   ==> (gam) c~   d       | mult=  1
+ d   c~   ==>  d    c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d   c~   ==> (d  ) c~   gam     | mult=  1
+ d   c~   ==>  d    c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ d   c~   ==>  d   (gam) c~      | mult=  1
+ d   c~   ==>  d    c~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ d   c~   ==>  d   (c~ ) gam     | mult=  1
+ d   c~   ==>  d    c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d   c~ ) ==>  d    c~   gam     | mult=  1
+ d   c~   ==>  d    c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d  )c~   ==>  gam  c~   d       | mult=  1
+ g   c~   ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d  (c~ ) ==>  gam  d    c~      | mult=  1
+ d   g    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d   b~   ==> (gam) b~   d       | mult=  1
+ d   b~   ==>  d    b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d   b~   ==> (d  ) b~   gam     | mult=  1
+ d   b~   ==>  d    b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ d   b~   ==>  d   (gam) b~      | mult=  1
+ d   b~   ==>  d    b~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ d   b~   ==>  d   (b~ ) gam     | mult=  1
+ d   b~   ==>  d    b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d   b~ ) ==>  d    b~   gam     | mult=  1
+ d   b~   ==>  d    b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(d  )b~   ==>  gam  b~   d       | mult=  1
+ g   b~   ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d  (b~ ) ==>  gam  d    b~      | mult=  1
+ d   g    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u   d~   ==> (gam) d~   u       | mult=  1
+ u   d~   ==>  u    d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u   d~   ==> (u  ) d~   gam     | mult=  1
+ u   d~   ==>  u    d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ u   d~   ==>  u   (gam) d~      | mult=  1
+ u   d~   ==>  u    d~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ u   d~   ==>  u   (d~ ) gam     | mult=  1
+ u   d~   ==>  u    d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u   d~ ) ==>  u    d~   gam     | mult=  1
+ u   d~   ==>  u    d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u  )d~   ==>  gam  d~   u       | mult=  1
+ g   d~   ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u  (d~ ) ==>  gam  u    d~      | mult=  1
+ u   g    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u   s~   ==> (gam) s~   u       | mult=  1
+ u   s~   ==>  u    s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u   s~   ==> (u  ) s~   gam     | mult=  1
+ u   s~   ==>  u    s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ u   s~   ==>  u   (gam) s~      | mult=  1
+ u   s~   ==>  u    s~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ u   s~   ==>  u   (s~ ) gam     | mult=  1
+ u   s~   ==>  u    s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u   s~ ) ==>  u    s~   gam     | mult=  1
+ u   s~   ==>  u    s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u  )s~   ==>  gam  s~   u       | mult=  1
+ g   s~   ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u  (s~ ) ==>  gam  u    s~      | mult=  1
+ u   g    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u   c~   ==> (gam) c~   u       | mult=  1
+ u   c~   ==>  u    c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u   c~   ==> (u  ) c~   gam     | mult=  1
+ u   c~   ==>  u    c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ u   c~   ==>  u   (gam) c~      | mult=  1
+ u   c~   ==>  u    c~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ u   c~   ==>  u   (c~ ) gam     | mult=  1
+ u   c~   ==>  u    c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u   c~ ) ==>  u    c~   gam     | mult=  1
+ u   c~   ==>  u    c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u  )c~   ==>  gam  c~   u       | mult=  1
+ g   c~   ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u  (c~ ) ==>  gam  u    c~      | mult=  1
+ u   g    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u   b~   ==> (gam) b~   u       | mult=  1
+ u   b~   ==>  u    b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u   b~   ==> (u  ) b~   gam     | mult=  1
+ u   b~   ==>  u    b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ u   b~   ==>  u   (gam) b~      | mult=  1
+ u   b~   ==>  u    b~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ u   b~   ==>  u   (b~ ) gam     | mult=  1
+ u   b~   ==>  u    b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u   b~ ) ==>  u    b~   gam     | mult=  1
+ u   b~   ==>  u    b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(u  )b~   ==>  gam  b~   u       | mult=  1
+ g   b~   ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u  (b~ ) ==>  gam  u    b~      | mult=  1
+ u   g    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s   d~   ==> (gam) d~   s       | mult=  1
+ s   d~   ==>  s    d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s   d~   ==> (s  ) d~   gam     | mult=  1
+ s   d~   ==>  s    d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ s   d~   ==>  s   (gam) d~      | mult=  1
+ s   d~   ==>  s    d~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ s   d~   ==>  s   (d~ ) gam     | mult=  1
+ s   d~   ==>  s    d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s   d~ ) ==>  s    d~   gam     | mult=  1
+ s   d~   ==>  s    d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s  )d~   ==>  gam  d~   s       | mult=  1
+ g   d~   ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s  (d~ ) ==>  gam  s    d~      | mult=  1
+ s   g    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s   u~   ==> (gam) u~   s       | mult=  1
+ s   u~   ==>  s    u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s   u~   ==> (s  ) u~   gam     | mult=  1
+ s   u~   ==>  s    u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ s   u~   ==>  s   (gam) u~      | mult=  1
+ s   u~   ==>  s    u~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ s   u~   ==>  s   (u~ ) gam     | mult=  1
+ s   u~   ==>  s    u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s   u~ ) ==>  s    u~   gam     | mult=  1
+ s   u~   ==>  s    u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s  )u~   ==>  gam  u~   s       | mult=  1
+ g   u~   ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s  (u~ ) ==>  gam  s    u~      | mult=  1
+ s   g    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s   c~   ==> (gam) c~   s       | mult=  1
+ s   c~   ==>  s    c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s   c~   ==> (s  ) c~   gam     | mult=  1
+ s   c~   ==>  s    c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ s   c~   ==>  s   (gam) c~      | mult=  1
+ s   c~   ==>  s    c~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ s   c~   ==>  s   (c~ ) gam     | mult=  1
+ s   c~   ==>  s    c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s   c~ ) ==>  s    c~   gam     | mult=  1
+ s   c~   ==>  s    c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s  )c~   ==>  gam  c~   s       | mult=  1
+ g   c~   ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s  (c~ ) ==>  gam  s    c~      | mult=  1
+ s   g    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s   b~   ==> (gam) b~   s       | mult=  1
+ s   b~   ==>  s    b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s   b~   ==> (s  ) b~   gam     | mult=  1
+ s   b~   ==>  s    b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ s   b~   ==>  s   (gam) b~      | mult=  1
+ s   b~   ==>  s    b~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ s   b~   ==>  s   (b~ ) gam     | mult=  1
+ s   b~   ==>  s    b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s   b~ ) ==>  s    b~   gam     | mult=  1
+ s   b~   ==>  s    b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(s  )b~   ==>  gam  b~   s       | mult=  1
+ g   b~   ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s  (b~ ) ==>  gam  s    b~      | mult=  1
+ s   g    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c   d~   ==> (gam) d~   c       | mult=  1
+ c   d~   ==>  c    d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c   d~   ==> (c  ) d~   gam     | mult=  1
+ c   d~   ==>  c    d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ c   d~   ==>  c   (gam) d~      | mult=  1
+ c   d~   ==>  c    d~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ c   d~   ==>  c   (d~ ) gam     | mult=  1
+ c   d~   ==>  c    d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c   d~ ) ==>  c    d~   gam     | mult=  1
+ c   d~   ==>  c    d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c  )d~   ==>  gam  d~   c       | mult=  1
+ g   d~   ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c  (d~ ) ==>  gam  c    d~      | mult=  1
+ c   g    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c   u~   ==> (gam) u~   c       | mult=  1
+ c   u~   ==>  c    u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c   u~   ==> (c  ) u~   gam     | mult=  1
+ c   u~   ==>  c    u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ c   u~   ==>  c   (gam) u~      | mult=  1
+ c   u~   ==>  c    u~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ c   u~   ==>  c   (u~ ) gam     | mult=  1
+ c   u~   ==>  c    u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c   u~ ) ==>  c    u~   gam     | mult=  1
+ c   u~   ==>  c    u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c  )u~   ==>  gam  u~   c       | mult=  1
+ g   u~   ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c  (u~ ) ==>  gam  c    u~      | mult=  1
+ c   g    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c   s~   ==> (gam) s~   c       | mult=  1
+ c   s~   ==>  c    s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c   s~   ==> (c  ) s~   gam     | mult=  1
+ c   s~   ==>  c    s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ c   s~   ==>  c   (gam) s~      | mult=  1
+ c   s~   ==>  c    s~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ c   s~   ==>  c   (s~ ) gam     | mult=  1
+ c   s~   ==>  c    s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c   s~ ) ==>  c    s~   gam     | mult=  1
+ c   s~   ==>  c    s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c  )s~   ==>  gam  s~   c       | mult=  1
+ g   s~   ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c  (s~ ) ==>  gam  c    s~      | mult=  1
+ c   g    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c   b~   ==> (gam) b~   c       | mult=  1
+ c   b~   ==>  c    b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c   b~   ==> (c  ) b~   gam     | mult=  1
+ c   b~   ==>  c    b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ c   b~   ==>  c   (gam) b~      | mult=  1
+ c   b~   ==>  c    b~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ c   b~   ==>  c   (b~ ) gam     | mult=  1
+ c   b~   ==>  c    b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c   b~ ) ==>  c    b~   gam     | mult=  1
+ c   b~   ==>  c    b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(c  )b~   ==>  gam  b~   c       | mult=  1
+ g   b~   ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c  (b~ ) ==>  gam  c    b~      | mult=  1
+ c   g    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b   d~   ==> (gam) d~   b       | mult=  1
+ b   d~   ==>  b    d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b   d~   ==> (b  ) d~   gam     | mult=  1
+ b   d~   ==>  b    d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ b   d~   ==>  b   (gam) d~      | mult=  1
+ b   d~   ==>  b    d~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ b   d~   ==>  b   (d~ ) gam     | mult=  1
+ b   d~   ==>  b    d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b   d~ ) ==>  b    d~   gam     | mult=  1
+ b   d~   ==>  b    d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b  )d~   ==>  gam  d~   b       | mult=  1
+ g   d~   ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b  (d~ ) ==>  gam  b    d~      | mult=  1
+ b   g    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b   u~   ==> (gam) u~   b       | mult=  1
+ b   u~   ==>  b    u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b   u~   ==> (b  ) u~   gam     | mult=  1
+ b   u~   ==>  b    u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ b   u~   ==>  b   (gam) u~      | mult=  1
+ b   u~   ==>  b    u~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ b   u~   ==>  b   (u~ ) gam     | mult=  1
+ b   u~   ==>  b    u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b   u~ ) ==>  b    u~   gam     | mult=  1
+ b   u~   ==>  b    u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b  )u~   ==>  gam  u~   b       | mult=  1
+ g   u~   ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b  (u~ ) ==>  gam  b    u~      | mult=  1
+ b   g    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b   s~   ==> (gam) s~   b       | mult=  1
+ b   s~   ==>  b    s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b   s~   ==> (b  ) s~   gam     | mult=  1
+ b   s~   ==>  b    s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ b   s~   ==>  b   (gam) s~      | mult=  1
+ b   s~   ==>  b    s~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ b   s~   ==>  b   (s~ ) gam     | mult=  1
+ b   s~   ==>  b    s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b   s~ ) ==>  b    s~   gam     | mult=  1
+ b   s~   ==>  b    s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b  )s~   ==>  gam  s~   b       | mult=  1
+ g   s~   ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b  (s~ ) ==>  gam  b    s~      | mult=  1
+ b   g    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b   c~   ==> (gam) c~   b       | mult=  1
+ b   c~   ==>  b    c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b   c~   ==> (b  ) c~   gam     | mult=  1
+ b   c~   ==>  b    c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+ b   c~   ==>  b   (gam) c~      | mult=  1
+ b   c~   ==>  b    c~      | uborn, mult=  1
+   3  4   4  5   1  3   0  4   2  5
+ b   c~   ==>  b   (c~ ) gam     | mult=  1
+ b   c~   ==>  b    c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b   c~ ) ==>  b    c~   gam     | mult=  1
+ b   c~   ==>  b    c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  4   0  5
+(b  )c~   ==>  gam  c~   b       | mult=  1
+ g   c~   ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b  (c~ ) ==>  gam  b    c~      | mult=  1
+ b   g    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d~  u    ==> (gam) d~   u       | mult=  1
+ d~  u    ==>  u    d~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d~  u    ==> (u  ) d~   gam     | mult=  1
+ d~  u    ==>  u    d~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ d~  u    ==>  u   (gam) d~      | mult=  1
+ d~  u    ==>  u    d~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ d~  u    ==>  u   (d~ ) gam     | mult=  1
+ d~  u    ==>  u    d~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(d~  u  ) ==>  u    d~   gam     | mult=  1
+ d~  u    ==>  u    d~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ d~ (u  ) ==>  gam  d~   u       | mult=  1
+ d~  g    ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(d~ )u    ==>  gam  u    d~      | mult=  1
+ g   u    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d~  s    ==> (gam) d~   s       | mult=  1
+ d~  s    ==>  s    d~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d~  s    ==> (s  ) d~   gam     | mult=  1
+ d~  s    ==>  s    d~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ d~  s    ==>  s   (gam) d~      | mult=  1
+ d~  s    ==>  s    d~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ d~  s    ==>  s   (d~ ) gam     | mult=  1
+ d~  s    ==>  s    d~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(d~  s  ) ==>  s    d~   gam     | mult=  1
+ d~  s    ==>  s    d~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ d~ (s  ) ==>  gam  d~   s       | mult=  1
+ d~  g    ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(d~ )s    ==>  gam  s    d~      | mult=  1
+ g   s    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d~  c    ==> (gam) d~   c       | mult=  1
+ d~  c    ==>  c    d~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d~  c    ==> (c  ) d~   gam     | mult=  1
+ d~  c    ==>  c    d~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ d~  c    ==>  c   (gam) d~      | mult=  1
+ d~  c    ==>  c    d~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ d~  c    ==>  c   (d~ ) gam     | mult=  1
+ d~  c    ==>  c    d~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(d~  c  ) ==>  c    d~   gam     | mult=  1
+ d~  c    ==>  c    d~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ d~ (c  ) ==>  gam  d~   c       | mult=  1
+ d~  g    ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(d~ )c    ==>  gam  c    d~      | mult=  1
+ g   c    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d~  b    ==> (gam) d~   b       | mult=  1
+ d~  b    ==>  b    d~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ d~  b    ==> (b  ) d~   gam     | mult=  1
+ d~  b    ==>  b    d~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ d~  b    ==>  b   (gam) d~      | mult=  1
+ d~  b    ==>  b    d~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ d~  b    ==>  b   (d~ ) gam     | mult=  1
+ d~  b    ==>  b    d~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(d~  b  ) ==>  b    d~   gam     | mult=  1
+ d~  b    ==>  b    d~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ d~ (b  ) ==>  gam  d~   b       | mult=  1
+ d~  g    ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(d~ )b    ==>  gam  b    d~      | mult=  1
+ g   b    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u~  d    ==> (gam) u~   d       | mult=  1
+ u~  d    ==>  d    u~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u~  d    ==> (d  ) u~   gam     | mult=  1
+ u~  d    ==>  d    u~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ u~  d    ==>  d   (gam) u~      | mult=  1
+ u~  d    ==>  d    u~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ u~  d    ==>  d   (u~ ) gam     | mult=  1
+ u~  d    ==>  d    u~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(u~  d  ) ==>  d    u~   gam     | mult=  1
+ u~  d    ==>  d    u~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ u~ (d  ) ==>  gam  u~   d       | mult=  1
+ u~  g    ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(u~ )d    ==>  gam  d    u~      | mult=  1
+ g   d    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u~  s    ==> (gam) u~   s       | mult=  1
+ u~  s    ==>  s    u~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u~  s    ==> (s  ) u~   gam     | mult=  1
+ u~  s    ==>  s    u~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ u~  s    ==>  s   (gam) u~      | mult=  1
+ u~  s    ==>  s    u~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ u~  s    ==>  s   (u~ ) gam     | mult=  1
+ u~  s    ==>  s    u~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(u~  s  ) ==>  s    u~   gam     | mult=  1
+ u~  s    ==>  s    u~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ u~ (s  ) ==>  gam  u~   s       | mult=  1
+ u~  g    ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(u~ )s    ==>  gam  s    u~      | mult=  1
+ g   s    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u~  c    ==> (gam) u~   c       | mult=  1
+ u~  c    ==>  c    u~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u~  c    ==> (c  ) u~   gam     | mult=  1
+ u~  c    ==>  c    u~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ u~  c    ==>  c   (gam) u~      | mult=  1
+ u~  c    ==>  c    u~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ u~  c    ==>  c   (u~ ) gam     | mult=  1
+ u~  c    ==>  c    u~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(u~  c  ) ==>  c    u~   gam     | mult=  1
+ u~  c    ==>  c    u~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ u~ (c  ) ==>  gam  u~   c       | mult=  1
+ u~  g    ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(u~ )c    ==>  gam  c    u~      | mult=  1
+ g   c    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ u~  b    ==> (gam) u~   b       | mult=  1
+ u~  b    ==>  b    u~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ u~  b    ==> (b  ) u~   gam     | mult=  1
+ u~  b    ==>  b    u~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ u~  b    ==>  b   (gam) u~      | mult=  1
+ u~  b    ==>  b    u~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ u~  b    ==>  b   (u~ ) gam     | mult=  1
+ u~  b    ==>  b    u~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(u~  b  ) ==>  b    u~   gam     | mult=  1
+ u~  b    ==>  b    u~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ u~ (b  ) ==>  gam  u~   b       | mult=  1
+ u~  g    ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(u~ )b    ==>  gam  b    u~      | mult=  1
+ g   b    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s~  d    ==> (gam) s~   d       | mult=  1
+ s~  d    ==>  d    s~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s~  d    ==> (d  ) s~   gam     | mult=  1
+ s~  d    ==>  d    s~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ s~  d    ==>  d   (gam) s~      | mult=  1
+ s~  d    ==>  d    s~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ s~  d    ==>  d   (s~ ) gam     | mult=  1
+ s~  d    ==>  d    s~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(s~  d  ) ==>  d    s~   gam     | mult=  1
+ s~  d    ==>  d    s~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ s~ (d  ) ==>  gam  s~   d       | mult=  1
+ s~  g    ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(s~ )d    ==>  gam  d    s~      | mult=  1
+ g   d    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s~  u    ==> (gam) s~   u       | mult=  1
+ s~  u    ==>  u    s~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s~  u    ==> (u  ) s~   gam     | mult=  1
+ s~  u    ==>  u    s~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ s~  u    ==>  u   (gam) s~      | mult=  1
+ s~  u    ==>  u    s~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ s~  u    ==>  u   (s~ ) gam     | mult=  1
+ s~  u    ==>  u    s~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(s~  u  ) ==>  u    s~   gam     | mult=  1
+ s~  u    ==>  u    s~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ s~ (u  ) ==>  gam  s~   u       | mult=  1
+ s~  g    ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(s~ )u    ==>  gam  u    s~      | mult=  1
+ g   u    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s~  c    ==> (gam) s~   c       | mult=  1
+ s~  c    ==>  c    s~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s~  c    ==> (c  ) s~   gam     | mult=  1
+ s~  c    ==>  c    s~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ s~  c    ==>  c   (gam) s~      | mult=  1
+ s~  c    ==>  c    s~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ s~  c    ==>  c   (s~ ) gam     | mult=  1
+ s~  c    ==>  c    s~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(s~  c  ) ==>  c    s~   gam     | mult=  1
+ s~  c    ==>  c    s~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ s~ (c  ) ==>  gam  s~   c       | mult=  1
+ s~  g    ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(s~ )c    ==>  gam  c    s~      | mult=  1
+ g   c    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ s~  b    ==> (gam) s~   b       | mult=  1
+ s~  b    ==>  b    s~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ s~  b    ==> (b  ) s~   gam     | mult=  1
+ s~  b    ==>  b    s~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ s~  b    ==>  b   (gam) s~      | mult=  1
+ s~  b    ==>  b    s~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ s~  b    ==>  b   (s~ ) gam     | mult=  1
+ s~  b    ==>  b    s~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(s~  b  ) ==>  b    s~   gam     | mult=  1
+ s~  b    ==>  b    s~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ s~ (b  ) ==>  gam  s~   b       | mult=  1
+ s~  g    ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(s~ )b    ==>  gam  b    s~      | mult=  1
+ g   b    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c~  d    ==> (gam) c~   d       | mult=  1
+ c~  d    ==>  d    c~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c~  d    ==> (d  ) c~   gam     | mult=  1
+ c~  d    ==>  d    c~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ c~  d    ==>  d   (gam) c~      | mult=  1
+ c~  d    ==>  d    c~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ c~  d    ==>  d   (c~ ) gam     | mult=  1
+ c~  d    ==>  d    c~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(c~  d  ) ==>  d    c~   gam     | mult=  1
+ c~  d    ==>  d    c~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ c~ (d  ) ==>  gam  c~   d       | mult=  1
+ c~  g    ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(c~ )d    ==>  gam  d    c~      | mult=  1
+ g   d    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c~  u    ==> (gam) c~   u       | mult=  1
+ c~  u    ==>  u    c~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c~  u    ==> (u  ) c~   gam     | mult=  1
+ c~  u    ==>  u    c~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ c~  u    ==>  u   (gam) c~      | mult=  1
+ c~  u    ==>  u    c~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ c~  u    ==>  u   (c~ ) gam     | mult=  1
+ c~  u    ==>  u    c~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(c~  u  ) ==>  u    c~   gam     | mult=  1
+ c~  u    ==>  u    c~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ c~ (u  ) ==>  gam  c~   u       | mult=  1
+ c~  g    ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(c~ )u    ==>  gam  u    c~      | mult=  1
+ g   u    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c~  s    ==> (gam) c~   s       | mult=  1
+ c~  s    ==>  s    c~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c~  s    ==> (s  ) c~   gam     | mult=  1
+ c~  s    ==>  s    c~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ c~  s    ==>  s   (gam) c~      | mult=  1
+ c~  s    ==>  s    c~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ c~  s    ==>  s   (c~ ) gam     | mult=  1
+ c~  s    ==>  s    c~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(c~  s  ) ==>  s    c~   gam     | mult=  1
+ c~  s    ==>  s    c~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ c~ (s  ) ==>  gam  c~   s       | mult=  1
+ c~  g    ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(c~ )s    ==>  gam  s    c~      | mult=  1
+ g   s    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ c~  b    ==> (gam) c~   b       | mult=  1
+ c~  b    ==>  b    c~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ c~  b    ==> (b  ) c~   gam     | mult=  1
+ c~  b    ==>  b    c~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ c~  b    ==>  b   (gam) c~      | mult=  1
+ c~  b    ==>  b    c~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ c~  b    ==>  b   (c~ ) gam     | mult=  1
+ c~  b    ==>  b    c~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(c~  b  ) ==>  b    c~   gam     | mult=  1
+ c~  b    ==>  b    c~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ c~ (b  ) ==>  gam  c~   b       | mult=  1
+ c~  g    ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(c~ )b    ==>  gam  b    c~      | mult=  1
+ g   b    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b~  d    ==> (gam) b~   d       | mult=  1
+ b~  d    ==>  d    b~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b~  d    ==> (d  ) b~   gam     | mult=  1
+ b~  d    ==>  d    b~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ b~  d    ==>  d   (gam) b~      | mult=  1
+ b~  d    ==>  d    b~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ b~  d    ==>  d   (b~ ) gam     | mult=  1
+ b~  d    ==>  d    b~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(b~  d  ) ==>  d    b~   gam     | mult=  1
+ b~  d    ==>  d    b~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ b~ (d  ) ==>  gam  b~   d       | mult=  1
+ b~  g    ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(b~ )d    ==>  gam  d    b~      | mult=  1
+ g   d    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b~  u    ==> (gam) b~   u       | mult=  1
+ b~  u    ==>  u    b~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b~  u    ==> (u  ) b~   gam     | mult=  1
+ b~  u    ==>  u    b~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ b~  u    ==>  u   (gam) b~      | mult=  1
+ b~  u    ==>  u    b~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ b~  u    ==>  u   (b~ ) gam     | mult=  1
+ b~  u    ==>  u    b~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(b~  u  ) ==>  u    b~   gam     | mult=  1
+ b~  u    ==>  u    b~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ b~ (u  ) ==>  gam  b~   u       | mult=  1
+ b~  g    ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(b~ )u    ==>  gam  u    b~      | mult=  1
+ g   u    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b~  s    ==> (gam) b~   s       | mult=  1
+ b~  s    ==>  s    b~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b~  s    ==> (s  ) b~   gam     | mult=  1
+ b~  s    ==>  s    b~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ b~  s    ==>  s   (gam) b~      | mult=  1
+ b~  s    ==>  s    b~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ b~  s    ==>  s   (b~ ) gam     | mult=  1
+ b~  s    ==>  s    b~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(b~  s  ) ==>  s    b~   gam     | mult=  1
+ b~  s    ==>  s    b~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ b~ (s  ) ==>  gam  b~   s       | mult=  1
+ b~  g    ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(b~ )s    ==>  gam  s    b~      | mult=  1
+ g   s    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ b~  c    ==> (gam) b~   c       | mult=  1
+ b~  c    ==>  c    b~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+ b~  c    ==> (c  ) b~   gam     | mult=  1
+ b~  c    ==>  c    b~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ b~  c    ==>  c   (gam) b~      | mult=  1
+ b~  c    ==>  c    b~      | uborn, mult=  1
+   3  4   4  5   2  3   0  4   1  5
+ b~  c    ==>  c   (b~ ) gam     | mult=  1
+ b~  c    ==>  c    b~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+(b~  c  ) ==>  c    b~   gam     | mult=  1
+ b~  c    ==>  c    b~      | uborn, mult=  1
+   3  5   4  5   2  3   1  4   0  5
+ b~ (c  ) ==>  gam  b~   c       | mult=  1
+ b~  g    ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   0  3   1  4   2  5
+(b~ )c    ==>  gam  c    b~      | mult=  1
+ g   c    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   0  3   2  4   1  5
+ d   g    ==> (gam) g    d       | mult=  1
+ d   g    ==>  d    g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+ d   g    ==> (d  ) g    gam     | mult=  1
+ d   g    ==>  d    g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ d   g    ==>  gam (d  ) g       | mult=  1
+ d   g    ==>  gam  d       | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ d   g    ==>  gam (g  ) d       | mult=  1
+ d   g    ==>  gam  d       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(d  )g    ==>  d    g    gam     | mult=  1
+ d   g    ==>  d    g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ d  (g  ) ==>  gam  g    d       | mult=  1
+ d   d~   ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(d   g  ) ==>  gam  d    g       | mult=  1
+ d   g    ==>  gam  d       | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ u   g    ==> (gam) g    u       | mult=  1
+ u   g    ==>  u    g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+ u   g    ==> (u  ) g    gam     | mult=  1
+ u   g    ==>  u    g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ u   g    ==>  gam (u  ) g       | mult=  1
+ u   g    ==>  gam  u       | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ u   g    ==>  gam (g  ) u       | mult=  1
+ u   g    ==>  gam  u       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(u  )g    ==>  u    g    gam     | mult=  1
+ u   g    ==>  u    g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ u  (g  ) ==>  gam  g    u       | mult=  1
+ u   u~   ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(u   g  ) ==>  gam  u    g       | mult=  1
+ u   g    ==>  gam  u       | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ s   g    ==> (gam) g    s       | mult=  1
+ s   g    ==>  s    g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+ s   g    ==> (s  ) g    gam     | mult=  1
+ s   g    ==>  s    g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ s   g    ==>  gam (s  ) g       | mult=  1
+ s   g    ==>  gam  s       | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ s   g    ==>  gam (g  ) s       | mult=  1
+ s   g    ==>  gam  s       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(s  )g    ==>  s    g    gam     | mult=  1
+ s   g    ==>  s    g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ s  (g  ) ==>  gam  g    s       | mult=  1
+ s   s~   ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(s   g  ) ==>  gam  s    g       | mult=  1
+ s   g    ==>  gam  s       | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ c   g    ==> (gam) g    c       | mult=  1
+ c   g    ==>  c    g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+ c   g    ==> (c  ) g    gam     | mult=  1
+ c   g    ==>  c    g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ c   g    ==>  gam (c  ) g       | mult=  1
+ c   g    ==>  gam  c       | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ c   g    ==>  gam (g  ) c       | mult=  1
+ c   g    ==>  gam  c       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(c  )g    ==>  c    g    gam     | mult=  1
+ c   g    ==>  c    g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ c  (g  ) ==>  gam  g    c       | mult=  1
+ c   c~   ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(c   g  ) ==>  gam  c    g       | mult=  1
+ c   g    ==>  gam  c       | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ b   g    ==> (gam) g    b       | mult=  1
+ b   g    ==>  b    g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+ b   g    ==> (b  ) g    gam     | mult=  1
+ b   g    ==>  b    g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ b   g    ==>  gam (b  ) g       | mult=  1
+ b   g    ==>  gam  b       | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ b   g    ==>  gam (g  ) b       | mult=  1
+ b   g    ==>  gam  b       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(b  )g    ==>  b    g    gam     | mult=  1
+ b   g    ==>  b    g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ b  (g  ) ==>  gam  g    b       | mult=  1
+ b   b~   ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(b   g  ) ==>  gam  b    g       | mult=  1
+ b   g    ==>  gam  b       | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ g   d    ==> (gam) g    d       | mult=  1
+ g   d    ==>  d    g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g   d    ==> (d  ) g    gam     | mult=  1
+ g   d    ==>  d    g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+ g   d    ==>  gam (d  ) g       | mult=  1
+ g   d    ==>  gam  d       | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   d    ==>  gam (g  ) d       | mult=  1
+ g   d    ==>  gam  d       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g  (d  ) ==>  d    g    gam     | mult=  1
+ g   d    ==>  d    g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+(g  )d    ==>  gam  g    d       | mult=  1
+ d~  d    ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+(g   d  ) ==>  gam  d    g       | mult=  1
+ g   d    ==>  gam  d       | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   u    ==> (gam) g    u       | mult=  1
+ g   u    ==>  u    g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g   u    ==> (u  ) g    gam     | mult=  1
+ g   u    ==>  u    g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+ g   u    ==>  gam (u  ) g       | mult=  1
+ g   u    ==>  gam  u       | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   u    ==>  gam (g  ) u       | mult=  1
+ g   u    ==>  gam  u       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g  (u  ) ==>  u    g    gam     | mult=  1
+ g   u    ==>  u    g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+(g  )u    ==>  gam  g    u       | mult=  1
+ u~  u    ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+(g   u  ) ==>  gam  u    g       | mult=  1
+ g   u    ==>  gam  u       | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   s    ==> (gam) g    s       | mult=  1
+ g   s    ==>  s    g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g   s    ==> (s  ) g    gam     | mult=  1
+ g   s    ==>  s    g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+ g   s    ==>  gam (s  ) g       | mult=  1
+ g   s    ==>  gam  s       | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   s    ==>  gam (g  ) s       | mult=  1
+ g   s    ==>  gam  s       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g  (s  ) ==>  s    g    gam     | mult=  1
+ g   s    ==>  s    g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+(g  )s    ==>  gam  g    s       | mult=  1
+ s~  s    ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+(g   s  ) ==>  gam  s    g       | mult=  1
+ g   s    ==>  gam  s       | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   c    ==> (gam) g    c       | mult=  1
+ g   c    ==>  c    g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g   c    ==> (c  ) g    gam     | mult=  1
+ g   c    ==>  c    g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+ g   c    ==>  gam (c  ) g       | mult=  1
+ g   c    ==>  gam  c       | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   c    ==>  gam (g  ) c       | mult=  1
+ g   c    ==>  gam  c       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g  (c  ) ==>  c    g    gam     | mult=  1
+ g   c    ==>  c    g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+(g  )c    ==>  gam  g    c       | mult=  1
+ c~  c    ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+(g   c  ) ==>  gam  c    g       | mult=  1
+ g   c    ==>  gam  c       | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   b    ==> (gam) g    b       | mult=  1
+ g   b    ==>  b    g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g   b    ==> (b  ) g    gam     | mult=  1
+ g   b    ==>  b    g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+ g   b    ==>  gam (b  ) g       | mult=  1
+ g   b    ==>  gam  b       | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   b    ==>  gam (g  ) b       | mult=  1
+ g   b    ==>  gam  b       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g  (b  ) ==>  b    g    gam     | mult=  1
+ g   b    ==>  b    g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+(g  )b    ==>  gam  g    b       | mult=  1
+ b~  b    ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+(g   b  ) ==>  gam  b    g       | mult=  1
+ g   b    ==>  gam  b       | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ d~  g    ==> (gam) g    d~      | mult=  1
+ d~  g    ==>  d~   g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+ d~  g    ==> (d~ ) g    gam     | mult=  1
+ d~  g    ==>  d~   g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ d~  g    ==>  gam (d~ ) g       | mult=  1
+ d~  g    ==>  gam  d~      | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ d~  g    ==>  gam (g  ) d~      | mult=  1
+ d~  g    ==>  gam  d~      | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(d~ )g    ==>  d~   g    gam     | mult=  1
+ d~  g    ==>  d~   g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ d~ (g  ) ==>  gam  g    d~      | mult=  1
+ d~  d    ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(d~  g  ) ==>  gam  d~   g       | mult=  1
+ d~  g    ==>  gam  d~      | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ u~  g    ==> (gam) g    u~      | mult=  1
+ u~  g    ==>  u~   g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+ u~  g    ==> (u~ ) g    gam     | mult=  1
+ u~  g    ==>  u~   g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ u~  g    ==>  gam (u~ ) g       | mult=  1
+ u~  g    ==>  gam  u~      | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ u~  g    ==>  gam (g  ) u~      | mult=  1
+ u~  g    ==>  gam  u~      | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(u~ )g    ==>  u~   g    gam     | mult=  1
+ u~  g    ==>  u~   g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ u~ (g  ) ==>  gam  g    u~      | mult=  1
+ u~  u    ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(u~  g  ) ==>  gam  u~   g       | mult=  1
+ u~  g    ==>  gam  u~      | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ s~  g    ==> (gam) g    s~      | mult=  1
+ s~  g    ==>  s~   g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+ s~  g    ==> (s~ ) g    gam     | mult=  1
+ s~  g    ==>  s~   g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ s~  g    ==>  gam (s~ ) g       | mult=  1
+ s~  g    ==>  gam  s~      | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ s~  g    ==>  gam (g  ) s~      | mult=  1
+ s~  g    ==>  gam  s~      | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(s~ )g    ==>  s~   g    gam     | mult=  1
+ s~  g    ==>  s~   g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ s~ (g  ) ==>  gam  g    s~      | mult=  1
+ s~  s    ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(s~  g  ) ==>  gam  s~   g       | mult=  1
+ s~  g    ==>  gam  s~      | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ c~  g    ==> (gam) g    c~      | mult=  1
+ c~  g    ==>  c~   g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+ c~  g    ==> (c~ ) g    gam     | mult=  1
+ c~  g    ==>  c~   g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ c~  g    ==>  gam (c~ ) g       | mult=  1
+ c~  g    ==>  gam  c~      | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ c~  g    ==>  gam (g  ) c~      | mult=  1
+ c~  g    ==>  gam  c~      | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(c~ )g    ==>  c~   g    gam     | mult=  1
+ c~  g    ==>  c~   g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ c~ (g  ) ==>  gam  g    c~      | mult=  1
+ c~  c    ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(c~  g  ) ==>  gam  c~   g       | mult=  1
+ c~  g    ==>  gam  c~      | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ b~  g    ==> (gam) g    b~      | mult=  1
+ b~  g    ==>  b~   g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+ b~  g    ==> (b~ ) g    gam     | mult=  1
+ b~  g    ==>  b~   g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ b~  g    ==>  gam (b~ ) g       | mult=  1
+ b~  g    ==>  gam  b~      | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ b~  g    ==>  gam (g  ) b~      | mult=  1
+ b~  g    ==>  gam  b~      | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(b~ )g    ==>  b~   g    gam     | mult=  1
+ b~  g    ==>  b~   g       | uborn, mult=  1
+   3  4   3  5   2  3   0  4   1  5
+ b~ (g  ) ==>  gam  g    b~      | mult=  1
+ b~  b    ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   1  3   0  4   2  5
+(b~  g  ) ==>  gam  b~   g       | mult=  1
+ b~  g    ==>  gam  b~      | uborn, mult=  1
+   3  4   4  5   1  3   2  4   0  5
+ g   d~   ==> (gam) g    d~      | mult=  1
+ g   d~   ==>  d~   g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g   d~   ==> (d~ ) g    gam     | mult=  1
+ g   d~   ==>  d~   g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+ g   d~   ==>  gam (d~ ) g       | mult=  1
+ g   d~   ==>  gam  d~      | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   d~   ==>  gam (g  ) d~      | mult=  1
+ g   d~   ==>  gam  d~      | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g  (d~ ) ==>  d~   g    gam     | mult=  1
+ g   d~   ==>  d~   g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+(g  )d~   ==>  gam  g    d~      | mult=  1
+ d   d~   ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+(g   d~ ) ==>  gam  d~   g       | mult=  1
+ g   d~   ==>  gam  d~      | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   u~   ==> (gam) g    u~      | mult=  1
+ g   u~   ==>  u~   g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g   u~   ==> (u~ ) g    gam     | mult=  1
+ g   u~   ==>  u~   g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+ g   u~   ==>  gam (u~ ) g       | mult=  1
+ g   u~   ==>  gam  u~      | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   u~   ==>  gam (g  ) u~      | mult=  1
+ g   u~   ==>  gam  u~      | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g  (u~ ) ==>  u~   g    gam     | mult=  1
+ g   u~   ==>  u~   g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+(g  )u~   ==>  gam  g    u~      | mult=  1
+ u   u~   ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+(g   u~ ) ==>  gam  u~   g       | mult=  1
+ g   u~   ==>  gam  u~      | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   s~   ==> (gam) g    s~      | mult=  1
+ g   s~   ==>  s~   g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g   s~   ==> (s~ ) g    gam     | mult=  1
+ g   s~   ==>  s~   g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+ g   s~   ==>  gam (s~ ) g       | mult=  1
+ g   s~   ==>  gam  s~      | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   s~   ==>  gam (g  ) s~      | mult=  1
+ g   s~   ==>  gam  s~      | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g  (s~ ) ==>  s~   g    gam     | mult=  1
+ g   s~   ==>  s~   g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+(g  )s~   ==>  gam  g    s~      | mult=  1
+ s   s~   ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+(g   s~ ) ==>  gam  s~   g       | mult=  1
+ g   s~   ==>  gam  s~      | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   c~   ==> (gam) g    c~      | mult=  1
+ g   c~   ==>  c~   g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g   c~   ==> (c~ ) g    gam     | mult=  1
+ g   c~   ==>  c~   g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+ g   c~   ==>  gam (c~ ) g       | mult=  1
+ g   c~   ==>  gam  c~      | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   c~   ==>  gam (g  ) c~      | mult=  1
+ g   c~   ==>  gam  c~      | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g  (c~ ) ==>  c~   g    gam     | mult=  1
+ g   c~   ==>  c~   g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+(g  )c~   ==>  gam  g    c~      | mult=  1
+ c   c~   ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+(g   c~ ) ==>  gam  c~   g       | mult=  1
+ g   c~   ==>  gam  c~      | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   b~   ==> (gam) g    b~      | mult=  1
+ g   b~   ==>  b~   g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g   b~   ==> (b~ ) g    gam     | mult=  1
+ g   b~   ==>  b~   g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+ g   b~   ==>  gam (b~ ) g       | mult=  1
+ g   b~   ==>  gam  b~      | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   b~   ==>  gam (g  ) b~      | mult=  1
+ g   b~   ==>  gam  b~      | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+ g  (b~ ) ==>  b~   g    gam     | mult=  1
+ g   b~   ==>  b~   g       | uborn, mult=  1
+   3  4   3  5   1  3   0  4   2  5
+(g  )b~   ==>  gam  g    b~      | mult=  1
+ b   b~   ==>  gam  g       | uborn, mult=  1
+   3  5   4  5   2  3   0  4   1  5
+(g   b~ ) ==>  gam  b~   g       | mult=  1
+ g   b~   ==>  gam  b~      | uborn, mult=  1
+   3  4   4  5   2  3   1  4   0  5
+ g   g    ==> (gam) d~   d       | mult=  1
+ g   g    ==>  d    d~      | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g   g    ==> (d  ) d~   gam     | mult=  1
+ g   g    ==>  d    d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4
+ g   g    ==>  d   (gam) d~      | mult=  1
+ g   g    ==>  d    d~      | uborn, mult=  1
+   3  4   4  5   1  3   2  3   1  5   2  5
+ g   g    ==>  d   (d~ ) gam     | mult=  1
+ g   g    ==>  d    d~      | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4
+(g  )g    ==>  gam  d~   d       | mult=  1
+ d~  g    ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g  (g  ) ==>  gam  d~   d       | mult=  1
+ g   d~   ==>  gam  d~      | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+(g  )g    ==>  gam  d    d~      | mult=  1
+ d   g    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g  (g  ) ==>  gam  d    d~      | mult=  1
+ g   d    ==>  gam  d       | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g   g    ==> (gam) u~   u       | mult=  1
+ g   g    ==>  u    u~      | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g   g    ==> (u  ) u~   gam     | mult=  1
+ g   g    ==>  u    u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4
+ g   g    ==>  u   (gam) u~      | mult=  1
+ g   g    ==>  u    u~      | uborn, mult=  1
+   3  4   4  5   1  3   2  3   1  5   2  5
+ g   g    ==>  u   (u~ ) gam     | mult=  1
+ g   g    ==>  u    u~      | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4
+(g  )g    ==>  gam  u~   u       | mult=  1
+ u~  g    ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g  (g  ) ==>  gam  u~   u       | mult=  1
+ g   u~   ==>  gam  u~      | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+(g  )g    ==>  gam  u    u~      | mult=  1
+ u   g    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g  (g  ) ==>  gam  u    u~      | mult=  1
+ g   u    ==>  gam  u       | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g   g    ==> (gam) s~   s       | mult=  1
+ g   g    ==>  s    s~      | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g   g    ==> (s  ) s~   gam     | mult=  1
+ g   g    ==>  s    s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4
+ g   g    ==>  s   (gam) s~      | mult=  1
+ g   g    ==>  s    s~      | uborn, mult=  1
+   3  4   4  5   1  3   2  3   1  5   2  5
+ g   g    ==>  s   (s~ ) gam     | mult=  1
+ g   g    ==>  s    s~      | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4
+(g  )g    ==>  gam  s~   s       | mult=  1
+ s~  g    ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g  (g  ) ==>  gam  s~   s       | mult=  1
+ g   s~   ==>  gam  s~      | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+(g  )g    ==>  gam  s    s~      | mult=  1
+ s   g    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g  (g  ) ==>  gam  s    s~      | mult=  1
+ g   s    ==>  gam  s       | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g   g    ==> (gam) c~   c       | mult=  1
+ g   g    ==>  c    c~      | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g   g    ==> (c  ) c~   gam     | mult=  1
+ g   g    ==>  c    c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4
+ g   g    ==>  c   (gam) c~      | mult=  1
+ g   g    ==>  c    c~      | uborn, mult=  1
+   3  4   4  5   1  3   2  3   1  5   2  5
+ g   g    ==>  c   (c~ ) gam     | mult=  1
+ g   g    ==>  c    c~      | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4
+(g  )g    ==>  gam  c~   c       | mult=  1
+ c~  g    ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g  (g  ) ==>  gam  c~   c       | mult=  1
+ g   c~   ==>  gam  c~      | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+(g  )g    ==>  gam  c    c~      | mult=  1
+ c   g    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g  (g  ) ==>  gam  c    c~      | mult=  1
+ g   c    ==>  gam  c       | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g   g    ==> (gam) b~   b       | mult=  1
+ g   g    ==>  b    b~      | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g   g    ==> (b  ) b~   gam     | mult=  1
+ g   g    ==>  b    b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4
+ g   g    ==>  b   (gam) b~      | mult=  1
+ g   g    ==>  b    b~      | uborn, mult=  1
+   3  4   4  5   1  3   2  3   1  5   2  5
+ g   g    ==>  b   (b~ ) gam     | mult=  1
+ g   g    ==>  b    b~      | uborn, mult=  1
+   3  5   4  5   1  3   2  3   1  4   2  4
+(g  )g    ==>  gam  b~   b       | mult=  1
+ b~  g    ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g  (g  ) ==>  gam  b~   b       | mult=  1
+ g   b~   ==>  gam  b~      | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+(g  )g    ==>  gam  b    b~      | mult=  1
+ b   g    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5
+ g  (g  ) ==>  gam  b    b~      | mult=  1
+ g   b    ==>  gam  b       | uborn, mult=  1
+   3  4   3  5   1  4   2  4   1  5   2  5

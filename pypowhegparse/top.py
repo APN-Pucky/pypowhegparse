@@ -1,5 +1,6 @@
 import glob
 import numpy as np
+import os
 import pandas as pd
 import re
 import pytopdrawer as ptd
@@ -8,11 +9,34 @@ from scipy.stats import chisquare
 from scipy.stats import chi2
 
 
+TOP_RUN_RE = re.compile(r"^(pwg[a-zA-Z0-9-]*?)-(\d{4})-([a-zA-Z0-9-]+?grid)\.top$")
+TOP_SERIAL_RE = re.compile(r"^(pwg[a-zA-Z0-9-]*?)-([a-zA-Z0-9-]+?grid)\.top$")
+
+
 def _top_files(folder, file_filter=None):
     files = sorted(glob.glob(folder + "/pwg*.top"))
     if file_filter is not None:
         files = [file for file in files if file_filter(file)]
     return files
+
+
+def _top_file_info(file):
+    basename = os.path.basename(file)
+    match = TOP_RUN_RE.search(basename)
+    if match is not None:
+        fname = match.group(1)
+        if fname.endswith("-"):
+            fname = fname[:-1]
+        number = int(match.group(2))
+        return f"{fname}-{match.group(3)}", number
+
+    match = TOP_SERIAL_RE.search(basename)
+    if match is None:
+        raise ValueError(f"unexpected top file name: {file}")
+    fname = match.group(1)
+    if fname.endswith("-"):
+        fname = fname[:-1]
+    return f"{fname}-{match.group(2)}", 1
 
 
 def load_top_plot(plot: TopPlot):
@@ -28,38 +52,26 @@ def load_top_plot(plot: TopPlot):
 
 def load_top_file(file):
     pairs = {}
+    fname, number = _top_file_info(file)
     for top in ptd.read(file):
-        name = re.compile("(pwg[a-zA-Z0-9-]+?)(\d\d\d\d)?-([a-zA-Z0-9-]+?grid).top")
-        g = name.search(file)
-        if g is not None:
-            fname = g.group(1)
-            if fname[-1] == "-":
-                fname = fname[0:-1]
-            fname = fname + "-" + g.group(3)
-            number = int(g.group(2))
-            if number not in pairs.keys():
-                pairs[number] = load_top_plot(top)
-            else:
-                pairs[number] = pd.concat([pairs[number], load_top_plot(top)])
+        if number not in pairs.keys():
+            pairs[number] = load_top_plot(top)
+        else:
+            pairs[number] = pd.concat([pairs[number], load_top_plot(top)])
     return pd.concat(pairs.values(), keys=pairs.keys())
 
 
 def load_top_folder(folder, file_filter=None):  # names
     pairs = {}
     for file in _top_files(folder, file_filter=file_filter):
-        name = re.compile("(pwg[a-zA-Z0-9-]+?)(\d\d\d\d)?-([a-zA-Z0-9-]+?grid).top")
-        g = name.search(file)
-        if g is not None:
-            fname = g.group(1)
-            if fname[-1] == "-":
-                fname = fname[0:-1]
-            fname = fname + "-" + g.group(3)
-            if g.group(2) is not None:
-                number = int(g.group(2))
-                if fname not in pairs.keys():
-                    pairs[fname] = load_top_file(file)
-                else:
-                    pairs[fname] = pd.concat([pairs[fname], load_top_file(file)])
+        try:
+            fname, _ = _top_file_info(file)
+        except ValueError:
+            continue
+        if fname not in pairs.keys():
+            pairs[fname] = load_top_file(file)
+        else:
+            pairs[fname] = pd.concat([pairs[fname], load_top_file(file)])
     return pd.concat(pairs.values(), keys=pairs.keys())
 
 
@@ -95,7 +107,7 @@ def chisquare_tops(folder, p_min=0.33):
 
 def btlgrid_tops(folder, p_min=0.95):
     for file in glob.glob(folder + "/*btlgrid.top"):
-        title = re.compile("(pwg-[a-zA-Z0-9-]+)-(\d*)-?btlgrid.top")
+        title = re.compile(r"(pwg-[a-zA-Z0-9-]+)-(\d*)-?btlgrid.top")
 
         tops = ptd.read(file)
         for top in tops:

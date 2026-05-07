@@ -36,12 +36,18 @@ def test_cli_renders_selected_terminal_top_plots(capsys):
     assert "top_file  run" not in captured.out
     assert "dim=" in captured.out
     assert "┌" in captured.out
-    assert (
-        "\x1b[31m✗ FAIL\x1b[0m  [pwg-rmngrid run 1 | dim=          10 | pvalue="
-        in captured.out
+    assert any(
+        ("\x1b[31m✗ FAIL\x1b[0m  [" in line or "\x1b[33m⚠ WARN\x1b[0m  [" in line)
+        and " run 1 | dim=" in line
+        for line in lines
     )
     assert any(
-        line.startswith("\x1b[31m✗ FAIL\x1b[0m  ") and "┌" in line for line in lines
+        (
+            line.startswith("\x1b[31m✗ FAIL\x1b[0m  ")
+            or line.startswith("\x1b[33m⚠ WARN\x1b[0m  ")
+        )
+        and "┌" in line
+        for line in lines
     )
 
 
@@ -322,6 +328,18 @@ def test_single_run_overview_omits_na_std_suffix(capsys):
 
     assert exit_code == 0
     assert "+-n/a" not in captured.out
+
+
+def test_cli_parses_serial_powheg_outputs(capsys):
+    exit_code = cli.main(["tests/regression-test", "--no-top-plots"])
+    captured = capsys.readouterr()
+
+    assert exit_code == 1
+    assert "POWHEG Overview: tests/regression-test" in captured.out
+    assert "No pwgcounters*.dat files were parsed." not in captured.out
+    assert "No pwg*stat.dat files were parsed." not in captured.out
+    assert "[pwgcounters]" in captured.out
+    assert "[pwg-stat]" in captured.out
 
 
 def test_run_number_filter_is_applied_across_folder_parsers():

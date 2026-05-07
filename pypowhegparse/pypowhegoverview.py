@@ -465,9 +465,19 @@ def _bytes_to_lines(lines: Iterable[bytes]) -> list[str]:
 
 def _extract_run_number(file_path: str | Path) -> str | None:
     match = RUN_NUMBER_RE.search(Path(file_path).name)
-    if match is None:
-        return None
-    return match.group(1)
+    if match is not None:
+        return match.group(1)
+
+    name = Path(file_path).name
+    if (
+        name.startswith("pwgcounters")
+        and name.endswith(".dat")
+        or name.startswith("pwg")
+        and (name.endswith("-stat.dat") or name.endswith("grid.top"))
+        or "checklimits" in name
+    ):
+        return "0001"
+    return None
 
 
 def _build_file_filter(
