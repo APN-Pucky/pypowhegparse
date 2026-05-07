@@ -5,6 +5,7 @@ import signal
 import argparse
 import os
 import re
+import time
 from pathlib import Path
 from typing import Callable, Iterable, Sequence
 
@@ -14,7 +15,6 @@ from .checklimits import (
     count_warn,
     error_colour_grep,
     error_spin_grep,
-    inspect_warn_grep,
 )
 from .counters import load_counter_folder
 from .stat import load_stat_folder
@@ -191,17 +191,6 @@ def build_parser() -> argparse.ArgumentParser:
         help="With --strict, fail if the selected warning level occurs more than this many times.",
     )
     parser.add_argument(
-        "--show-warn-context",
-        action="store_true",
-        help="Print excerpts around checklimits warnings at --warn-level.",
-    )
-    parser.add_argument(
-        "--warn-context-limit",
-        type=int,
-        default=3,
-        help="Maximum number of warning excerpts to print. Use 0 for no limit.",
-    )
-    parser.add_argument(
         "--ignore-colour",
         action="store_true",
         help="Ignore colour-check failures when computing the strict exit code.",
@@ -228,6 +217,11 @@ def build_parser() -> argparse.ArgumentParser:
         default=200,
         help="Maximum number of rows to print per table. Use 0 for unlimited.",
     )
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="Enable debug output, including cumulative timing summaries.",
+    )
     return parser
 
 
@@ -241,6 +235,18 @@ def _section(title: str) -> None:
     print()
     print(title)
     print("-" * min(len(title), SECTION_WIDTH))
+
+
+def _debug_print_timing_summary(
+    args: argparse.Namespace,
+    timings: list[tuple[str, float]],
+    section_name: str,
+) -> None:
+    if not getattr(args, "debug", False):
+        return
+    print(f"[debug] Timing summary after {section_name}:")
+    for label, elapsed in timings:
+        print(f"[debug]   {label:<32} {elapsed:.3f}s")
 
 
 def _table_to_string(df: pd.DataFrame, width: int, max_rows: int) -> str:
@@ -674,27 +680,7 @@ def _checklimits_summary(
         columns=["check", "count"],
     ).set_index("check")
 
-    warn_contexts = []
-    for block in inspect_warn_grep(str(folder), warn_level, file_filter=file_filter):
-        lines = _bytes_to_lines(block)
-        if lines:
-            warn_contexts.append(lines)
-    return summary, colour_lines, spin_lines, warn_contexts
-
-
-def _print_warn_contexts(contexts: list[list[str]], args: argparse.Namespace) -> None:
-    if not contexts:
-        print("No warning excerpts matched the selected level.")
-        return
-
-    context_limit = (
-        args.warn_context_limit if args.warn_context_limit > 0 else len(contexts)
-    )
-    for index, block in enumerate(contexts[:context_limit], start=1):
-        print(f"[warning excerpt {index}]")
-        for line in block:
-            print(line)
-        print()
+    return summary, colour_lines, spin_lines
 
 
 def _checklimits_status_counts(
@@ -730,27 +716,39 @@ def _strict_exit_code(
 
 
 def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
+    report_start = time.perf_counter()
+    timings: list[tuple[str, float]] = []
     file_filter = _build_file_filter(args)
+
+    counter_start = time.perf_counter()
     counter_df = (
         None
         if args.no_counters
         else _safe_load_dataframe(load_counter_folder, folder, file_filter=file_filter)
     )
+    timings.append(("load_counter_folder", time.perf_counter() - counter_start))
+
+    stat_start = time.perf_counter()
     stat_df = (
         None
         if args.no_stat
         else _safe_load_dataframe(load_stat_folder, folder, file_filter=file_filter)
     )
+    timings.append(("load_stat_folder", time.perf_counter() - stat_start))
+
+    top_start = time.perf_counter()
     top_df = (
         None
         if args.no_top
         else _safe_load_dataframe(load_top_folder, folder, file_filter=file_filter)
     )
+    timings.append(("load_top_folder", time.perf_counter() - top_start))
 
     title = f"POWHEG Overview: {folder}"
     if args.run_number is not None:
         title = f"{title} [run {args.run_number}]"
     _title(title)
+    parser_input_start = time.perf_counter()
     print(
         _table_to_string(
             _parser_input_summary(
@@ -764,16 +762,18 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
             args.max_rows,
         )
     )
+    timings.append(("parser_input_summary", time.perf_counter() - parser_input_start))
+    _debug_print_timing_summary(args, timings, "Parser Input")
 
     warn_summary = None
     colour_lines: list[str] = []
     spin_lines: list[str] = []
-    warn_contexts: list[list[str]] = []
     summary_warning_count = 0
     summary_failure_count = 0
 
     if not args.no_checklimits:
-        warn_summary, colour_lines, spin_lines, warn_contexts = _checklimits_summary(
+        checklimits_start = time.perf_counter()
+        warn_summary, colour_lines, spin_lines = _checklimits_summary(
             folder,
             args.warn_level,
             file_filter=file_filter,
@@ -786,11 +786,11 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
         )
         summary_warning_count += checklimits_warnings
         summary_failure_count += checklimits_failures
-        if args.show_warn_context:
-            _section(f"Warning Context (level {args.warn_level})")
-            _print_warn_contexts(warn_contexts, args)
+        timings.append(("checklimits_summary", time.perf_counter() - checklimits_start))
+        _debug_print_timing_summary(args, timings, "Checklimits Summary")
 
     if counter_df is not None:
+        counter_summary_start = time.perf_counter()
         _section("Counter Summary")
         counter_summary, counter_warnings, counter_failures = _mean_std_summary(
             counter_df,
@@ -799,22 +799,34 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
         summary_warning_count += counter_warnings
         summary_failure_count += counter_failures
         print(counter_summary)
+        timings.append(("counter_summary", time.perf_counter() - counter_summary_start))
+        _debug_print_timing_summary(args, timings, "Counter Summary")
     elif not args.no_counters:
+        counter_summary_start = time.perf_counter()
         _section("Counter Summary")
         print("No pwgcounters*.dat files were parsed.")
+        timings.append(("counter_summary", time.perf_counter() - counter_summary_start))
+        _debug_print_timing_summary(args, timings, "Counter Summary")
 
     if stat_df is not None:
+        stat_summary_start = time.perf_counter()
         _section("Stat Summary")
         stat_summary, stat_warnings, stat_failures = _mean_std_summary(stat_df, args)
         summary_warning_count += stat_warnings
         summary_failure_count += stat_failures
         print(stat_summary)
+        timings.append(("stat_summary", time.perf_counter() - stat_summary_start))
+        _debug_print_timing_summary(args, timings, "Stat Summary")
     elif not args.no_stat:
+        stat_summary_start = time.perf_counter()
         _section("Stat Summary")
         print("No pwg*stat.dat files were parsed.")
+        timings.append(("stat_summary", time.perf_counter() - stat_summary_start))
+        _debug_print_timing_summary(args, timings, "Stat Summary")
 
     if top_df is not None:
         if not args.no_top_plots:
+            top_section_start = time.perf_counter()
             selected_top_df = _select_relevant_top_plots(top_df, args)
             _section("Relevant Top Plots")
             if selected_top_df.empty:
@@ -838,9 +850,19 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
                         args,
                     ):
                         print(line)
+            timings.append(
+                ("relevant_top_plots", time.perf_counter() - top_section_start)
+            )
+            _debug_print_timing_summary(args, timings, "Relevant Top Plots")
     elif not args.no_top:
+        top_section_start = time.perf_counter()
         _section("Relevant Top Plots")
         print("No *grid.top files were parsed.")
+        timings.append(("relevant_top_plots", time.perf_counter() - top_section_start))
+        _debug_print_timing_summary(args, timings, "Relevant Top Plots")
+
+    timings.append(("folder_report_total", time.perf_counter() - report_start))
+    _debug_print_timing_summary(args, timings, "Folder Report")
 
     exit_code = 0
     if summary_failure_count > 0:

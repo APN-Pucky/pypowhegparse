@@ -1,7 +1,32 @@
 import glob
 from pathlib import Path
 
-from smpl.io.grep import grep
+from smpl.io.grep import grep as smplgrep
+
+
+def grep(parttern, file):
+    # check if grep is installed and use it if so, otherwise fall back to a pure Python implementation
+    try:
+        import subprocess
+
+        result = subprocess.run(
+            ["grep", "-a", parttern, file],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+        )
+        if result.returncode == 0:
+            return result.stdout.splitlines()
+        else:
+            return ""
+    except FileNotFoundError:
+        return (
+            smplgrep(parttern, file, encoding="utf-8", errors="replace")
+            .read()
+            .splitlines()
+        )
 
 
 def _checklimits_files(folder, file_filter=None):
@@ -25,7 +50,7 @@ def inspect_warn_loop(folder, level=1):
 def error_colour_grep(folder, file_filter=None):
     matches = []
     for file in _checklimits_files(folder, file_filter=file_filter):
-        lines = grep("colour check fails", file).read().splitlines()
+        lines = grep("colour check fails", file)
         matches.extend(f"{file}:{line}" for line in lines)
     return _encode_lines(matches)
 
@@ -33,7 +58,7 @@ def error_colour_grep(folder, file_filter=None):
 def error_spin_grep(folder, file_filter=None):
     matches = []
     for file in _checklimits_files(folder, file_filter=file_filter):
-        lines = grep("spin correlated amplitude wrong", file).read().splitlines()
+        lines = grep("spin correlated amplitude wrong", file)
         matches.extend(f"{file}:{line}" for line in lines)
     return _encode_lines(matches)
 
@@ -43,7 +68,7 @@ def inspect_warn_grep(folder, level=1, after=10, before=10, file_filter=None):
     blocks = []
 
     for file in _checklimits_files(folder, file_filter=file_filter):
-        matched_lines = grep(pattern, file).read().splitlines()
+        matched_lines = grep(pattern, file)
         if not matched_lines:
             continue
 
@@ -75,7 +100,7 @@ def search_for_warn_grep(folder, level=1, file_filter=None):
     pattern = "W" * level + "ARN"
     matches = []
     for file in _checklimits_files(folder, file_filter=file_filter):
-        matches.extend(grep(pattern, file).read().splitlines())
+        matches.extend(grep(pattern, file))
     return _encode_lines(matches)
 
 
