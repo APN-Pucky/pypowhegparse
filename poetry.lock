@@ -4012,14 +4012,14 @@ files = [
 
 [[package]]
 name = "smpl"
-version = "1.5.6"
+version = "1.5.7"
 description = "SiMPLe plotting and fitting"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "smpl-1.5.6-py3-none-any.whl", hash = "sha256:dacdced950ec5b29772b54993f97e82e0ab307ac7c5f16e696986216830dbf9e"},
-    {file = "smpl-1.5.6.tar.gz", hash = "sha256:5865f94a71b4b0bde4e25a5d8fa0860fe0e59430d30c73c6ce3a8b1a0c41a5da"},
+    {file = "smpl-1.5.7-py3-none-any.whl", hash = "sha256:2d32e836b2d963508afd5166fe277776592a22818879548a693c06a37bf3b94d"},
+    {file = "smpl-1.5.7.tar.gz", hash = "sha256:b2018d0914e0263d70a247b3941f5fac53d5befd4f51a6be2979af1117e6d557"},
 ]
 
 [package.dependencies]
