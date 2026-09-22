@@ -13,7 +13,7 @@ uncertainties = "*"
 pandas = "*"
 scipy = "*"
 numpy = "*"
-pytopdrawer = ">=0.0.13"
+pytopdrawer = ">=0.0.14"
 
 [tool.poetry.scripts]
 powhegparse = "pypowhegparse.powhegoverview:main"
