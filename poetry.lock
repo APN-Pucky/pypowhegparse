@@ -3318,18 +3318,18 @@ dev = ["black", "build", "freezegun", "mdx_truly_sane_lists", "mike", "mkdocs", 
 
 [[package]]
 name = "pytopdrawer"
-version = "0.0.14"
+version = "0.0.16"
 description = "Plot top files with python and matplotlib (mainly from POWHEG)"
 optional = false
 python-versions = "<4.0,>=3.10"
 groups = ["main"]
 files = [
-    {file = "pytopdrawer-0.0.14-py3-none-any.whl", hash = "sha256:e7ea596f7f7b3f3366111e91aee46ba31f93cfea47fdd21d3cd49706a8e51147"},
-    {file = "pytopdrawer-0.0.14.tar.gz", hash = "sha256:627d38851023319dd53ab78d4c366d01dedb1bbb02d9a500d129d06111caf0d8"},
+    {file = "pytopdrawer-0.0.16-py3-none-any.whl", hash = "sha256:ea9e01505ce6fd8824c0723b8cbf53b6a6ea41b3531db754cca061c2df3f65a2"},
+    {file = "pytopdrawer-0.0.16.tar.gz", hash = "sha256:eb2110e0cf4d2e81416cea0349852b40fedeea607cc14650bcaf28968605a64b"},
 ]
 
 [package.dependencies]
-plotext = "*"
+plotext = ">=6.0.0"
 smpl = "*"
 uncertainties = "*"
 
@@ -4655,4 +4655,4 @@ cffi = ["cffi (>=1.17,<2.0) ; platform_python_implementation != \"PyPy\" and pyt
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "f1a4cd8626f80eb80803e0457d9659ce9ae8fb9f757bdbe288dd3f9811b6c699"
+content-hash = "7a9e52b280ceab8e71338feb6550ea841cf20165f94acbda8e8b2c420b83a878"
