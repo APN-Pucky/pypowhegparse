@@ -9,7 +9,7 @@ from contextlib import redirect_stdout
 from pathlib import Path
 from typing import Sequence
 
-from . import pypowhegoverview as overview
+from . import powhegoverview as overview
 
 
 ANSI_RE = re.compile(r"\x1b\[[0-9;]*m")
