@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 import argparse
 import math
+import re
 import pytopdrawer
 import matplotlib.pyplot as plt
+
+from pypowhegparse.top import convergence
 
 
 def main():
@@ -20,12 +23,25 @@ def main():
     parser.add_argument(
         "-t", "--text", action="store_true", help="print plots as text to stdout"
     )
+    parser.add_argument(
+        "-c",
+        "--calibration",
+        action="store_true",
+        help="add one plot per dimension through the nodes (i/nbin, C_i), "
+        "C_i being the cumulative of the previous iteration at bin i",
+        default=False,
+    )
     args = parser.parse_args()
     tops = pytopdrawer.read(args.topfile, True, False)
-    # Text first so we get fast results
     if args.text:
         for top in tops:
             print(top)
+    if args.calibration:
+        tops += [convergence(top) for top in tops]
+    for top in tops:
+        if re.fullmatch(r"\s*dim=\s*(\d+)\s*", top.title.text) is not None:
+            top.title.text = "cumulative " + top.title.text
+
     if args.output or not args.noshow:
         N = len(tops)
         cols = math.ceil(math.sqrt(N))  # Round up to ensure enough space
@@ -42,6 +58,8 @@ def main():
         axes = axes.flatten()
         for ti, top in enumerate(tops):
             top.plot(axes=axes[ti])
+            # add a linewidht=2 digonal as target for both the cumulative and convergence plots
+            axes[ti].plot([0, 1], [0, 1], color="black", linewidth=2)
         for a in axes[N:]:
             a.set_visible(False)
         if args.output is not None:

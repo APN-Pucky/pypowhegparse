@@ -4,12 +4,27 @@ import os
 import pandas as pd
 import re
 import pytopdrawer as ptd
-from pytopdrawer import TopPlot
+from pytopdrawer import Limits, Title, TopPlot
 from scipy.stats import chi2
 
 
 TOP_RUN_RE = re.compile(r"^(pwg[a-zA-Z0-9-]*?)-(\d{4})-([a-zA-Z0-9-]+?grid)\.top$")
 TOP_SERIAL_RE = re.compile(r"^(pwg[a-zA-Z0-9-]*?)-([a-zA-Z0-9-]+?grid)\.top$")
+
+
+def convergence(self: TopPlot):
+    """
+        Returns a TopPlot through the nodes (i/nbin, C_i) with C_i being the cumulative
+        of the previous iteration at bin i.
+    A converged grid lies on the diagonal.
+    """
+    c = self.ydata()
+    if self.xdata()[0] != 0:
+        c = np.concatenate(([0], c))
+    nbin = len(c) - 1
+    x = np.arange(nbin + 1) / nbin
+    title = Title(self.title.position, "calibration " + self.title.text)
+    return TopPlot(limits=Limits(0, 1, 0, 1), title=title, data=np.column_stack((x, c)))
 
 
 def _top_files(folder, file_filter=None, first_only=False):
