@@ -3028,20 +3028,23 @@ files = [
 
 [[package]]
 name = "plotext"
-version = "5.3.2"
+version = "6.1.0"
 description = "plotext plots directly on terminal"
 optional = false
-python-versions = ">=3.5"
+python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "plotext-5.3.2-py3-none-any.whl", hash = "sha256:394362349c1ddbf319548cfac17ca65e6d5dfc03200c40dfdc0503b3e95a2283"},
-    {file = "plotext-5.3.2.tar.gz", hash = "sha256:52d1e932e67c177bf357a3f0fe6ce14d1a96f7f7d5679d7b455b929df517068e"},
+    {file = "plotext-6.1.0-py3-none-macosx_10_13_x86_64.whl", hash = "sha256:4fec26b86ad32b3597de5861cfbf0023bb5ae02250f0ca940b12b069bccf43e6"},
+    {file = "plotext-6.1.0-py3-none-macosx_11_0_arm64.whl", hash = "sha256:bfafad58a20da6c279e722481b5c3e67a9c8c54bde722d414c5ceffe71b7c652"},
+    {file = "plotext-6.1.0-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:6c035440296be20e539ee70d4de07290d84bb0c9017bb3bc5867a8b3f9cead56"},
+    {file = "plotext-6.1.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e59f54cedfb56129e2aec1f885869fe13903fdd4e6f18a10301e71a7d5b9851c"},
+    {file = "plotext-6.1.0-py3-none-win_amd64.whl", hash = "sha256:60c85326da5454db482c9b1357c9ba385bae4a05c9dd498ff604e80458e03e3b"},
+    {file = "plotext-6.1.0.tar.gz", hash = "sha256:6b729ce6376c5c1c2152fe85e0449dcc54879d0923b3c6c8d1670108245c6f84"},
 ]
 
 [package.extras]
-completion = ["shtab"]
 image = ["pillow (>=8.4)"]
-video = ["ffpyplayer (>=4.3.5)", "opencv-python (>=4.5.5)", "pafy (>=0.5.5)", "pillow (>=8.4)", "youtube-dl (==2020.12.2)"]
+video = ["ffpyplayer (>=4.3.5)", "pillow (>=8.4)", "yt-dlp (>=2024.1.1)"]
 
 [[package]]
 name = "poetry"
@@ -4652,4 +4655,4 @@ cffi = ["cffi (>=1.17,<2.0) ; platform_python_implementation != \"PyPy\" and pyt
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "bc5a8c426c6927359c870a7321714a6c5b909209d8659ca60c65b620ef646203"
+content-hash = "f1a4cd8626f80eb80803e0457d9659ce9ae8fb9f757bdbe288dd3f9811b6c699"
