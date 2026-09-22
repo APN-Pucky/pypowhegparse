@@ -12,7 +12,7 @@ TOP_RUN_RE = re.compile(r"^(pwg[a-zA-Z0-9-]*?)-(\d{4})-([a-zA-Z0-9-]+?grid)\.top
 TOP_SERIAL_RE = re.compile(r"^(pwg[a-zA-Z0-9-]*?)-([a-zA-Z0-9-]+?grid)\.top$")
 
 
-def convergence(self: TopPlot):
+def calibration(self: TopPlot):
     """
         Returns a TopPlot through the nodes (i/nbin, C_i) with C_i being the cumulative
         of the previous iteration at bin i.

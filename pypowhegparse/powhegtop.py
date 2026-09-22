@@ -5,8 +5,6 @@ import re
 import pytopdrawer
 import matplotlib.pyplot as plt
 
-from pypowhegparse.top import convergence
-
 
 def main():
     parser = argparse.ArgumentParser()
@@ -37,7 +35,7 @@ def main():
         for top in tops:
             print(top)
     if args.calibration:
-        tops += [convergence(top) for top in tops]
+        tops += [calibration(top) for top in tops]
     for top in tops:
         if re.fullmatch(r"\s*dim=\s*(\d+)\s*", top.title.text) is not None:
             top.title.text = "cumulative " + top.title.text
