@@ -3,7 +3,7 @@ from pathlib import Path
 try:
     import pypowhegparse.cli as cli
 except ModuleNotFoundError:
-    import pypowhegparse.pypowhegoverview as cli
+    import pypowhegparse.powhegoverview as cli
 
 
 def test_cli_prints_default_overview_without_top_plots(capsys):

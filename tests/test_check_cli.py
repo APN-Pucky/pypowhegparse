@@ -1,4 +1,4 @@
-import pypowhegparse.pypowhegcheck as check
+import pypowhegparse.powhegcheck as check
 
 
 def test_check_reports_fail_only_lines_by_default(capsys):
