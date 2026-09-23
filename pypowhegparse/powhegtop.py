@@ -59,7 +59,7 @@ def main():
         for ti, top in enumerate(tops):
             top.plot(axes=axes[ti])
             # add a linewidht=2 digonal as target for both the cumulative and convergence plots
-            axes[ti].plot([0, 1], [0, 1], color="black", linewidth=2)
+            axes[ti].plot([0, 1], [0, 1], color="grey", linewidth=1.5, linestyle="--")
         for a in axes[N:]:
             a.set_visible(False)
         if args.output is not None:
