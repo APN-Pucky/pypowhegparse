@@ -128,8 +128,9 @@ def pvalue_top(top: TopPlot):
 
 
 def chisquare_top(top: TopPlot):
-    mask = top.xdata() > 0
-    return np.sum((top.ydata()[mask] - top.xdata()[mask]) ** 2 / top.xdata()[mask])
+    cal = calibration(top)
+    mask = cal.xdata() > 0
+    return np.sum((cal.ydata()[mask] - cal.xdata()[mask]) ** 2 / cal.xdata()[mask])
 
     # chi2 = chisquare(top.ydata()[mask], top.xdata()[mask])
     # return chi2
