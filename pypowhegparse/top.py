@@ -87,10 +87,12 @@ def _top_file_info(file):
     return f"{fname}-{match.group(2)}", 1
 
 
-def load_top_plot(plot: TopPlot):
+def load_top_plot(plot: TopPlot, calibrate=False):
     pairs = [
         ("pvalue", pvalue_top(plot)),
         ("chi2", chisquare_top(plot)),
+        ("cal_pvalue", pvalue_top(plot, calibrate=True) if calibrate else np.nan),
+        ("cal_chi2", chisquare_top(plot, calibrate=True) if calibrate else np.nan),
         ("plot", plot),
     ]
     return pd.DataFrame.from_records(
@@ -98,18 +100,18 @@ def load_top_plot(plot: TopPlot):
     ).transpose()
 
 
-def load_top_file(file):
+def load_top_file(file, calibrate=False):
     pairs = {}
     fname, number = _top_file_info(file)
     for top in ptd.read(file):
         if number not in pairs.keys():
-            pairs[number] = load_top_plot(top)
+            pairs[number] = load_top_plot(top,calibrate)
         else:
-            pairs[number] = pd.concat([pairs[number], load_top_plot(top)])
+            pairs[number] = pd.concat([pairs[number], load_top_plot(top,calibrate)])
     return pd.concat(pairs.values(), keys=pairs.keys())
 
 
-def load_top_folder(folder, file_filter=None, first_only=False):  # names
+def load_top_folder(folder, file_filter=None, first_only=False, calibrate=False):  # names
     pairs = {}
     for file in _top_files(folder, file_filter=file_filter, first_only=first_only):
         try:
@@ -117,19 +119,25 @@ def load_top_folder(folder, file_filter=None, first_only=False):  # names
         except ValueError:
             continue
         if fname not in pairs.keys():
-            pairs[fname] = load_top_file(file)
+            pairs[fname] = load_top_file(file,calibrate)
         else:
-            pairs[fname] = pd.concat([pairs[fname], load_top_file(file)])
+            pairs[fname] = pd.concat([pairs[fname], load_top_file(file,calibrate)])
     return pd.concat(pairs.values(), keys=pairs.keys())
 
 
-def pvalue_top(top: TopPlot):
-    return chi2.sf(chisquare_top(top), 1)
+def pvalue_top(top: TopPlot, calibrate=False):
+    return chi2.sf(chisquare_top(top,calibrate), 1)
 
 
-def chisquare_top(top: TopPlot):
-    mask = top.xdata() > 0
-    return np.sum((top.ydata()[mask] - top.xdata()[mask]) ** 2 / top.xdata()[mask])
+def chisquare_top(top: TopPlot, calibrate=False):
+
+    if calibrate:
+        cal = calibration(top)
+        mask = cal.xdata() > 0
+        return np.sum((cal.ydata()[mask] - cal.xdata()[mask]) ** 2 / cal.xdata()[mask])
+    else:
+        mask = top.xdata() > 0
+        return np.sum((top.ydata()[mask] - top.xdata()[mask]) ** 2 / top.xdata()[mask])
 
     # chi2 = chisquare(top.ydata()[mask], top.xdata()[mask])
     # return chi2
