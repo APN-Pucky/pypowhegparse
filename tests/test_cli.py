@@ -1,5 +1,7 @@
 from pathlib import Path
 
+import pytest
+
 try:
     import pypowhegparse.cli as cli
 except ModuleNotFoundError:
@@ -275,12 +277,29 @@ def test_top_plot_status_thresholds_are_adjustable():
             "2",
             "--top-fail-chi2-min",
             "6",
+            "--top-warn-cal-pvalue-max",
+            "0.3",
+            "--top-fail-cal-pvalue-max",
+            "0.02",
+            "--top-warn-cal-chi2-min",
+            "4",
+            "--top-fail-cal-chi2-min",
+            "6",
         ]
     )
-    ok_row = cli.pd.Series({"pvalue": 0.3, "chi2": 1.0})
-    warn_row = cli.pd.Series({"pvalue": 0.15, "chi2": 1.0})
-    fail_row = cli.pd.Series({"pvalue": 0.02, "chi2": 8.0})
 
+    # calibrated always ok and non-calibrated reason for warn or fail
+    ok_row = cli.pd.Series({"pvalue": 0.3, "chi2": 1.0, "cal_pvalue": 0.35, "cal_chi2": 3.0})
+    warn_row = cli.pd.Series({"pvalue": 0.15, "chi2": 1.0, "cal_pvalue": 0.35, "cal_chi2": 3.0})
+    fail_row = cli.pd.Series({"pvalue": 0.02, "chi2": 8.0, "cal_pvalue": 0.35, "cal_chi2": 3.0})
+    assert cli._top_plot_status(ok_row, args) == "ok"
+    assert cli._top_plot_status(warn_row, args) == "warn"
+    assert cli._top_plot_status(fail_row, args) == "fail"
+
+    # non-calibrated always ok and calibrated reason for warn or fail
+    ok_row = cli.pd.Series({"pvalue": 0.3, "chi2": 1.0, "cal_pvalue": 0.35, "cal_chi2": 3.0})
+    warn_row = cli.pd.Series({"pvalue": 0.3, "chi2": 1.0, "cal_pvalue": 0.1, "cal_chi2": 5.0})
+    fail_row = cli.pd.Series({"pvalue": 0.3, "chi2": 1.0, "cal_pvalue": 0.001, "cal_chi2": 7.0})
     assert cli._top_plot_status(ok_row, args) == "ok"
     assert cli._top_plot_status(warn_row, args) == "warn"
     assert cli._top_plot_status(fail_row, args) == "fail"
@@ -399,3 +418,32 @@ def test_overview_run_number_filter_updates_summary_counts(capsys):
 
     assert exit_code == 0
     assert "POWHEG Overview: tests/Z2jet [run 0001]" in captured.out
+
+
+# NaN calibrated values (no -c) never warn or fail, even with extreme thresholds.
+def test_missing_calibrated_values_never_warn_or_fail():
+    args = cli.build_parser().parse_args(
+        ["--top-warn-cal-pvalue-max", "1", "--top-warn-cal-chi2-min", "0"]
+    )
+    row = cli.pd.Series(
+        {"pvalue": 0.9, "chi2": 0.01, "cal_pvalue": float("nan"), "cal_chi2": float("nan")}
+    )
+
+    assert cli._top_plot_status(row, args) == "ok"
+
+
+# Calibration plots are only drawn with -c.
+def test_cli_prints_calibration_plots_only_with_flag(capsys):
+    cli.main(["tests/Z2jet", "--top-limit", "1", "--top-pvalue-max", "1"])
+    without = capsys.readouterr().out
+    cli.main(["tests/Z2jet", "--top-limit", "1", "--top-pvalue-max", "1", "-c"])
+    with_flag = capsys.readouterr().out
+
+    assert "calibration dim=" not in without
+    assert "calibration dim=" in with_flag
+
+
+# --top-sort cal_* without -c is rejected.
+def test_cal_top_sort_requires_calibration_flag():
+    with pytest.raises(SystemExit):
+        cli.main(["tests/Z2jet", "--top-sort", "cal_pvalue"])
