@@ -18,7 +18,7 @@ from .checklimits import (
 )
 from .counters import load_counter_folder
 from .stat import load_stat_folder
-from .top import load_top_folder
+from .top import load_top_folder, calibration
 
 
 ANSI_RE = re.compile(r"\x1b\[[0-9;]*m")
@@ -121,8 +121,20 @@ def build_parser() -> argparse.ArgumentParser:
         help="Prefer top plots with p-value at or below this threshold.",
     )
     parser.add_argument(
+        "-c",
+        "--calibration",
+        action="store_true",
+        help="Also check, print and plot the calibration curve of each top plot, using the --top-*-cal-* thresholds.",
+    )
+    parser.add_argument(
+        "--top-cal-pvalue-max",
+        type=float,
+        default=0.97,
+        help="Prefer calibrated top plots with p-value at or below this threshold.",
+    )
+    parser.add_argument(
         "--top-sort",
-        choices=("pvalue", "chi2"),
+        choices=("pvalue", "chi2", "cal_pvalue", "cal_chi2"),
         default="pvalue",
         help="How to rank relevant top plots before rendering.",
     )
@@ -154,6 +166,30 @@ def build_parser() -> argparse.ArgumentParser:
         type=float,
         default=10.83,
         help="Mark a top-plot title as failure when chi2 is at or above this threshold.",
+    )
+    parser.add_argument(
+        "--top-warn-cal-pvalue-max",
+        type=float,
+        default=0.97,
+        help="Mark a calibrated top-plot title as warning when p-value is at or below this threshold.",
+    )
+    parser.add_argument(
+        "--top-fail-cal-pvalue-max",
+        type=float,
+        default=0.9,
+        help="Mark a calibrated top-plot title as failure when p-value is at or below this threshold.",
+    )
+    parser.add_argument(
+        "--top-warn-cal-chi2-min",
+        type=float,
+        default=0.1,
+        help="Mark a calibrated top-plot title as warning when chi2 is at or above this threshold.",
+    )
+    parser.add_argument(
+        "--top-fail-cal-chi2-min",
+        type=float,
+        default=1,
+        help="Mark a calibrated top-plot title as failure when chi2 is at or above this threshold.",
     )
     parser.add_argument(
         "--negative-weight-fraction-warn",
@@ -661,9 +697,15 @@ def _parser_input_summary(
     summary.loc["grid top files", "loaded_rows"] = parsed_top_plots
     return summary
 
+def _check_calibration_args(parser: argparse.ArgumentParser, args: argparse.Namespace) -> None:
+    if args.top_sort.startswith("cal_") and not args.calibration:
+        parser.error(
+            f"--top-sort={args.top_sort} requires --calibration to be enabled."
+        )
 
 def _top_numeric_frame(top_df: pd.DataFrame) -> pd.DataFrame:
-    return top_df[["pvalue", "chi2"]].astype(float)
+    return top_df[["pvalue", "chi2", "cal_pvalue", "cal_chi2"]].astype(float)
+
 
 
 def _representative_top_plots(top_df: pd.DataFrame) -> pd.DataFrame:
@@ -685,20 +727,34 @@ def _select_relevant_top_plots(
     file_scores = representative_plots.groupby("top_file").agg(
         min_pvalue=("pvalue", "min"),
         max_chi2=("chi2", "max"),
+        min_cal_pvalue=("cal_pvalue", "min"),
+        max_cal_chi2=("cal_chi2", "max"),
         first_run=("run", "first"),
         first_source_order=("_source_order", "min"),
     )
 
     if args.top_sort == "chi2":
         ranked_files = file_scores.sort_values(
-            ["max_chi2", "min_pvalue", "first_source_order"],
-            ascending=[False, True, True],
+            ["max_chi2", "min_pvalue", "max_cal_chi2", "min_cal_pvalue", "first_source_order"],
+            ascending=[False, True, False, True, True],
+            kind="mergesort",
+        )
+    elif args.top_sort == "cal_chi2":
+        ranked_files = file_scores.sort_values(
+            ["max_cal_chi2", "min_cal_pvalue", "max_chi2", "min_pvalue", "first_source_order"],
+            ascending=[False, True, False, True, True],
+            kind="mergesort",
+        )
+    elif args.top_sort == "cal_pvalue":
+        ranked_files = file_scores.sort_values(
+            ["min_cal_pvalue", "max_cal_chi2", "min_pvalue", "max_chi2", "first_source_order"],
+            ascending=[True, False, True, False, True],
             kind="mergesort",
         )
     else:
         ranked_files = file_scores.sort_values(
-            ["min_pvalue", "max_chi2", "first_source_order"],
-            ascending=[True, False, True],
+            ["min_pvalue", "max_chi2",  "min_cal_pvalue","max_cal_chi2","first_source_order"],
+            ascending=[True, False, True, False,True],
             kind="mergesort",
         )
 
@@ -706,7 +762,8 @@ def _select_relevant_top_plots(
         selected_files = ranked_files.index.tolist()
     else:
         selected_files = ranked_files[
-            ranked_files["min_pvalue"] <= args.top_pvalue_max
+            (ranked_files["min_pvalue"] <= args.top_pvalue_max)
+            | (ranked_files["min_cal_pvalue"] <= args.top_cal_pvalue_max)
         ].index.tolist()
         if not selected_files:
             selected_files = ranked_files.index.tolist()
@@ -726,10 +783,16 @@ def _select_relevant_top_plots(
 def _top_plot_status(row, args: argparse.Namespace) -> str:
     pvalue = float(row.pvalue)
     chi2 = float(row.chi2)
+    cal_pvalue = float(row.cal_pvalue)
+    cal_chi2 = float(row.cal_chi2)
 
     if pvalue <= args.top_fail_pvalue_max or chi2 >= args.top_fail_chi2_min:
         return "fail"
+    if cal_pvalue <= args.top_fail_cal_pvalue_max or cal_chi2 >= args.top_fail_cal_chi2_min:
+        return "fail"
     if pvalue <= args.top_warn_pvalue_max or chi2 >= args.top_warn_chi2_min:
+        return "warn"
+    if cal_pvalue <= args.top_warn_cal_pvalue_max or cal_chi2 >= args.top_warn_cal_chi2_min:
         return "warn"
     return "ok"
 
@@ -819,7 +882,7 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
         None
         if args.no_top
         else _safe_load_dataframe(
-            load_top_folder, folder, file_filter=top_file_filter, first_only=True
+            load_top_folder, folder, file_filter=top_file_filter, first_only=True, calibrate=args.calibration
         )
     )
     timings.append(("load_top_folder", time.perf_counter() - top_start))
@@ -921,14 +984,19 @@ def _report_for_folder(folder: Path, args: argparse.Namespace) -> int:
                     print(
                         f"{_status_prefix(top_status, args)}  "
                         f"[{row.top_file} run {row.run} | {row.plot_title} | "
-                        f"pvalue={row.pvalue:.6g} chi2={row.chi2:.6g}]"
+                        f"pvalue={row.pvalue:.6g} chi2={row.chi2:.6g} | "
+                        f"calibrated pvalue={row.cal_pvalue:.6g} calibrated chi2={row.cal_chi2:.6g}]"
                     )
-                    for line in _prefixed_block_lines(
-                        _maybe_strip_ansi(row.plot.terminal_plot_str(), args),
-                        top_status,
-                        args,
-                    ):
-                        print(line)
+                    plots = [row.plot]
+                    if args.calibration:
+                        plots.append(calibration(row.plot))
+                    for plot in plots:
+                        for line in _prefixed_block_lines(
+                            _maybe_strip_ansi(plot.terminal_plot_str(), args),
+                            top_status,
+                            args,
+                        ):
+                            print(line)
             timings.append(
                 ("relevant_top_plots", time.perf_counter() - top_section_start)
             )
@@ -958,6 +1026,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         signal.signal(signal.SIGPIPE, signal.SIG_DFL)
     parser = build_parser()
     args = parser.parse_args(argv)
+    _check_calibration_args(parser, args)
 
     exit_code = 0
     for folder in _resolve_folders(args):

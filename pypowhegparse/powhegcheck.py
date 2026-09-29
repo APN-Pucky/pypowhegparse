@@ -230,6 +230,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         signal.signal(signal.SIGPIPE, signal.SIG_DFL)
     parser = build_parser()
     args = parser.parse_args(argv)
+    overview._check_calibration_args(parser,args)
 
     exit_code = 0
     for folder in overview._resolve_folders(args):
